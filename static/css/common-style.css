@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff;
+}
+
+button {
+    cursor: pointer;
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    /* Tạo hiệu ứng chuyển động mượt mà */
+    transition: background-color 0.3s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+input[type=text] ,
+textarea {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 0.5rem;
+}
+
+input[type=text]:focus {
+    border: none !important;
+}
+
+.sections {
+    margin: 2rem 15vw;
+}
+
+.small-icons {
+    height: 2rem;
+    width: 2rem;
+    border: none;
+}
+
+.large-icons {
+    height: 3rem;
+    width: 3rem;
+    border: none;
+}
+
+
+/*Responsive Styles*/
+.testing {
+    background-color: #1a685b;
+    display: block;
+    width: auto;
+    height: auto;
+    display: none;
+}
+
+/* Larger desktops and monitors are default layout ----------- */
+
+/* Laptops, larger tablets in landscape, and small desktops -- */
+@media only screen and (max-width : 1280px) {
+    /* Add Your CSS Styling Here */
+}
+
+/* Tablets & larger smartphones ------------------------------ */
+@media only screen and (max-width : 768px) {
+    /* Add Your CSS Styling Here */
+}
+
+/* Smaller Smartphones ---------------- */
+@media only screen and (max-width : 480px) {
+
+}
