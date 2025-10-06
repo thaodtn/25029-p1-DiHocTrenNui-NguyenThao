@@ -1,3 +1,21 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // load header
+    console.log('load header');
+    fetch('../static/html/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("header-placeholder").innerHTML = html;
+        });
+
+    // load footer
+    console.log('load footer');
+    fetch('../static/html/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("footer-placeholder").innerHTML = html;
+        });
+})
+
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function openMenuDropdown () {

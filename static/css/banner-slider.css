@@ -16,7 +16,7 @@
 .banner-slider .banner-slider-item {
     display: none;
     width: 100%;
-    height: 40vw;
+    height: 50vw;
     animation-name: fade;
     animation-duration: 1.5s;
 }
@@ -61,4 +61,12 @@
   bottom: 1rem;
   width: 100%;
   text-align: center;
+}
+
+/* Tablets & larger smartphones ------------------------------ */
+@media only screen and (max-width : 900px) {
+   .banner-slider .banner-slider-item {
+      width: 100%;
+      height: 150vw;
+  }
 }
