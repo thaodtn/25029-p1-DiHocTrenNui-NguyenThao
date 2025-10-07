@@ -31,14 +31,25 @@ a {
     display: inline-block;
 }
 
-input[type=text] ,
-textarea {
+input[type=text],
+input[type=date],
+textarea,
+label,
+select {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-radius: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem;
 }
+
+label {font-weight: bold;}
 
 input[type=text]:focus {
     border: none !important;
+}
+
+p {
+    line-height: 1.6;
 }
 
 .sections {
@@ -68,18 +79,26 @@ input[type=text]:focus {
 }
 
 /* Larger desktops and monitors are default layout ----------- */
+@media only screen and (max-width : 1700px) {
+    
+}
 
 /* Laptops, larger tablets in landscape, and small desktops -- */
-@media only screen and (max-width : 1280px) {
-    /* Add Your CSS Styling Here */
+@media only screen and (max-width : 1360px) { /* 1280px */
+    .sections {margin: 1.5rem 10vw;}
+}
+
+@media only screen and (max-width : 1200px) {
+    
 }
 
 /* Tablets & larger smartphones ------------------------------ */
-@media only screen and (max-width : 768px) {
-    /* Add Your CSS Styling Here */
+@media only screen and (max-width : 900px) {
+   
 }
-
 /* Smaller Smartphones ---------------- */
-@media only screen and (max-width : 480px) {
-
+@media only screen and (max-width : 680px) {
+    html {
+        font-size: 13px;
+    }
 }

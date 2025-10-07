@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,72 @@
     <link rel="icon" type="image/jpg" href="../static/image/icons/logo.jpg">
     <link rel="stylesheet" href="../static/css/common-style.css">
     <link rel="stylesheet" href="../static/css/header-style.css">
+    <link rel="stylesheet" href="../register/register-style.css">
     <link rel="stylesheet" href="../static/css/footer-style.css">
 </head>
+
 <body>
     <div id="header-placeholder"></div>
-    <main>
 
+    <main id="register-student-main-section">
+        <div class="title-container">
+            <img src="../static/image/slides/heart.png" alt="">
+            <div class="title-inner-container">
+                <h2 class="title">Hãy giới thiệu với chúng tôi</h2>
+                <p class="slogan">Thông tin các bạn nhỏ miền núi có hoàn cảnh mồ côi,
+                    hoàn cảnh khó khăn cần sự hỗ trợ để được đến trường và duy trì việc học!</p>
+            </div>
+        </div>
+        <section class="register-container">
+            <div class="register-student-forms">
+                <form class="student-forms" action="">
+                    <label for="fullname">Họ và tên của học sinh *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Họ và tên">
+
+                    <label for="birthday">Ngày sinh *</label>
+                    <input type="date" id="birthday" name="birthday" placeholder="Ngày/tháng/năm">
+
+                    <label for="">Nơi cư trú của học sinh:</label>
+                    <label for="city">Tỉnh / Thành Phố *</label>
+                    <input type="text" id="city" name="city" placeholder="Nhập tên Tỉnh hoặc Thành phố ">
+
+                    <label for="district">Xã / Phường *</label>
+                    <input type="text" id="district" name="district" placeholder="Nhập tên Xã hoặc Phường">
+
+                    <label for="street">Nóc / Thôn / Tổ *</label>
+                    <input type="text" id="street" name="street" placeholder="Nhập tên Nóc hoặc Thôn hoặc Tổ">
+
+                    <label for="ethnic-group">Dân tộc *</label>
+                    <input type="text" id="ethnic-group" name="ethnic-group" placeholder="Dân tộc">
+
+                    <label for="classes">Học lớp *</label>
+                    <input type="text" id="classes" name="classes" placeholder="tên Lớp">
+
+                    <label for="school">Trường *</label>
+                    <input type="text" id="school" name="school" placeholder="Tên Trường">
+
+                    <label for="situation">Hoàn cảnh *</label>
+                    <p>Vui lòng cung cấp đủ các thông tin về tên bố mẹ, có mấy anh chị em, có mồ côi hay không, có
+                        hộ nghèo hay không, có bệnh hay không, đang ở với ai</p>
+                    <textarea type="text" id="situation" name="situation" placeholder="" rows="5"></textarea>
+
+                    <label for="submitter">Tên người giới thiệu (hoặc Facebook người giới thiệu) *</label>
+                    <input type="text" id="submitter" name="submitter" placeholder="">
+
+                    <label for="submitter-phone">Số điện thoại người giới thiệu *</label>
+                    <input type="text" id="submitter-phone" name="submitter-phone" placeholder="">
+
+                    <label for="comment">Thông tin chia sẻ thêm (nếu có)</label>
+                    <input type="text" name="comment" id="comment">
+
+                    <button id="student-submit-btn">Gửi thông tin</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <div id="footer-placeholder"></div>
     <script src="../static/js/common-script.js"></script>
 </body>
+
 </html>

@@ -154,3 +154,38 @@
     float: right;
     background: none;
 }
+
+/* Larger desktops and monitors are default layout ----------- */
+@media only screen and (max-width : 1700px) {
+    .register-btn-container {display: none;}
+    .register-dropdown-container {display: block;}
+}
+
+/* Laptops, larger tablets in landscape, and small desktops -- */
+@media only screen and (max-width : 1360px) { /* 1280px */
+    /* Header */
+    .search-inner-container {width: auto;}
+    .search-input {display: none;}    
+}
+
+@media only screen and (max-width : 1200px) {
+    /* Header */
+    .nav-container {display: none;}
+    .nav-dropdown-container {display: block; margin-right: 1rem;}
+    .register-dropdown-container {margin-right: 1rem;}
+    .logo-container {flex-grow: 1;}
+}
+
+/* Tablets & larger smartphones ------------------------------ */
+@media only screen and (max-width : 900px) {
+    
+}
+
+/* Smaller Smartphones ---------------- */
+@media only screen and (max-width : 680px) {
+    #main-header {    
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .logo-container {width: 100%;}
+}

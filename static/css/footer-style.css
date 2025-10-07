@@ -52,7 +52,7 @@
 }
 
 .feedback-container input,
-textarea {
+.feedback-container textarea {
     display: block;
     margin: 0.75rem;
     padding: 0.5rem;
@@ -84,4 +84,34 @@ textarea {
     /* font-family: Lobster, sans-serif; */
     font-size: 1rem;
     margin-bottom: 0.25rem;
+}
+
+/* Larger desktops and monitors are default layout ----------- */
+@media only screen and (max-width : 1700px) {
+    
+}
+
+/* Laptops, larger tablets in landscape, and small desktops -- */
+@media only screen and (max-width : 1360px) { /* 1280px */
+    .feedback-container input, .feedback-container textarea {width: 30rem;}
+}
+
+@media only screen and (max-width : 1200px) {
+    /* Footer */
+    .main-footer {
+        flex-direction: column-reverse;
+        gap: 3rem;
+        padding: 3rem 10vw;
+    }
+    .feedback-container input, .feedback-container textarea {width: 100%;}
+}
+
+/* Tablets & larger smartphones ------------------------------ */
+@media only screen and (max-width : 900px) {
+   
+}
+
+/* Smaller Smartphones ---------------- */
+@media only screen and (max-width : 680px) {
+    
 }

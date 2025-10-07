@@ -194,7 +194,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    line-height: 1.6;
+    /* line-height: 1.6; */
 }
 
 .intro-content h2 {

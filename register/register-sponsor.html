@@ -15,63 +15,59 @@
 <body>
     <div id="header-placeholder"></div>
 
-    <div>
-        <img class="layout-img" src="https://placehold.co/1200x400" alt="">
-    </div>
-
     <main id="register-sponsor-main-section">
-        <h1>NHẬN HỖ TRỢ CÁC EM "ĐI HỌC TRÊN NÚI"</h1>
-        <section class="introduction-container">
-            <p class="slogan">Chỉ cần 1 gia đình dưới phố nhận nuôi 1 em trên núi, sẽ giúp cho hành trình học chữ của
-                các em bớt gian nan!</p>
-            <div class="method-container">
-                <div class="method">
-                    <h3>Hỗ trợ lâu lài</h3>
-                    <p>
-                        Bạn có thể lựa chọn hỗ trợ lâu dài một hoặc nhiều em nhỏ mồ côi/khó khăn. Vui lòng cho
-                        chúng tôi biết các thông tin dưới đây để phục vụ cho việc liên hệ đến bạn và gửi
-                        thông tin của em học sinh sẽ được bạn hỗ trợ.
-                    </p>
-                    <a href="#">Đăng ký ngay</a>
-                </div>
-                <div class="method">
-                    <h3>Ủng hộ một lần</h3>
-                    <p>
-                        Nếu không hỗ trợ lâu dài, bạn có thể ủng hộ vào Quỹ chung “ĐI HỌC TRÊN NÚI”.
-                    </p>
-                    <a href="">Ủng hộ ngay</a>
-                </div>
+        <div class="title-container">
+            <img src="../static/image/slides/heart.png" alt="">
+            <div class="title-inner-container">
+                <h2 class="title">Người Hỗ Trợ</h2>
+                <p class="slogan">Sự chia sẻ và gắn kết của bạn sẽ giúp cho hành trình học chữ của các em nhỏ
+                    bớt gian nan!</p>
+            </div>
+        </div>
+        <section class="register-container">
+            <div class="register-forms">
+                <h2>Hỗ trợ lâu dài</h2>
+                <p>
+                    Bạn có thể lựa chọn hỗ trợ lâu dài một hoặc nhiều em nhỏ mồ côi/khó khăn. Vui lòng cho
+                    chúng tôi biết các thông tin dưới đây để liên hệ và gửi đến bạn thông tin của các em nhỏ.
+                </p>
+                <form action="">
+                    <label for="fullname">Họ và tên của bạn (hoặc Nickname) *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Họ và tên">
+
+                    <label for="facebook">Link Facebook (nếu có)</label>
+                    <input type="text" id="facebook" name="facebook" placeholder="https://www.facebook.com/">
+
+                    <label for="phone">Số điện thoại liên hệ *</label>
+                    <input type="text" id="phone" name="phone" placeholder="+84 - ">
+
+                    <label for="number-student">Số lượng em nhỏ nhận hỗ trợ (1, 2, ...) *</label>
+                    <input type="text" id="number-student" name="number-student" placeholder="...">
+
+                    <label for="period">Thời gian gửi tiền hỗ trợ khi bắt đầu kết nối *</label>
+                    <select name="period" id="period">
+                        <option value="one-month">Định kỳ tháng (từ ngày 01-07 hàng tháng) ~ 500.000 VND</option>
+                        <option value="three-months">Gửi 3 tháng 1 lần (từ ngày 01-07 đầu quý) ~ 1.500.000 VND</option>
+                        <option value="six-months">Gửi 6 tháng 1 lần (từ ngày 01-07 tháng đầu tiên) ~ 3.000.000 VND</option>
+                        <option value="one-year">Gửi 1 lần cho cả năm ~ 6.000.000 VND</option>
+                    </select>
+
+                    <label for="comment">Thông tin chia sẻ thêm (nếu có)</label>
+                    <input type="text" name="comment" id="comment">
+
+                    <button id="sponsor-submit-btn">Gửi thông tin</button>
+                </form>
+            </div>
+            <div class="donate-forms">
+                <h2>Ủng hộ vào Quỹ chung “Đi Học Trên Núi”</h2>
+                <p> Chủ tài khoản: Chủ Nhiệm CLB - Nguyễn Bình Nam  <br>
+                    Số tài khoản : 004100023456789                  <br>
+                    Ngân hàng    : Vietcombank                      <br>
+                    Nội dung: "Quỹ chung Đi Học Trên Núi"
+                </p>
+                <img src="https://placehold.co/40x40?text=Mã+QR" alt="Ma QR">
             </div>
         </section>
-
-        <section>
-            <form action="">
-                <label for="fullname">Họ và tên của bạn (hoặc Nickname) *</label>
-                <input type="text" id="fullname" name="fullname">
-
-                <label for="facebook">Link Facebook (nếu có)</label>
-                <input type="text" id="facebook" name="facebook">
-
-                <label for="phone">Số điện thoại liên hệ *</label>
-                <input type="text" id="phone" name="phone">
-
-                <label for="number-student">Số lượng em nhỏ nhận hỗ trợ (1, 2, ...) *</label>
-                <input type="text" id="number-student" name="number-student">
-
-                <label for="period">Thời gian gửi tiền hỗ trợ khi bắt đầu kết nối *</label>
-                <select name="period" id="period">
-                    <option value="one-month">Định kỳ tháng (từ ngày 01-07 hàng tháng) ~ 500.000 VND</option>
-                    <option value="three-months">Gửi 3 tháng 1 lần (từ ngày 01-07 đầu quý) ~ 1.500.000 VND</option>
-                    <option value="six-months">Gửi 6 tháng 1 lần (từ ngày 01-07 tháng đầu tiên) ~ 3.000.000 VND</option>
-                    <option value="one-year">Gửi 1 lần cho cả năm ~ 6.000.000 VND</option>
-                </select>
-
-                <label for="comment">Thông tin chia sẻ thêm (nếu có)</label>
-                <input type="text" name="comment" id="comment">
-            </form>
-        </section>
-
-
     </main>
 
     <div id="footer-placeholder"></div>
