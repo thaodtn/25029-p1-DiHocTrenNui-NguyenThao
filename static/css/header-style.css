@@ -154,6 +154,9 @@
     float: right;
     background: none;
 }
+.search-input:focus-visible {
+    outline: none;
+}
 
 /* Larger desktops and monitors are default layout ----------- */
 @media only screen and (max-width : 1700px) {

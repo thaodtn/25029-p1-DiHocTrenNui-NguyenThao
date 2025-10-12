@@ -126,6 +126,6 @@
 @media only screen and (max-width : 680px) {
     #register-sponsor-main-section {margin-top: 10rem;}
     .title-container {height: 30vw;}
-    .title-inner-container {justify-content: end;}    
+    .title-container .title-inner-container {justify-content: end;}    
     .register-forms, .donate-forms {margin: 1rem; padding: 2rem;}
 }

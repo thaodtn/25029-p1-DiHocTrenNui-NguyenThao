@@ -31,8 +31,7 @@ a {
     display: inline-block;
 }
 
-input[type=text],
-input[type=date],
+input,
 textarea,
 label,
 select {
@@ -43,10 +42,7 @@ select {
 }
 
 label {font-weight: bold;}
-
-input[type=text]:focus {
-    border: none !important;
-}
+input {border: 1px solid #e5e5e5;}
 
 p {
     line-height: 1.6;

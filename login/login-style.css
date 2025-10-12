@@ -1,0 +1,153 @@
+#login-main-section {
+    position: relative;
+    margin-top: 6rem;
+    display: block;
+    background: linear-gradient(#29a38f, #1f7a6b);
+    color: #333;
+    /* max-height: 600px; */
+    height: 600px;
+    width: 100%;
+}
+
+#login-main-section .background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 10%;
+    object-fit: cover;
+
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: auto; */
+    /* max-width: 500px; */
+    width: 500px;
+    height: auto;    
+    border: 1px solid #e5e5e5;
+    border-radius: 0.8rem;
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(51, 51, 51, 0.3);
+    background: rgba(237, 245, 235, 0.7);
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container .welcome-message {
+    position: relative;
+    padding: 2rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container .welcome-message h2,
+p {
+    align-self: center;
+    padding: 0.25rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.login-container .login-forms {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 2rem 2rem;
+    align-self: center;
+    width: 100%;
+}
+
+.login-forms div {
+    position: relative;
+    display: flex;
+    background-color: white;
+    height: 2.5rem;
+    /* 40px */
+    align-items: center;
+    border-radius: 1px;
+}
+
+.login-forms div img {
+    position: relative;
+    display: inline-block;
+    height: 60%;
+    width: auto;
+    align-self: center;
+    padding: 0 0.5rem;
+
+}
+
+#show-pw-icon {
+    display: none;
+}
+
+.login-forms div input {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 0.75rem;
+    line-height: 1.6;
+    border: none;
+    background-color: white;
+}
+
+.login-forms div input:focus-visible {
+    outline: none;
+}
+
+.login-forms div input:focus {
+    /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(26, 104, 91, 0.6); */
+}
+
+#forget-pw {
+    color: #333;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+}
+
+#login-btn {
+    background-color: #185f53;
+    color: white;
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(51, 51, 51, 0.3);
+    border-radius: 8px;
+    max-width: fit-content;
+    align-self: center;
+}
+
+#login-btn:hover {
+    background-color: #ffac00;
+    color: #333;
+}
+
+/* Larger desktops and monitors are default layout ----------- */
+@media only screen and (max-width : 1700px) {
+    /* .login-container height: 500px, width: 600px */
+}
+
+/* Laptops, larger tablets in landscape, and small desktops -- */
+@media only screen and (max-width : 1360px) {
+    /* .login-container height: 500px, width: 600px */
+}
+
+@media only screen and (max-width : 1200px) {
+    /* .login-container height: 500px, width: 600px */
+}
+
+/* Tablets & larger smartphones ------------------------------ */
+@media only screen and (max-width : 900px) {
+    /* .login-container height: 500px, width: 600px */
+}
+
+/* Smaller Smartphones ---------------- */
+@media only screen and (max-width : 680px) {
+    /* .login-container height: 500px, width: 600px */
+    .login-container {
+        width: 80vw;
+        /* height: auto; */
+        /* margin: 1rem; */
+        /* margin-left: 3rem; */
+        /* margin-right: 3rem; */
+        margin-bottom: 2rem;
+    }
+}
