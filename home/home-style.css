@@ -29,6 +29,9 @@
     text-shadow: 0.125rem 0.125rem 0.125rem rgba(51, 51, 51, 0.3);
     /* font-family: Lobster, sans-serif; */
 }
+.logo-text:hover, .logo-img:hover {
+    cursor: pointer;
+}
 
 .nav-container {
     position: relative;
