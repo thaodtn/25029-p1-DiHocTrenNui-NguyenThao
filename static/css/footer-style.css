@@ -74,10 +74,12 @@
 
 #copy-right {
     position: relative;
-    float: bottom;
+    /* float: bottom; */
     width: 100%;
-    padding: 2rem;
+    height: 6rem;
+    /* padding: 2rem; */
     text-align: center;
+    align-content: center;
     background-color: #1a685b;
     color: #fff;
 }

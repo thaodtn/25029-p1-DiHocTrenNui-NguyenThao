@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/jpg" href="../static/image/icons/logo.jpg">
+    <link rel="stylesheet" href="../static/css/common-style.css">
+    <link rel="stylesheet" href="../static/css/header-style.css">
+    <link rel="stylesheet" href="../users/dashboard-style.css">
+    <link rel="stylesheet" href="../static/css/footer-style.css">
+</head>
+<body>
+    <header id="dashboard-page-header"></header>
+
+    <main id="user-dashboard-main-section">
+
+    </main>
+
+    <footer id="dashboard-page-copy-right"></footer>
+    <script src="../static/js/common-script.js"></script>
+    <script src="dashboard-script.js"></script>
+    <script>
+        fetchAndInjectElementById('../static/html/header.html', 'user-header', 'dashboard-page-header');
+        fetchAndInjectElementById('../static/html/footer.html', 'copy-right', 'dashboard-page-copy-right');
+    </script>
+</body>
+</html>

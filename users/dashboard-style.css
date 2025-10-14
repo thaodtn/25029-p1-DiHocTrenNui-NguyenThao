@@ -1,0 +1,7 @@
+#user-dashboard-main-section {
+    position: relative;
+    margin-top: 4rem;
+    padding: 0;
+    width: 100%;
+    height: calc(100vh - 10rem);
+}

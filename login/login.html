@@ -21,17 +21,17 @@
                 <p>Bạn đang đăng nhập vào hệ thống quản lý của chương trình <b>"Đi Học Trên Núi"</b>.</p>
                 <p>Đây là nền tảng trực tuyến để lưu trữ thông tin, quản lý quá trình trao - nhận học bổng và các báo cáo thu/chi, hoạt động của chương trình.</p>
             </div>
-            <form class="login-forms" action="">
+            <form id="login-forms" class="login-forms" action="">
                 <div>
                     <img src="../static/image/icons/user.png" alt="">
-                    <input type="email" id="email" name="email" placeholder="@Email">
+                    <input type="email" id="email" name="email" placeholder="@Email" required>
                 </div>
                 <br>
                 <div>
                     <img src="../static/image/icons/padlock.png" alt="">
-                    <input type="password" id="password" name="password" placeholder="Mật khẩu">
-                    <img id="show-pw-icon" src="../static/image/icons/show.png" alt="" onclick="togglePasswordVisible()">
-                    <img id="hide-pw-icon" src="../static/image/icons/hide.png" alt="" onclick="togglePasswordVisible()">
+                    <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+                    <img id="show-pw-icon" src="../static/image/icons/show.png" alt="">
+                    <img id="hide-pw-icon" src="../static/image/icons/hide.png" alt="">
                 </div>
 
                 <a href="#" id="forget-pw">Quên mật khẩu ?</a>
@@ -39,6 +39,7 @@
                 <button type="submit" id="login-btn">Đăng nhập</button>
 
             </form>
+            <p id="message"></p>
         </div>
     </main>
 
@@ -46,7 +47,8 @@
     <div id="login-page-copy-right"></div>
 
     <script src="../static/js/common-script.js"></script>
-    <script src="login-script.js"></script>
+    <script type="module" src="../static/js/mock-data.js"></script>
+    <script type="module" src="login-script.js"></script>
     <script>
         fetchAndInjectElementById('../static/html/header.html', 'main-header', 'login-page-header');
         fetchAndInjectElementById('../static/html/footer.html', 'main-footer', 'login-page-footer');

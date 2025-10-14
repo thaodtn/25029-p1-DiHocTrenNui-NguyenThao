@@ -2,7 +2,7 @@
     position: relative;
     margin-top: 4rem;
     padding: 0;
-    gap: 0;
+    gap: 0;    
     background-color: rgba(220, 220, 220, 0.452);
 }
 
@@ -56,10 +56,12 @@
     border-radius: 3px;
     background-color: white;
     padding: 2rem 3rem;
+    min-height: calc(100vh - 10rem); 
+    /* 10rem = header + copy right */
 }
 #profile-settings-container form {
     display: grid;
-    grid-template-columns: repeat(2, 40%);
+    grid-template-columns: repeat(2, 50%);
     justify-content: left;    
 }
 
@@ -80,7 +82,7 @@
 #user-settings-content-section label,
 #user-settings-content-section input {
     margin: 1rem 0;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
 }
 
@@ -130,15 +132,13 @@
     }
     .user-settings-sidebar {
         position: relative;
-        width: fit-content;
+        width: max-content;
         height: auto;
         display: flex;
         padding: 0;
         background-color: rgba(220, 220, 220, 0.8);
     }
-    #user-settings-content-section {
-        margin-left: 0;
-    }
+    #user-settings-content-section {padding: 0;}
 }
 
 /* Styles for screens up to 480px wide (e.g., mobile phones) */
