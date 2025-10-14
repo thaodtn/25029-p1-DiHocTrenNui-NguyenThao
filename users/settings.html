@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="icon" type="image/jpg" href="../static/image/icons/logo.jpg">
+    <link rel="stylesheet" href="../static/css/common-style.css">
+    <link rel="stylesheet" href="../static/css/header-style.css">
+    <link rel="stylesheet" href="../users/settings-style.css">
+    <link rel="stylesheet" href="../static/css/footer-style.css">
+</head>
+
+<body>
+    <!-- <div id="header-placeholder"></div> -->
+    <header id="settings-page-header"></header>
+
+    <section id="common-side-bar-section"></section>
+
+    <main id="user-settings-main-section">
+        <!-- <h2 class="title">User settings</h2> -->
+        <section class="user-settings-sidebar">
+            <div id="profile-settting-btn" class="active">
+                <img class="small-icons" src="../static/image/icons/user.png" alt="">
+                <a href="#" onclick="enableProfileSetting()">Profile Settings</a>
+            </div>
+            <div id="password-settting-btn">
+                <img class="small-icons" src="../static/image/icons/padlock.png" alt="">
+                <a href="#" onclick="enablePasswordSetting()">Password</a>
+            </div>
+        </section>
+        <section id="user-settings-content-section">
+            <div id="profile-settings-container">
+                <form action="">
+                    <div class="avatar-container">
+                        <img class="avatar-img" src="../static/image/avatar/user-1.jpg" alt="">
+                        <button type="button">Thay đổi ảnh đại diện</button>
+                    </div>
+                    <div>
+                        <label for="user-name">Họ Tên:</label> <br>
+                        <input type="text" name="user-name" id="user-name" required>
+                    </div>
+                    <div>
+                        <label for="user-email">Email:</label> <br>
+                        <input type="text" name="user-email" id="user-email" readonly>
+                    </div>
+                    <div>
+                        <label for="user-phone-number">Số Điện Thoại:</label> <br>
+                        <input type="text" name="user-phone-number" id="user-phone-number" required>
+                    </div>
+                    <div>
+                        <label for="user-code">Mã số:</label> <br>
+                        <input type="text" name="user-code" id="user-code" readonly>
+                    </div>
+                    <div>
+                        <label for="user-role">Vai trò:</label> <br>
+                        <input type="text" name="user-role" id="user-role" readonly>
+                    </div>
+
+                    <button class="submit-btn" type="submit">Lưu thay đổi</button>
+                </form>
+                
+                
+            </div>
+            <div id="password-settings-container" class="hidden">
+                <form action="">
+                    <label for="current-pw">Mật khẩu hiện tại:</label>
+                    <input type="password" id="current-pw" name="current-pw" required>
+                    <label for="new-pw">Mật khẩu mới:</label>
+                    <input type="password" id="new-pw" name="new-pw" required>
+                    <label for="confirmed-pw">Nhập lại mật khẩu mới:</label>
+                    <input type="password" id="confirmed-pw" name="confirmed-pw" required>
+                    <button type="submit">Thay đổi</button>
+                </form>
+            </div>         
+        </section>
+    </main>
+
+    <div id="settings-page-copy-right"></div>
+
+    <script src="../static/js/common-script.js"></script>
+    <script src="settings-script.js"></script>
+    <script>
+        fetchAndInjectElementById('../static/html/header.html', 'user-header', 'settings-page-header');
+        fetchAndInjectElementById('../static/html/footer.html', 'copy-right', 'settings-page-copy-right');
+    </script>
+</body>
+
+</html>

@@ -1,163 +1,3 @@
-/******************** CSS Layout for HEADER section *********************/
-#main-header {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-    margin: 0;
-    padding: 1.25rem;
-    justify-content: space-around;
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.logo-container {
-    position: relative;
-    padding: 0.25rem 0.5rem;
-    min-width: 14rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-}
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: navy;
-    text-shadow: 0.125rem 0.125rem 0.125rem rgba(51, 51, 51, 0.3);
-    /* font-family: Lobster, sans-serif; */
-}
-.logo-text:hover, .logo-img:hover {
-    cursor: pointer;
-}
-
-.nav-container {
-    position: relative;
-    display: flex;
-    background-color: #1a685b;
-    border-radius: 2rem;
-    box-shadow: 0.125rem 0.125rem 0.125rem rgba(51, 51, 51, 0.3);
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 1rem;
-}
-.nav-container a {
-    display: block;
-    position: relative;
-    padding: 1rem;
-    color: #fff;
-    min-width: 6rem;
-}
-.nav-container a:hover {
-    color: #ffac00;
-    transform: scale(1.01);
-}
-/* hidden by default */
-.nav-dropdown-container {
-    position: relative;
-    display: none;
-}
-#nav-dropdown-btn {
-    color: white;
-    background-color: #1a685b;
-    padding: 1rem;
-    min-width: 8rem;
-}
-
-/* hidden by default */
-.nav-dropdown-list {
-    display: none; 
-    position: absolute;
-    background-color: #1a685b;
-    min-width: 8rem;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
-    z-index: inherit;
-}
-.nav-dropdown-list a {
-    color: white;
-    padding: 0.5rem 1rem;
-    width: 100%;
-}
-
-#nav-dropdown-btn:hover {background-color: #ffac00;}
-.show {display: block;}
-
-.register-btn-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-}
-.register-btn {
-    background-color: #ffac00;
-    color: #fff;
-    min-width: 15rem;
-    box-shadow: 0.125rem 0.125rem 0.125rem rgba(51, 51, 51, 0.3);
-}
-.register-btn:hover {
-    color: #ffac00;
-    background-color: #1a685b;
-}
-/* hidden by default */
-.register-dropdown-container {
-    position: relative;
-    display: none;
-}
-.register-dropdown-item {
-    position: relative;
-    display: block;
-    min-width: 8rem;
-    padding: 1rem;
-    text-align: center;
-    background-color: #ffac00;
-    color: white;
-    border-radius: 2rem;
-    box-shadow: 0.125rem 0.125rem 0.125rem rgba(51, 51, 51, 0.3);
-}
-/* hidden by default */
-.register-dropdown-list {
-    display: none; 
-    position: absolute;
-    background-color: #1a685b;
-    min-width: 18rem;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
-    z-index: inherit;
-}
-.register-dropdown-list a {
-    color: white;
-    padding: 0.5rem 1rem;
-    width: 100%;
-}
-
-.register-dropdown-item:hover {background-color: #1a685b; color: #ffac00;}
-.register-dropdown-container:hover .register-dropdown-list {display: block;}
-.register-dropdown-list a:hover {background-color: #ffac00;}
-
-.search-inner-container {
-    display: flex;
-    position: relative;
-    padding-right: 0;
-    border: 0.125rem solid rgba(0, 0, 0, 0.25);
-    border-radius: 2rem;
-    /* width: 10rem; */
-    width: auto;
-}
-.search-input {
-    border: none;
-    padding-left: 1rem;
-    background: none;
-    width: 100%;
-}
-.search-btn {
-    padding: 0.5rem;
-    margin: 0;    
-    border-radius: 2rem;
-    float: right;
-    background: none;
-}
-
 /******************** CSS Layout for MAIN section    *********************/
 #main-container {
     /* background-color: rgba(26, 104, 91, 0.05); */
@@ -328,115 +168,18 @@
     border: none;
 }
 
-/******************** CSS Layout for FOOTER section *********************/
-.main-footer {
-    padding: 5rem;
-    display: flex;
-    justify-content: space-around;
-    background-color: #0a2924;
-    color: #fff;
-}
-
-.contact-container {
-    vertical-align: center;
-}
-
-.main-footer h2 {
-    padding-bottom: 1rem;
-}
-
-.contact-container div {
-    display: flex;
-    align-items: center;
-}
-
-.contact-container div img {
-    padding: 0.25rem;
-    margin: 0.5rem;
-    height: 2rem;
-    width: 2rem;
-    background-color: #ffac00;
-    border: none;
-    border-radius: 0.75rem;
-}
-
-.contact-container nav {
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-}
-
-.contact-container nav a:hover {
-    transform: scale(1.2);
-}
-
-.contact-container nav a img {
-    margin-top: 0.5rem;
-    height: 3rem;
-    width: 3rem;
-    border: none;
-}
-
-.feedback-container {
-    justify-items: center;
-}
-
-.feedback-container input,
-textarea {
-    display: block;
-    margin: 0.75rem;
-    padding: 0.5rem;
-    width: 40rem;
-}
-
-.feedback-container button {
-    background-color: #ffac00;
-    color: #fff;
-    box-shadow: 0.125rem 0.125rem 0.125rem rgba(255, 255, 255, 0.3);
-    margin: 2rem;
-}
-
-.feedback-container button:hover {
-    background-color: rgba(255, 255, 255, 0.85);
-    color: black;
-    transform: scale(1.01);
-}
-
-.copy-right {
-    width: 100%;
-    padding: 2rem;
-    text-align: center;
-    background-color: #1a685b;
-    color: #fff;
-}
-
-.copy-right p {
-    /* font-family: Lobster, sans-serif; */
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-}
 
 /* Larger desktops and monitors are default layout ----------- */
 @media only screen and (max-width : 1700px) {
-    .register-btn-container {display: none;}
-    .register-dropdown-container {display: block;}
+    
 }
 
 /* Laptops, larger tablets in landscape, and small desktops -- */
 @media only screen and (max-width : 1360px) { /* 1280px */
-    /* Header */
-    .search-inner-container {width: auto;}
-    .search-input {display: none;}
     .sections {margin: 1.5rem 10vw;}
-    .feedback-container input, textarea {width: 30rem;}
 }
 
 @media only screen and (max-width : 1200px) {
-    /* Header */
-    .nav-container {display: none;}
-    .nav-dropdown-container {display: block; margin-right: 1rem;}
-    .register-dropdown-container {margin-right: 1rem;}
-    .logo-container {flex-grow: 1;}
     /* Main */
     #introduction-section {
         flex-direction: column-reverse;
@@ -446,13 +189,6 @@ textarea {
     .total-numbers-container {gap: 1rem;}
     .detail-container {flex-direction: column;}
     .step-lists {grid-template-columns: repeat(2, 1fr);}
-    /* Footer */
-    .main-footer {
-        flex-direction: column-reverse;
-        gap: 3rem;
-        padding: 3rem 10vw;
-    }
-    .feedback-container input, textarea {width: 100%;}
 }
 
 /* Tablets & larger smartphones ------------------------------ */
@@ -470,12 +206,8 @@ textarea {
 
 /* Smaller Smartphones ---------------- */
 @media only screen and (max-width : 680px) {
-    html {
-        font-size: 13px;
-    }
     #main-header {    
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .logo-container {width: 100%;}
 }

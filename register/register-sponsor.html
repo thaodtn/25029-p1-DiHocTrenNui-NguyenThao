@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div id="header-placeholder"></div>
+    <div id="register-page-header"></div>
 
     <main id="register-sponsor-main-section">
         <div class="title-container">
@@ -70,8 +70,14 @@
         </section>
     </main>
 
-    <div id="footer-placeholder"></div>
+    <div id="register-page-footer"></div>
+    <div id="register-page-copy-right"></div>
     <script src="../static/js/common-script.js"></script>
+    <script>
+        fetchAndInjectElementById('../static/html/header.html', 'main-header', 'register-page-header');
+        fetchAndInjectElementById('../static/html/footer.html', 'main-footer', 'register-page-footer');
+        fetchAndInjectElementById('../static/html/footer.html', 'copy-right', 'register-page-copy-right');
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,147 @@
+#user-settings-main-section {
+    position: relative;
+    margin-top: 4rem;
+    padding: 0;
+    gap: 0;
+    background-color: rgba(220, 220, 220, 0.452);
+}
+
+.user-settings-sidebar {
+    position: fixed;
+    width: 300px;
+    /* height: 8rem; 1 + 3 + 3 + 1 */
+    height: 100%;
+    padding: 1rem 0;
+    background-color: white;
+    /* background-color: rgba(220, 220, 220, 0.452); */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+#user-settings-content-section {
+    width: 100%;
+    padding-left: 300px;
+}
+
+.user-settings-sidebar div {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    justify-content: left;
+}
+.user-settings-sidebar div img {
+    padding: 0.25rem;
+    margin: 0.5rem;
+}
+.user-settings-sidebar div a {
+    position: relative;
+    display: block;
+    padding: 0;
+    color: #333;
+}
+.user-settings-sidebar .active,
+.user-settings-sidebar .active a {
+    background-color: rgb(26, 104, 91);
+    color: white;
+}
+
+.user-settings-sidebar div:hover:not(.active) {
+    background-color: rgba(26, 104, 91, 0.4);
+}
+
+#profile-settings-container,
+#password-settings-container {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    background-color: white;
+    padding: 2rem 3rem;
+}
+#profile-settings-container form {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: left;    
+}
+
+#user-settings-content-section button {
+    grid-column: 1 / -1; /* Spans from the first column line to the last */
+    width: max-content;
+    height: max-content;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border-radius: 5px;    
+    background-color: rgb(172, 172, 172);    
+    box-shadow: 0.125rem 0.125rem 0.125rem rgba(51, 51, 51, 0.3);
+}
+#user-settings-content-section button:hover {
+    background-color: #1a685b;
+    color: white;
+}
+#user-settings-content-section label,
+#user-settings-content-section input {
+    margin: 1rem 0;
+    width: 90%;
+    max-width: 400px;
+}
+
+.avatar-container {
+    grid-column: 1 / -1; /* Spans from the first column line to the last */
+    position: relative;
+    display: flex;
+    padding: 2rem 0;
+    align-items: center;
+    gap: 2rem;
+}
+.avatar-container img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+#password-settings-container {
+    display: none;
+}
+#password-settings-container form {
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+}
+#password-settings-container form label {
+    margin-bottom: 0;
+}
+
+/* Styles for screens up to 1024px wide (e.g., small laptops, tablets) */
+@media screen and (max-width: 1024px) {
+    #profile-settings-container form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .avatar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+/* Styles for screens up to 768px wide (e.g., tablets, large phones) */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    .user-settings-sidebar {
+        position: relative;
+        width: fit-content;
+        height: auto;
+        display: flex;
+        padding: 0;
+        background-color: rgba(220, 220, 220, 0.8);
+    }
+    #user-settings-content-section {
+        margin-left: 0;
+    }
+}
+
+/* Styles for screens up to 480px wide (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+
+}

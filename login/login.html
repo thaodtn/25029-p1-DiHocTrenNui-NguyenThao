@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../static/css/footer-style.css">
 </head>
 <body>
-    <div id="header-placeholder"></div>
+    <div id="login-page-header"></div>
 
     <main id="login-main-section">
         <img class="background" src="../static/image/backgound/green-leaves (1).jpg" alt="">
@@ -42,8 +42,15 @@
         </div>
     </main>
 
-    <div id="footer-placeholder"></div>
+    <div id="login-page-footer"></div>
+    <div id="login-page-copy-right"></div>
+
     <script src="../static/js/common-script.js"></script>
     <script src="login-script.js"></script>
+    <script>
+        fetchAndInjectElementById('../static/html/header.html', 'main-header', 'login-page-header');
+        fetchAndInjectElementById('../static/html/footer.html', 'main-footer', 'login-page-footer');
+        fetchAndInjectElementById('../static/html/footer.html', 'copy-right', 'login-page-copy-right');
+    </script>
 </body>
 </html>

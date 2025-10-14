@@ -1,5 +1,5 @@
 /******************** CSS Layout for FOOTER section *********************/
-.main-footer {
+#main-footer {
     padding: 5rem;
     display: flex;
     justify-content: space-around;
@@ -11,7 +11,7 @@
     vertical-align: center;
 }
 
-.main-footer h2 {
+#main-footer h2 {
     padding-bottom: 1rem;
 }
 
@@ -72,7 +72,9 @@
     transform: scale(1.01);
 }
 
-.copy-right {
+#copy-right {
+    position: relative;
+    float: bottom;
     width: 100%;
     padding: 2rem;
     text-align: center;
@@ -80,7 +82,7 @@
     color: #fff;
 }
 
-.copy-right p {
+#copy-right p {
     /* font-family: Lobster, sans-serif; */
     font-size: 1rem;
     margin-bottom: 0.25rem;
@@ -98,7 +100,7 @@
 
 @media only screen and (max-width : 1200px) {
     /* Footer */
-    .main-footer {
+    #main-footer {
         flex-direction: column-reverse;
         gap: 3rem;
         padding: 3rem 10vw;
