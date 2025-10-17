@@ -1,34 +1,40 @@
-import { users, currentUser } from '../static/js/mock-data.js';
+import { users, currentUser } from "/static/js/common-script.js";
+let newUser;
 
 document.getElementById('show-pw-icon').addEventListener('click', togglePasswordVisible);
 document.getElementById('hide-pw-icon').addEventListener('click', togglePasswordVisible);
+document.getElementById('login-forms').addEventListener('submit', authenLogin);
 
+export function checkCurrentUser() {
+    if (currentUser) {
+        window.location.href = '../users/dashboard.html'; //redirect to Dashboard page
+    }
+}
 
-document.getElementById('login-forms').addEventListener('submit', function (event) {
+function authenLogin(event) {
     event.preventDefault(); // stops the browser from reloading the page, allowing JavaScript to handle the submission.
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const message = document.getElementById('message');
     let checked = false;
-    
     users.some(element => {
         if ((element.email === email) && (element.password === password)) {
+            newUser = element;
             checked = true;
             return true; //stop the 'some' iteration
         }
         return false; //continue iteration
     });
-    console.log(currentUser);
     if (checked === true) {
-        message.textContent = 'Login successful.';
-        // currentUser = element;
+        localStorage.setItem('currentUser', JSON.stringify(newUser));  
+        alert('Login successful.'); //need to pop up this alert to delay for saving newUser into local storage, if not next command redirect to Dashboard page without saving newUser
         window.location.href = '../users/dashboard.html'; //redirect to Dashboard page
+        // alert('Login successful.');
     }
     else {
-        message.textContent = 'Invalid username or password.';
+        alert('Invalid username or password.');
     }
-});
+}
 
 function togglePasswordVisible() {
     const pw = document.getElementById("password");
@@ -42,3 +48,4 @@ function togglePasswordVisible() {
         document.getElementById("hide-pw-icon").style.display = "inline-block";
     }
 }
+

@@ -8,7 +8,7 @@
 <body>
     <section id="main-header">
         <nav class="nav-dropdown-container">
-            <button id="nav-dropdown-btn" onclick="openMenuDropdown()">&#9776;</button>
+            <button id="nav-dropdown-btn">&#9776;</button>
             <div id="nav-dropdown" class="nav-dropdown-list">
                 <a href="../../index.html#main-container">Trang chủ</a>
                 <a href="../../index.html#introduction-section">Giới thiệu</a>
@@ -18,7 +18,7 @@
             </div>
         </nav>
         <div class="logo-container" onclick="document.location='../../index.html'">
-            <img class="logo-img large-icons" src="../static/image/icons/logo.jpg" alt="logo">
+            <img class="logo-img large-icons" src="/static/image/icons/logo.jpg" alt="logo">
             <p class="logo-text">Đi Học Trên Núi</p>
         </div>
         <nav class="nav-container">
@@ -33,7 +33,7 @@
             <button id="register-student-btn" class="register-btn" onclick="document.location='../../register/register-student.html'">Đăng ký học sinh &#10095;&#10095;&#10095;</button>
         </div>
         <div class="register-dropdown-container">
-            <button id="register-dropdown-btn" class="register-dropdown-item" onclick="openRegisterDropdown()">Đăng ký</button>
+            <button id="register-dropdown-btn" class="register-dropdown-item">Đăng ký</button>
             <div id="register-dropdown-list" class="register-dropdown-list">
                 <a href="../../register/register-sponsor.html">Hỗ trợ</a>
                 <a href="../../register/register-student.html">Học sinh</a>
@@ -42,23 +42,35 @@
         <div class="search-container">
             <div class="search-inner-container">
                 <input class="search-input" type="text" placeholder="Tìm kiếm...">
-                <button class="search-btn"><img class="small-icons" src="../static/image/icons/search.png" alt=""></button>
+                <button class="search-btn"><img class="small-icons" src="/static/image/icons/search.png" alt=""></button>
             </div>
         </div>
     </section>
     <section id="user-header">
         <div class="left-side-bar">
             <button class="side-bar-menu-btn">&#9776;</button>
-            <div class="img-box"><img class="logo-img small-icons" src="../static/image/icons/logo.jpg" alt="logo"></div>
+            <div class="img-box"><img class="logo-img small-icons" src="/static/image/icons/logo.jpg" alt="logo"></div>
             <p class="logo-text">Đi Học Trên Núi</p>
         </div>
         <div class="right-side-bar">
             <div class="user-search-container">
                 <input class="user-search-input" type="text" placeholder="Tìm kiếm...">
-                <button class="user-search-btn"><img class="small-icons" src="../static/image/icons/search.png" alt=""></button>
+                <button class="user-search-btn"><img class="small-icons" src="/static/image/icons/search.png" alt=""></button>
             </div>
-            <div class="img-box notif-btn"><img class="small-icons" src="../static/image/icons/bell.png" alt=""></div>
-            <div class="img-box"><img class="avatar-img large-icons" src="../static/image/avatar/user-1.jpg" alt=""></div>
+            <div class="img-box notif-btn"><img class="small-icons" src="/static/image/icons/bell.png" alt=""></div>
+            <!-- <div class="img-box"><img class="avatar-img large-icons" src="/static/image/avatar/user-1.jpg" alt=""></div> -->
+            <div id="account-settings-container">
+                <button id="account-settings-btn"><img class="avatar-img large-icons" src="/static/image/avatar/user-1.jpg" alt=""></button>
+                <div id="account-settings-nav" class="account-settings-nav">                    
+                    <div id="profile-settting-btn" class="">
+                        <img src="/static/image/icons/user.png" alt=""><a href="/users/settings.html#profile-settings-container">Profile</a>
+                    </div>
+                    <div id="password-settting-btn">
+                        <img src="/static/image/icons/padlock.png" alt=""><a href="/users/settings.html#password-settings-container">Password</a>
+                    </div>
+                    <div id="log-out-btn"><img src="/static/image/icons/padlock.png" alt=""><a href="/index.html">Log-out</a></div>
+                </div>
+            </div>
         </div>
     </section>
 

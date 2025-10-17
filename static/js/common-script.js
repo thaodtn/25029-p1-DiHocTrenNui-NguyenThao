@@ -1,31 +1,50 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     // load header
-//     console.log('load header');
-//     fetch('../static/html/header.html')
-//         .then(response => response.text())
-//         .then(html => {
-//             document.getElementById("header-placeholder").innerHTML = html;
-//         });
+import { originalUsers } from "./mock-data.js";
+import { fetchProfileData, fetchPassword } from "/users/settings-script.js"
 
-//     // load footer
-//     console.log('load footer');
-//     fetch('../static/html/footer.html')
-//         .then(response => response.text())
-//         .then(html => {
-//             document.getElementById("footer-placeholder").innerHTML = html;
-//         });
-// })
+export let users = '';
+export let currentUser = '';
 
+export function initData() {
+    //Kiểm tra xem dữ liệu trong localStorage đã có hay chưa
+    if (!localStorage.getItem('users')) {
+        //sao chép toàn bộ dữ liệu từ mock-data.js vào localStorage
+        localStorage.setItem('users', JSON.stringify(originalUsers));
+        //clear currentUser
+        localStorage.setItem('currentUser', '');
+    }
+    else {
+        //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
+        users = JSON.parse(localStorage.getItem('users'));
+        if (localStorage.getItem('currentUser')) {
+            currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        }
 
+    }
+    console.log('Finish initData()');
+}
+
+export async function loadMainHeaderContent(sourcePageURL, sourceElementId, destinationElementId) {
+    await fetchAndInjectElementById(sourcePageURL, sourceElementId, destinationElementId);
+    document.getElementById('nav-dropdown-btn').addEventListener('click', openMenuDropdown);
+    document.getElementById('register-dropdown-btn').addEventListener('click', openRegisterDropdown);
+}
+
+export async function loadUserHeaderContent(sourcePageURL, sourceElementId, destinationElementId) {
+    await fetchAndInjectElementById(sourcePageURL, sourceElementId, destinationElementId);
+    document.getElementById('account-settings-btn').addEventListener('click', openAccountSettingDropdown);
+    document.getElementById('profile-settting-btn').addEventListener('click', enableProfileSetting);
+    document.getElementById('password-settting-btn').addEventListener('click', enablePasswordSetting);
+    document.getElementById('log-out-btn').addEventListener('click', logout);
+}
 
 // Use async/await for cleaner asynchronous code.
-async function fetchAndInjectElementById(sourcePageURL, sourceElementId, destinationElementId) {
+export async function fetchAndInjectElementById(sourcePageURL, sourceElementId, destinationElementId) {
     try {        
         // Get the container element where the fetched content will be placed.
         const container = document.getElementById(destinationElementId);
 
         // Step 1: Fetch the HTML as a plain text response.
-        console.log('Fetch the HTML as a plain text response.');
+        console.log('Starting fetchAndInjectElementById into',destinationElementId);
         const response = await fetch(sourcePageURL);
 
         // Ensure the request was successful.
@@ -53,7 +72,7 @@ async function fetchAndInjectElementById(sourcePageURL, sourceElementId, destina
         // Step 4: Insert the body's content into your container.
         container.innerHTML = elementContent;
 
-        console.log('Successfully fetched and injected the body content.');
+        console.log('Successfully fetchAndInjectElementById.');
 
     } catch (error) {
         console.error('Failed to fetch and inject content:', error);
@@ -69,10 +88,42 @@ function openMenuDropdown() {
 function openRegisterDropdown() {
     document.getElementById("register-dropdown-list").classList.toggle("show");
 }
+function openAccountSettingDropdown() {
+    document.getElementById("account-settings-nav").classList.toggle("show");
+}
+
+function enableProfileSetting() {
+    const btn = document.getElementById('profile-settting-btn');
+    if (!btn.classList.contains('active')) {
+        btn.classList.add('active');
+        document.getElementById('profile-settings-container').style.display = 'block';
+    }
+    document.getElementById('password-settting-btn').classList.remove('active');
+    document.getElementById('password-settings-container').style.display = 'none';
+    fetchProfileData();
+}
+
+function enablePasswordSetting() {
+    const btn = document.getElementById('password-settting-btn');
+    if (!btn.classList.contains('active')) {
+        btn.classList.add('active');
+        document.getElementById('password-settings-container').style.display = 'block';
+    }
+    document.getElementById('profile-settting-btn').classList.remove('active');
+    document.getElementById('profile-settings-container').style.display = 'none';
+    fetchPassword();
+}
+
+function logout() {
+    //reset currentUser
+    currentUser = '';
+    localStorage.setItem('currentUser', currentUser);
+    //window.location.href = '/index.html'; //dont know why it cannot redirect to Home page by this command
+}
+
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
     if (!event.target.matches("#nav-dropdown-btn")) {
-        console.log(event);
         let list = document.getElementsByClassName('nav-dropdown-list');
         for (let i = 0; i < list.length; i++) {
             if (list[i].classList.contains('show')) {
@@ -81,7 +132,6 @@ window.onclick = function (event) {
         }
     }
     if (!event.target.matches("#register-dropdown-btn")) {
-        console.log(event);
         let list = document.getElementsByClassName('register-dropdown-list');
         for (let i = 0; i < list.length; i++) {
             if (list[i].classList.contains('show')) {
@@ -90,3 +140,21 @@ window.onclick = function (event) {
         }
     }
 }
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     // load header
+//     console.log('load header');
+//     fetch('/static/html/header.html')
+//         .then(response => response.text())
+//         .then(html => {
+//             document.getElementById("header-placeholder").innerHTML = html;
+//         });
+
+//     // load footer
+//     console.log('load footer');
+//     fetch('/static/html/footer.html')
+//         .then(response => response.text())
+//         .then(html => {
+//             document.getElementById("footer-placeholder").innerHTML = html;
+//         });
+// })

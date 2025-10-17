@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
-    <link rel="icon" type="image/jpg" href="../static/image/icons/logo.jpg">
-    <link rel="stylesheet" href="../static/css/common-style.css">
-    <link rel="stylesheet" href="../static/css/header-style.css">
+    <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
+    <link rel="stylesheet" href="/static/css/common-style.css">
+    <link rel="stylesheet" href="/static/css/header-style.css">
     <link rel="stylesheet" href="../users/settings-style.css">
-    <link rel="stylesheet" href="../static/css/footer-style.css">
+    <link rel="stylesheet" href="/static/css/footer-style.css">
 </head>
 
 <body>
@@ -20,21 +20,21 @@
 
     <main id="user-settings-main-section">
         <!-- <h2 class="title">User settings</h2> -->
-        <section class="user-settings-sidebar">
+        <!-- <section class="user-settings-sidebar" >
             <div id="profile-settting-btn" class="active">
-                <img class="small-icons" src="../static/image/icons/user.png" alt="">
-                <a href="#" onclick="enableProfileSetting()">Profile Settings</a>
+                <img class="small-icons" src="/static/image/icons/user.png" alt="">
+                <a href="#">Profile Settings</a>
             </div>
             <div id="password-settting-btn">
-                <img class="small-icons" src="../static/image/icons/padlock.png" alt="">
-                <a href="#" onclick="enablePasswordSetting()">Password</a>
+                <img class="small-icons" src="/static/image/icons/padlock.png" alt="">
+                <a href="#">Password</a>
             </div>
-        </section>
+        </section> -->
         <section id="user-settings-content-section">
             <div id="profile-settings-container">
                 <form action="">
                     <div class="avatar-container">
-                        <img class="avatar-img" src="../static/image/avatar/user-1.jpg" alt="">
+                        <img class="avatar-img" src="/static/image/avatar/user-1.jpg" alt="">
                         <button type="button">Thay đổi ảnh đại diện</button>
                     </div>
                     <div>
@@ -43,19 +43,19 @@
                     </div>
                     <div>
                         <label for="user-email">Email:</label> <br>
-                        <input type="text" name="user-email" id="user-email" readonly>
+                        <input type="text" name="user-email" id="user-email" disabled>
                     </div>
                     <div>
                         <label for="user-phone-number">Số Điện Thoại:</label> <br>
                         <input type="text" name="user-phone-number" id="user-phone-number" required>
                     </div>
                     <div>
-                        <label for="user-code">Mã số:</label> <br>
-                        <input type="text" name="user-code" id="user-code" readonly>
+                        <label for="user-id">Mã số:</label> <br>
+                        <input type="text" name="user-id" id="user-id" disabled>
                     </div>
                     <div>
                         <label for="user-role">Vai trò:</label> <br>
-                        <input type="text" name="user-role" id="user-role" readonly>
+                        <input type="text" name="user-role" id="user-role" disabled>
                     </div>
 
                     <button class="submit-btn" type="submit">Lưu thay đổi</button>
@@ -79,11 +79,14 @@
 
     <div id="settings-page-copy-right"></div>
 
-    <script src="../static/js/common-script.js"></script>
-    <script src="settings-script.js"></script>
-    <script>
-        fetchAndInjectElementById('../static/html/header.html', 'user-header', 'settings-page-header');
-        fetchAndInjectElementById('../static/html/footer.html', 'copy-right', 'settings-page-copy-right');
+    <script type="module" src="/static/js/common-script.js"></script>
+    <script type="module" src="/static/js/mock-data.js"></script>
+    <script type="module" src="./settings-script.js"></script>   
+    <script type="module">
+        import { initData, loadUserHeaderContent, fetchAndInjectElementById } from '/static/js/common-script.js';
+        initData();
+        loadUserHeaderContent('/static/html/header.html', 'user-header', 'settings-page-header');
+        fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'settings-page-copy-right');
     </script>
 </body>
 

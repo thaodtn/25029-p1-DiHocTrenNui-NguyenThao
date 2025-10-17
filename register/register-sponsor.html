@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng kí nhận hỗ trợ</title>
-    <link rel="icon" type="image/jpg" href="../static/image/icons/logo.jpg">
-    <link rel="stylesheet" href="../static/css/common-style.css">
-    <link rel="stylesheet" href="../static/css/header-style.css">
+    <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
+    <link rel="stylesheet" href="/static/css/common-style.css">
+    <link rel="stylesheet" href="/static/css/header-style.css">
     <link rel="stylesheet" href="../register/register-style.css">
-    <link rel="stylesheet" href="../static/css/footer-style.css">
+    <link rel="stylesheet" href="/static/css/footer-style.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 
     <main id="register-sponsor-main-section">
         <div class="title-container">
-            <img src="../static/image/slides/heart.png" alt="">
+            <img src="/static/image/slides/heart.png" alt="">
             <div class="title-inner-container">
                 <h2 class="title">Người Hỗ Trợ</h2>
                 <p class="slogan">Sự chia sẻ và gắn kết của bạn sẽ giúp cho hành trình học chữ của các em nhỏ
@@ -55,7 +55,7 @@
                     <label for="comment">Thông tin chia sẻ thêm (nếu có)</label>
                     <input type="text" name="comment" id="comment">
 
-                    <button id="sponsor-submit-btn">Gửi thông tin</button>
+                    <button type="submit" id="sponsor-submit-btn">Gửi thông tin</button>
                 </form>
             </div>
             <div class="donate-forms">
@@ -72,11 +72,13 @@
 
     <div id="register-page-footer"></div>
     <div id="register-page-copy-right"></div>
-    <script src="../static/js/common-script.js"></script>
-    <script>
-        fetchAndInjectElementById('../static/html/header.html', 'main-header', 'register-page-header');
-        fetchAndInjectElementById('../static/html/footer.html', 'main-footer', 'register-page-footer');
-        fetchAndInjectElementById('../static/html/footer.html', 'copy-right', 'register-page-copy-right');
+    <script type="module" src="/static/js/common-script.js"></script>
+    <script type="module" src="/register/register-script.js"></script>
+    <script type="module">
+        import {loadMainHeaderContent, fetchAndInjectElementById} from '/static/js/common-script.js';
+        loadMainHeaderContent('/static/html/header.html', 'main-header', 'register-page-header');
+        fetchAndInjectElementById('/static/html/footer.html', 'main-footer', 'register-page-footer');
+        fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'register-page-copy-right');
     </script>
 </body>
 
