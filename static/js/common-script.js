@@ -139,6 +139,14 @@ window.onclick = function (event) {
             }
         }
     }
+    if (!event.target.matches("#account-settings-avatar")) {
+        let list = document.getElementsByClassName('account-settings-nav');
+        for (let i = 0; i < list.length; i++) {
+            if (list[i].classList.contains('show')) {
+                list[i].classList.remove('show');
+            }
+        }
+    }
 }
 
 // document.addEventListener('DOMContentLoaded', function () {

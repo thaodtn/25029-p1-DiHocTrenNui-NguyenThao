@@ -49,10 +49,10 @@
     <script type="module" src="/static/js/mock-data.js"></script>
     <script type="module" src="login-script.js"></script>
     <script type="module" >
-        import { initData, fetchAndInjectElementById } from '/static/js/common-script.js';
+        import { initData, loadMainHeaderContent, fetchAndInjectElementById } from '/static/js/common-script.js';
         import { checkCurrentUser } from './login-script.js';
         initData();
-        fetchAndInjectElementById('/static/html/header.html', 'main-header', 'login-page-header');
+        loadMainHeaderContent('/static/html/header.html', 'main-header', 'login-page-header');
         fetchAndInjectElementById('/static/html/footer.html', 'main-footer', 'login-page-footer');
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'login-page-copy-right');
         checkCurrentUser();
