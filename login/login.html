@@ -50,11 +50,12 @@
     <script type="module" src="login-script.js"></script>
     <script type="module" >
         import { initData, loadMainHeaderContent, fetchAndInjectElementById } from '/static/js/common-script.js';
-        import { checkCurrentUser } from './login-script.js';
+        import { loadLoginPageEvents, checkCurrentUser } from './login-script.js';
         initData();
         loadMainHeaderContent('/static/html/header.html', 'main-header', 'login-page-header');
         fetchAndInjectElementById('/static/html/footer.html', 'main-footer', 'login-page-footer');
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'login-page-copy-right');
+        loadLoginPageEvents();
         checkCurrentUser();
     </script>
 </body>

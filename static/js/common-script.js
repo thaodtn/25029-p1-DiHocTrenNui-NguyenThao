@@ -1,5 +1,4 @@
 import { originalUsers } from "./mock-data.js";
-import { fetchProfileData, fetchPassword } from "/users/settings-script.js"
 
 export let users = '';
 export let currentUser = '';
@@ -100,7 +99,6 @@ function enableProfileSetting() {
     }
     document.getElementById('password-settting-btn').classList.remove('active');
     document.getElementById('password-settings-container').style.display = 'none';
-    fetchProfileData();
 }
 
 function enablePasswordSetting() {
@@ -111,7 +109,6 @@ function enablePasswordSetting() {
     }
     document.getElementById('profile-settting-btn').classList.remove('active');
     document.getElementById('profile-settings-container').style.display = 'none';
-    fetchPassword();
 }
 
 function logout() {

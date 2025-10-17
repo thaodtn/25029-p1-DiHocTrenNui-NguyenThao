@@ -58,20 +58,20 @@
                         <input type="text" name="user-role" id="user-role" disabled>
                     </div>
 
-                    <button class="submit-btn" type="submit">Lưu thay đổi</button>
+                    <button id="save-profile-changes-btn" class="submit-btn" type="submit">Lưu thay đổi</button>
                 </form>
                 
                 
             </div>
             <div id="password-settings-container" class="hidden">
-                <form action="">
+                <form id="password-settings-form" action="">
                     <label for="current-pw">Mật khẩu hiện tại:</label>
                     <input type="password" id="current-pw" name="current-pw" required>
                     <label for="new-pw">Mật khẩu mới:</label>
                     <input type="password" id="new-pw" name="new-pw" required>
                     <label for="confirmed-pw">Nhập lại mật khẩu mới:</label>
                     <input type="password" id="confirmed-pw" name="confirmed-pw" required>
-                    <button type="submit">Thay đổi</button>
+                    <button id="save-password-changes-btn" type="submit">Thay đổi</button>
                 </form>
             </div>         
         </section>
@@ -84,9 +84,11 @@
     <script type="module" src="./settings-script.js"></script>   
     <script type="module">
         import { initData, loadUserHeaderContent, fetchAndInjectElementById } from '/static/js/common-script.js';
+        import { loadSettingsPageEvents } from './settings-script.js';
         initData();
         loadUserHeaderContent('/static/html/header.html', 'user-header', 'settings-page-header');
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'settings-page-copy-right');
+        loadSettingsPageEvents();
     </script>
 </body>
 

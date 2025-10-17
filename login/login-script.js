@@ -1,9 +1,12 @@
 import { users, currentUser } from "/static/js/common-script.js";
 let newUser;
 
-document.getElementById('show-pw-icon').addEventListener('click', togglePasswordVisible);
-document.getElementById('hide-pw-icon').addEventListener('click', togglePasswordVisible);
-document.getElementById('login-forms').addEventListener('submit', authenLogin);
+export function loadLoginPageEvents() {
+    document.getElementById('show-pw-icon').addEventListener('click', togglePasswordVisible);
+    document.getElementById('hide-pw-icon').addEventListener('click', togglePasswordVisible);
+    document.getElementById('login-forms').addEventListener('submit', authenLogin);
+}
+
 
 export function checkCurrentUser() {
     if (currentUser) {
