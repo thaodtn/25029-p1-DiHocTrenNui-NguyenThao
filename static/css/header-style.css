@@ -164,7 +164,7 @@
     outline: none;
 }
 
-/******************** CSS Layout for USER HEADER section *********************/
+/******************* CSS Layout for USER HEADER section ********************
 #user-header {
     position: fixed;
     top: 0;
@@ -249,7 +249,7 @@
     padding: 0;
     margin: 0;
 }
-/* hidden by default */
+/* hidden by default 
 .account-settings-nav {
     display: none;
     position: absolute;
@@ -284,7 +284,7 @@
     margin: 0;
     
 }
-
+*/
 .show {display: block;}
 
 /* Larger desktops and monitors are default layout ----------- */

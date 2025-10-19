@@ -7,6 +7,26 @@ export function loadSettingsPageEvents() {
     fetchProfileData();
 }
 
+export function enableProfileSetting() {
+    const btn = document.getElementById('profile-settting-btn');
+    if (!btn.classList.contains('active')) {
+        btn.classList.add('active');
+        document.getElementById('profile-settings-container').style.display = 'block';
+    }
+    document.getElementById('password-settting-btn').classList.remove('active');
+    document.getElementById('password-settings-container').style.display = 'none';
+}
+
+export function enablePasswordSetting() {
+    const btn = document.getElementById('password-settting-btn');
+    if (!btn.classList.contains('active')) {
+        btn.classList.add('active');
+        document.getElementById('password-settings-container').style.display = 'block';
+    }
+    document.getElementById('profile-settting-btn').classList.remove('active');
+    document.getElementById('profile-settings-container').style.display = 'none';
+}
+
 export function fetchProfileData() {
     // document.getElementById('avatar-img');    
     document.getElementById('user-name').value = currentUser.name;
@@ -15,9 +35,6 @@ export function fetchProfileData() {
     document.getElementById('user-id').value = currentUser.id;
     document.getElementById('user-role').value = currentUser.role;
     console.log('finish fetchProfileData');
-}
-export function fetchPassword() {
-    //document.getElementById('current-pw').value = currentUser.password;
 }
 
 function saveProfileChanges(event) {

@@ -1,0 +1,52 @@
+#user-list-main-section {
+    position: relative;
+    margin-top: 4rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: whitesmoke;
+    min-height: calc(100vh - 10rem);
+}
+
+#add-user-btn {
+    position: relative;
+    width: 11rem;
+    padding: 0.8rem 0.5rem;
+    border-radius: 5px;
+    background-color: #1a685b;
+    color: white;
+    text-align: center;
+}
+
+.user-list-search-container {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#user-list-search-btn {
+    position: relative;
+    width: 7rem;
+    padding: 0.8rem 0.5rem;
+    border-radius: 5px;
+    background-color: #1a685b;
+    color: white;
+    text-align: center;
+}
+
+.user-list-table-container {
+    position: relative;
+    background-color: white;
+}
+
+.edit-user-btn {
+    position: relative;
+    width: 3.5rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    margin: 0;
+}

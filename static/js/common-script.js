@@ -1,7 +1,8 @@
-import { originalUsers } from "./mock-data.js";
+import { originalUsers, accessControlList } from "./mock-data.js";
 
 export let users = '';
 export let currentUser = '';
+export let currentUserControlList = '';
 
 export function initData() {
     //Kiểm tra xem dữ liệu trong localStorage đã có hay chưa
@@ -26,14 +27,6 @@ export async function loadMainHeaderContent(sourcePageURL, sourceElementId, dest
     await fetchAndInjectElementById(sourcePageURL, sourceElementId, destinationElementId);
     document.getElementById('nav-dropdown-btn').addEventListener('click', openMenuDropdown);
     document.getElementById('register-dropdown-btn').addEventListener('click', openRegisterDropdown);
-}
-
-export async function loadUserHeaderContent(sourcePageURL, sourceElementId, destinationElementId) {
-    await fetchAndInjectElementById(sourcePageURL, sourceElementId, destinationElementId);
-    document.getElementById('account-settings-btn').addEventListener('click', openAccountSettingDropdown);
-    document.getElementById('profile-settting-btn').addEventListener('click', enableProfileSetting);
-    document.getElementById('password-settting-btn').addEventListener('click', enablePasswordSetting);
-    document.getElementById('log-out-btn').addEventListener('click', logout);
 }
 
 // Use async/await for cleaner asynchronous code.
@@ -87,36 +80,7 @@ function openMenuDropdown() {
 function openRegisterDropdown() {
     document.getElementById("register-dropdown-list").classList.toggle("show");
 }
-function openAccountSettingDropdown() {
-    document.getElementById("account-settings-nav").classList.toggle("show");
-}
 
-function enableProfileSetting() {
-    const btn = document.getElementById('profile-settting-btn');
-    if (!btn.classList.contains('active')) {
-        btn.classList.add('active');
-        document.getElementById('profile-settings-container').style.display = 'block';
-    }
-    document.getElementById('password-settting-btn').classList.remove('active');
-    document.getElementById('password-settings-container').style.display = 'none';
-}
-
-function enablePasswordSetting() {
-    const btn = document.getElementById('password-settting-btn');
-    if (!btn.classList.contains('active')) {
-        btn.classList.add('active');
-        document.getElementById('password-settings-container').style.display = 'block';
-    }
-    document.getElementById('profile-settting-btn').classList.remove('active');
-    document.getElementById('profile-settings-container').style.display = 'none';
-}
-
-function logout() {
-    //reset currentUser
-    currentUser = '';
-    localStorage.setItem('currentUser', currentUser);
-    //window.location.href = '/index.html'; //dont know why it cannot redirect to Home page by this command
-}
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
@@ -136,30 +100,16 @@ window.onclick = function (event) {
             }
         }
     }
-    if (!event.target.matches("#account-settings-avatar")) {
-        let list = document.getElementsByClassName('account-settings-nav');
-        for (let i = 0; i < list.length; i++) {
-            if (list[i].classList.contains('show')) {
-                list[i].classList.remove('show');
-            }
-        }
-    }
+    
 }
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     // load header
-//     console.log('load header');
-//     fetch('/static/html/header.html')
-//         .then(response => response.text())
-//         .then(html => {
-//             document.getElementById("header-placeholder").innerHTML = html;
-//         });
-
-//     // load footer
-//     console.log('load footer');
-//     fetch('/static/html/footer.html')
-//         .then(response => response.text())
-//         .then(html => {
-//             document.getElementById("footer-placeholder").innerHTML = html;
-//         });
-// })
+export function checkUserControl(userId, action) {
+    //get user's role
+    let checkedUser = users.find(element => element.id === userId);
+    if (checkedUser) {
+        let userRole = checkedUser.role;
+        //check action
+        if (accessControlList[userRole][action] === true) return true;
+        else return false;
+    } else return false;
+}

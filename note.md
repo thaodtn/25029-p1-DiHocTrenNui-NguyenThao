@@ -107,7 +107,7 @@ static
 - [x] Login page (A.3)  
 - [x] Form quản lý tài khoản (A.4)  
 
-# Week 3:
+## Week 3:
 - [ ] Trang quản lý và tạo tài khoản mới (A.2)   
 - [ ] Trang xem chi tiết (các chức năng từ Dashboard theo user role tương ứng)  
 
