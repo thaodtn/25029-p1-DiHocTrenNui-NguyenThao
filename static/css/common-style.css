@@ -48,17 +48,6 @@ p {
     line-height: 1.6;
 }
 
-table {
-    border-collapse: collapse;
-    /* border: 1px solid #e5e5e5; */
-}
-
-th, td {
-    border-bottom: 1px solid #e5e5e5;
-    line-height: 2;
-    padding: 0.5rem 1rem;
-}
-
 .sections {
     margin: 2rem 15vw;
 }
