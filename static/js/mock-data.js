@@ -1,8 +1,9 @@
 export const originalUsers = [
-    {id: 1, name: "Nguyen Thao", email: "thao@gmail.com", password: "123456", phone: "0905111111", role: "admin" },
-    {id: 2, name: "Vu Lien", email: "lien@gmail.com", password: "123456", phone: "0905222222", role: "volunteer" },
-    {id: 3, name: "Minh Huy", email: "huy@gmail.com", password: "123456", phone: "0905333333", role: "sponsor" },
-    {id: 4, name: "Ngoc Thu", email: "thu@gmail.com", password: "123456", phone: "0905444444", role: "teacher" },
+    {id: 'QTV0001', name: "Nguyen Thao", email: "thao@gmail.com", password: "123456", phone: "0905111111", role: "admin", status: 'active' },
+    {id: 'TNV0001', name: "Vu Lien", email: "lien@gmail.com", password: "123456", phone: "0905222222", role: "volunteer", status: 'active' },
+    {id: 'NHT0001', name: "Minh Huy", email: "huy@gmail.com", password: "123456", phone: "0905333333", role: "sponsor", status: 'active' },
+    {id: 'NHT0002', name: "Van Cuong", email: "cuong@gmail.com", password: "123456", phone: "0905777777", role: "sponsor", status: 'inactive' },
+    {id: 'GVN0001', name: "Ngoc Thu", email: "thu@gmail.com", password: "123456", phone: "0905444444", role: "teacher", status: 'active' },
 ];
 
 

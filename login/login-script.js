@@ -19,11 +19,9 @@ function authenLogin(event) {
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    let checked = false;
-    users.some(element => {
-        if ((element.email === email) && (element.password === password)) {
+    let checked = users.some(element => {
+        if ((element.status === 'active') && (element.email === email) && (element.password === password)) {
             newUser = element;
-            checked = true;
             return true; //stop the 'some' iteration
         }
         return false; //continue iteration
@@ -52,3 +50,15 @@ function togglePasswordVisible() {
     }
 }
 
+/* backup in-case localStorage.setItem hadn't finished while window.location.href redirect to new page
+saveUserToLocalStorage(newUser).then(() => {
+  window.location.href = '../users/dashboard.html';
+});
+
+function saveUserToLocalStorage(user) {
+  return new Promise((resolve) => {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    resolve();
+  });
+}
+*/

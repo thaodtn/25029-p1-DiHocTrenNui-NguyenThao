@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <script src="https://kit.fontawesome.com/d9b040b21a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
     <link rel="stylesheet" href="/static/css/common-style.css">
     <link rel="stylesheet" href="../users/dashboard-style.css">
@@ -14,30 +15,7 @@
 <body>
     <header id="user-header">
         <div class="left-side-bar">
-            <button id="side-bar-menu-btn" class="side-bar-menu-btn">&#9776;</button>
-            <div id="left-side-panel" class="left-side-panel">
-                <button id="close-left-side-panel-btn" class="close-left-side-panel-btn">x</button>
-                <div id="config-user-btn">
-                    <img src="/static/image/icons/user-config.png" alt="">
-                    <a href="/management/user-list.html">Quản lý người dùng</a>
-                </div>
-                <div id="view-student-btn">
-                    <img src="/static/image/icons/children (2).png" alt="">
-                    <a href="#">Danh sách Học Sinh</a>
-                </div>
-                <div id="view-sponsor-btn">
-                    <img src="/static/image/icons/investor.png" alt="">
-                    <a href="#">Danh sách Người Hỗ Trợ</a>
-                </div>
-                <div id="view-school-btn">
-                    <img src="/static/image/icons/school.png" alt="">
-                    <a href="#">Danh sách Trường Học</a>
-                </div>
-                <div id="view-transaction-record-btn">
-                    <img src="/static/image/icons/payment.png" alt="">
-                    <a href="#">Danh sách Sao kê</a>
-                </div>
-            </div>
+            <button id="side-bar-menu-btn" class="side-bar-menu-btn"><i class="fa-solid fa-bars fa-xl"></i></button>            
             <div class="img-box"><img class="logo-img small-icons" src="/static/image/icons/logo.jpg" alt="logo">
             </div>
             <p class="logo-text">Đi Học Trên Núi</p>
@@ -56,19 +34,51 @@
                 <div id="account-settings-nav" class="account-settings-nav">
                     <div id="profile-settting-btn" class="">
                         <img src="/static/image/icons/user.png" alt="">
-                        <a href="/users/settings.html#profile-settings-container">Profile</a>
+                        <a href="/users/settings.html">Profile</a>
                     </div>
-                    <div id="password-settting-btn">
-                        <img src="/static/image/icons/padlock.png" alt="">
-                        <a href="/users/settings.html#password-settings-container">Password</a>
-                    </div>
-                    <div id="log-out-btn"><img src="/static/image/icons/logout.png" alt="">
-                        <a href="#">Log-out</a></div>
+                    <div id="logout-btn"><img src="/static/image/icons/logout.png" alt="">
+                        <span href="#">Logout</span></div>
                 </div>
             </div>
         </div>
     </header>
+
+    
+    
     <main id="user-dashboard-main-section">
+        <section id="left-side-panel" class="left-side-panel">
+            <button id="close-left-side-panel-btn" class="close-left-side-panel-btn">x</button>
+            <div id="goto-dashboard-btn">
+                <i class="fa-regular fa-house"></i>
+                <a href="/users/dashboard.html">Trang chủ</a>                
+            </div>
+            <hr>
+            <div id="config-user-btn">
+                <img src="/static/image/icons/user-config.png" alt="">
+                <a href="/management/user-list.html">Quản lý người dùng</a>
+            </div>
+            <div id="view-student-btn">
+                <img src="/static/image/icons/children (2).png" alt="">
+                <a href="#">Danh sách Học Sinh</a>
+            </div>
+            <div id="view-sponsor-btn">
+                <img src="/static/image/icons/investor.png" alt="">
+                <a href="#">Danh sách Người Hỗ Trợ</a>
+            </div>
+            <div id="view-school-btn">
+                <img src="/static/image/icons/school.png" alt="">
+                <a href="#">Danh sách Trường Học</a>
+            </div>
+            <div id="view-transaction-record-btn">
+                <img src="/static/image/icons/payment.png" alt="">
+                <a href="#">Danh sách Sao kê</a>
+            </div>
+            <hr>
+            <div id="statistic-btn">
+                <i class="fa-solid fa-chart-line"></i>
+                <a href="#">Thống kê - Báo cáo</a>
+            </div>
+        </section>
 
     </main>
 
@@ -77,9 +87,10 @@
     <script type="module" src="./dashboard-script.js"></script>
     <script type="module">
         import { initData, fetchAndInjectElementById } from '/static/js/common-script.js';
-        import { loadUserHeaderEvents } from '/users/dashboard-script.js';
+        import { loadUserHeaderEvents, loadLeftSideBarEvents } from '/users/dashboard-script.js';
         initData();
         loadUserHeaderEvents();
+        loadLeftSideBarEvents();
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'dashboard-page-copy-right');
     </script>
 </body>

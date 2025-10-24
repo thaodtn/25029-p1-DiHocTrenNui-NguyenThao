@@ -95,6 +95,9 @@ static
 - volunteer
 - sponsor
 - teacher
+### Status:
+- active: account đang hoạt động, chức năng được cấp theo vai trờ.
+- inactive: account đã bị khóa, không đăng nhập được nữa, vẫn giữ lại để tra cứu lịch sử chứ không xóa.
 
 # Tasks tracking:
 ## Week 1:
@@ -111,3 +114,7 @@ static
 - [ ] Trang quản lý và tạo tài khoản mới (A.2)   
 - [ ] Trang xem chi tiết (các chức năng từ Dashboard theo user role tương ứng)  
 
+## Comments / Feedback:
+- [x] chỉnh lại giao diện trang Profile và đổi mật khẩu (căn nội dung vào giữa, bóp 2 bên).
+- [x] đưa left-side-bar sang phần main của dashboard và hiển thị 100% height
+- [ ] chỉnh lại giao diện trang user's list: các button và ô input thẳng hàng ngang với màn hình lớn / thẳng hàng dọc với màn hình mobile

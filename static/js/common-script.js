@@ -23,6 +23,45 @@ export function initData() {
     console.log('Finish initData()');
 }
 
+export function updateUserById(selectedUser) {
+    let index = users.findIndex(user => user.id === selectedUser.id);
+    if (index >= 0) {
+        users[index] = selectedUser;
+        //sao chép toàn bộ dữ liệu mới của mảng users vào localStorage
+        localStorage.setItem('users', JSON.stringify(users));
+        alert('Cập nhật thành công.');
+    }
+    else alert('Cập nhật thất bại. Vui lòng thử lại!');
+}
+
+export function updateUserByIndex(index, newUser) {
+    if (index < users.length) {
+        users[index] = newUser;
+        //sao chép toàn bộ dữ liệu mới của mảng users vào localStorage
+        localStorage.setItem('users', JSON.stringify(users));
+        alert('Cập nhật thành công.');
+    }
+    else alert('Cập nhật thất bại. Vui lòng thử lại!');
+}
+
+export function addNewUser(newUser) {
+    users.push(newUser);
+    //sao chép toàn bộ dữ liệu mới của mảng users vào localStorage
+    localStorage.setItem('users', JSON.stringify(users));
+    alert('Cập nhật thành công.');
+}
+
+export function deactiveUser(selectedUser) {
+    let index = users.findIndex(user => user.id === selectedUser.id);
+    if (index >= 0) {
+        users[index].status = 'inactive';
+        //sao chép toàn bộ dữ liệu mới của mảng users vào localStorage
+        localStorage.setItem('users', JSON.stringify(users));
+        alert('Cập nhật thành công.');
+    }
+    else alert('Cập nhật thất bại. Vui lòng thử lại!');
+}
+
 export async function loadMainHeaderContent(sourcePageURL, sourceElementId, destinationElementId) {
     await fetchAndInjectElementById(sourcePageURL, sourceElementId, destinationElementId);
     document.getElementById('nav-dropdown-btn').addEventListener('click', openMenuDropdown);

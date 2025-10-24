@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User's List</title>
+    <script src="https://kit.fontawesome.com/d9b040b21a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
     <link rel="stylesheet" href="/static/css/common-style.css">
     <link rel="stylesheet" href="/users/dashboard-style.css">
@@ -13,37 +14,104 @@
 <body>
     <header id="user-list-page-header"></header>
 
-    <main id="user-list-main-section">
-        <h3>Danh Sách User</h3>
-        <button id="add-user-btn">+ Thêm User mới</button>
-        <div class="user-list-search-container">
-            <input type="text" class="input-box" placeholder="Tìm Họ Tên, email, số điện thoại ...">
-            <select name="search-user-role" id="search-user-role">
-                <option value="all">Tất cả</option>
-                <option value="admin">Quản Trị Viên</option>
-                <option value="volunteer">Tình Nguyện Viên</option>
-                <option value="sponsor">Người Hỗ Trợ</option>
-                <option value="teacher">Giáo Viên</option>
-            </select>
-            <button id="user-list-search-btn">Tìm kiếm</button>
-        </div>
-        <div class="user-list-table-container">
-            <table class="user-table">
-                <thead>
-                    <tr>
-                        <th>Họ Tên</th>
-                        <th>Email</th>
-                        <th>Số Điện Thoại</th>
-                        <th>Mã số</th>
-                        <th>Vai Trò</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="user-table-body">
-
-                </tbody>
-            </table>
-        </div>
+    <main id="userslist-main-section">
+        <section id="userslist-left-side-pannel"></section>
+        <section class="userslist-content-section">
+            <div class="userslist-title">
+                <p>Quản lý Người dùng</p>
+            </div>
+            <div class="userslist-action-container">
+                <input type="text" class="input-search-text" placeholder="Tìm Họ Tên, email, số điện thoại ...">
+                <select name="search-user-role" id="search-user-role" class="input-search-filter">
+                    <option value="all">Tất cả</option>
+                    <option value="admin">Quản Trị Viên</option>
+                    <option value="volunteer">Tình Nguyện Viên</option>
+                    <option value="sponsor">Người Hỗ Trợ</option>
+                    <option value="teacher">Giáo Viên</option>
+                </select>
+                <button id="userslist-search-btn"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+                <button id="open-form-add-user-btn"><i class="fa-solid fa-user-plus fa-lg"></i></button>
+            </div>
+            <div class="user-list-table-container">
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>Họ Tên</th>
+                            <th>Email</th>
+                            <th>Số Điện Thoại</th>
+                            <th>Mã số</th>
+                            <th>Vai Trò</th>
+                            <th>Trạng Thái</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body">    
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="add-new-user-modal-container" class="modal-container">
+            <form class="add-new-user-form-container" action="">
+                <p class="form-title">Thông tin của Người dùng mới</p>
+                <label for="user-name">Họ Tên</label>
+                <input type="text" name="user-name" id="user-name" required>
+                <label for="user-email">Email</label>
+                <input type="email" name="user-email" id="user-email" required>
+                <label for="user-password">Mật khẩu</label>
+                <input type="text" name="user-password" id="user-password" required>
+                <label for="user-phone">Số Điện Thoại</label>
+                <input type="tel" name="user-phone" id="user-phone" required>
+                <label for="user-id">Mã Số</label>
+                <input type="text" name="user-id" id="user-id" required>
+                <label for="user-role">Vai Trò</label>
+                <select name="user-role" id="user-role">
+                    <option value="admin">Quản Trị Viên</option>
+                    <option value="volunteer">Tình Nguyện Viên</option>
+                    <option value="sponsor">Người Hỗ Trợ</option>
+                    <option value="teacher">Giáo Viên</option>
+                </select>
+                <label for="user-status">Trạng Thái</label>
+                <select name="user-status" id="user-status" required>
+                    <option value="active">active</option>
+                    <option value="inactive">inactive</option>
+                </select>
+                <div class="button-group">
+                    <button id="add-new-user-btn" class="submit-btn" type="submit"><i class="fa-solid fa-user-plus fa-lg"></i>Thêm</button>
+                    <button id="close-add-user-form-btn" type="button"><i class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                </div>
+            </form>
+        </section>
+        <section id="edit-user-modal-container" class="modal-container">
+            <form class="edit-user-form-container" action="">
+                <p class="form-title">Cập nhật lại thông tin của Người dùng</p>
+                <label for="edit-user-name">Họ Tên</label>
+                <input type="text" name="edit-user-name" id="edit-user-name" required>
+                <label for="edit-user-email">Email</label>
+                <input type="email" name="edit-user-email" id="edit-user-email" required>
+                <label for="edit-user-password">Mật khẩu</label>
+                <input type="text" name="edit-user-password" id="edit-user-password" required>
+                <label for="edit-user-phone">Số Điện Thoại</label>
+                <input type="tel" name="edit-user-phone" id="edit-user-phone" required>
+                <label for="edit-user-id">Mã Số</label>
+                <input type="text" name="edit-user-id" id="edit-user-id" required>
+                <label for="edit-user-role">Vai Trò</label>
+                <select name="edit-user-role" id="edit-user-role">
+                    <option value="admin">Quản Trị Viên</option>
+                    <option value="volunteer">Tình Nguyện Viên</option>
+                    <option value="sponsor">Người Hỗ Trợ</option>
+                    <option value="teacher">Giáo Viên</option>
+                </select>
+                <label for="edit-user-status">Trạng Thái</label>
+                <select name="edit-user-status" id="edit-user-status" required>
+                    <option value="active">active</option>
+                    <option value="inactive">inactive</option>
+                </select>
+                <div class="button-group">
+                    <button id="save-edit-user-btn" class="submit-btn" type="submit"><i class="fa-solid fa-floppy-disk fa-lg"></i>Lưu</button>
+                    <button id="close-edit-user-form-btn" type="button"><i class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                </div>
+            </form>
+        </section>
         
     </main>
 
@@ -54,13 +122,15 @@
     <script type="module" src="/users/dashboard-script.js"></script>
     <script type="module" src="/management/user-list.js"></script>
     <script type="module">
-        import { initData, fetchAndInjectElementById } from '/static/js/common-script.js';
-        import { loadUserHeaderContent } from '/users/dashboard-script.js';
-        import { loadDataToUserTable } from '/management/user-list.js';
+        import { users, initData, fetchAndInjectElementById } from '/static/js/common-script.js';
+        import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
+        import { loadDataToUserTable, loadUsersListEvent } from '/management/user-list.js';
         initData();
         loadUserHeaderContent('/users/dashboard.html', 'user-header', 'user-list-page-header');
+        loadLeftSideBarContent('userslist-left-side-pannel');
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'user-list-page-copy-right');
-        loadDataToUserTable();
+        loadDataToUserTable(users);
+        loadUsersListEvent();
     </script>
 </body>
 </html>

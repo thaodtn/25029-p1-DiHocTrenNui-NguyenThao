@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
+    <script src="https://kit.fontawesome.com/d9b040b21a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
     <link rel="stylesheet" href="/static/css/common-style.css">
     <link rel="stylesheet" href="/users/dashboard-style.css">
@@ -17,61 +18,55 @@
     <header id="settings-page-header"></header>
 
     <main id="user-settings-main-section">
-        <!-- <h2 class="title">User settings</h2> -->
-        <!-- <section class="user-settings-sidebar" >
-            <div id="profile-settting-btn" class="active">
-                <img class="small-icons" src="/static/image/icons/user.png" alt="">
-                <a href="#">Profile Settings</a>
-            </div>
-            <div id="password-settting-btn">
-                <img class="small-icons" src="/static/image/icons/padlock.png" alt="">
-                <a href="#">Password</a>
-            </div>
-        </section> -->
+        <section id="settings-left-side-pannel"></section>
         <section id="user-settings-content-section">
-            <div id="profile-settings-container">
-                <form action="">
-                    <div class="avatar-container">
-                        <img class="avatar-img" src="/static/image/avatar/user-1.jpg" alt="">
-                        <button type="button">Thay đổi ảnh đại diện</button>
-                    </div>
-                    <div>
-                        <label for="user-name">Họ Tên:</label> <br>
-                        <input type="text" name="user-name" id="user-name" required>
-                    </div>
-                    <div>
-                        <label for="user-email">Email:</label> <br>
-                        <input type="text" name="user-email" id="user-email" disabled>
-                    </div>
-                    <div>
-                        <label for="user-phone-number">Số Điện Thoại:</label> <br>
-                        <input type="text" name="user-phone-number" id="user-phone-number" required>
-                    </div>
-                    <div>
-                        <label for="user-id">Mã số:</label> <br>
-                        <input type="text" name="user-id" id="user-id" disabled>
-                    </div>
-                    <div>
-                        <label for="user-role">Vai trò:</label> <br>
-                        <input type="text" name="user-role" id="user-role" disabled>
-                    </div>
-
-                    <button id="save-profile-changes-btn" class="submit-btn" type="submit">Lưu thay đổi</button>
-                </form>
-                
-                
+            <p class="user-settings-title">Thông Tin Tài Khoản</p>
+            <div class="avatar-container">
+                <img id="current-user-avatar" class="current-user-avatar" src="/static/image/avatar/user-1.jpg" alt="Hình Đại Diện">
+                <button class="edit-avatar-btn" type="button"><i class="fa-regular fa-camera fa-lg"></i></button>
             </div>
-            <div id="password-settings-container" class="hidden">
-                <form id="password-settings-form" action="">
+            <div class="current-infor-container">
+                <div><b>Họ Tên : </b><span id="current-user-name"></span></div>
+                <div><b>Email : </b><span id="current-user-email"></span></div>
+                <div><b>Số Điện Thoại : </b><span id="current-user-phone"></span></div>
+                <div><b>Vai Trò : </b><span id="current-user-role"></span></div>
+                <div><b>Mã Số : </b><span id="current-user-id"></span></div>
+            </div>
+            <div class="action-btn-container">
+                <button id="open-edit-form-btn">Sửa Thông Tin</button>
+                <button id="open-change-pw-btn">Đổi Mật Khẩu</button>
+            </div>
+            <div id="update-profile-modal-container" class="modal-container">
+                <form id="update-profile-form-container" class="update-profile-form-container" action="">
+                    <p class="form-title">Cập nhật thông tin tài khoản</p>
+                    <hr>
+                    <label for="new-user-name">Họ Tên:</label>
+                    <input type="text" name="new-user-name" id="new-user-name" required>
+                    <label for="new-user-phone">Số Điện Thoại:</label>
+                    <input type="tel" name="new-user-phone" id="new-user-phone" required>
+                    <div class="button-group">
+                        <button id="update-profile-btn" class="submit-btn" type="submit"><i class="fa-regular fa-floppy-disk fa-lg"></i>Lưu</button>
+                        <button id="close-profile-form-btn" type="button"><i class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                    </div>
+                </form>
+            </div>
+            <div id="update-pw-modal-container" class="modal-container">
+                <form id="update-pw-form-container" class="update-pw-form-container" action="">
+                    <p class="form-title">Thay đổi mật khẩu</p>
+                    <hr>
                     <label for="current-pw">Mật khẩu hiện tại:</label>
                     <input type="password" id="current-pw" name="current-pw" required>
                     <label for="new-pw">Mật khẩu mới:</label>
                     <input type="password" id="new-pw" name="new-pw" required>
                     <label for="confirmed-pw">Nhập lại mật khẩu mới:</label>
                     <input type="password" id="confirmed-pw" name="confirmed-pw" required>
-                    <button id="save-password-changes-btn" type="submit">Thay đổi</button>
+                    <div class="button-group">
+                        <button id="update-pw-btn" class="submit-btn" type="submit"><i class="fa-regular fa-floppy-disk fa-lg"></i>Lưu</button>
+                        <button id="close-pw-form-btn" type="button"><i class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                    </div>
                 </form>
-            </div>         
+            </div>
+                  
         </section>
     </main>
 
@@ -83,10 +78,11 @@
     <script type="module" src="./settings-script.js"></script>   
     <script type="module">
         import { initData, fetchAndInjectElementById } from '/static/js/common-script.js';
-        import { loadUserHeaderContent } from '/users/dashboard-script.js';
+        import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
         import { loadSettingsPageEvents } from './settings-script.js';
         initData();
         loadUserHeaderContent('/users/dashboard.html', 'user-header', 'settings-page-header');
+        loadLeftSideBarContent('settings-left-side-pannel');
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'settings-page-copy-right');
         loadSettingsPageEvents();
     </script>

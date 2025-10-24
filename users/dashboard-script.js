@@ -1,6 +1,5 @@
 import { accessControlList } from '/static/js/mock-data.js';
 import { users, currentUser, fetchAndInjectElementById, checkUserControl } from '/static/js/common-script.js';
-import { enableProfileSetting, enablePasswordSetting } from '/users/settings-script.js';
 
 const UserFunctionalitiesDisplay = [
     'Quản lý người dùng',
@@ -14,12 +13,15 @@ export async function loadUserHeaderContent(sourcePageURL, sourceElementId, dest
 
 export function loadUserHeaderEvents() {
     document.getElementById('account-settings-btn').addEventListener('click', openAccountSettingDropdown);
-    document.getElementById('profile-settting-btn').addEventListener('click', enableProfileSetting);
-    document.getElementById('password-settting-btn').addEventListener('click', enablePasswordSetting);
-    document.getElementById('log-out-btn').addEventListener('click', logout);
+    document.getElementById('logout-btn').addEventListener('click', logout);
     document.getElementById('side-bar-menu-btn').addEventListener('click', openLeftSidePanel);
+}
+export async function loadLeftSideBarContent(destinationElementId) {
+    await fetchAndInjectElementById('/users/dashboard.html', 'left-side-panel', destinationElementId);
+    loadLeftSideBarEvents();
+}
+export function loadLeftSideBarEvents() {
     document.getElementById('close-left-side-panel-btn').addEventListener('click', closeLeftSidePanel);
-
 }
 
 function openAccountSettingDropdown() {
