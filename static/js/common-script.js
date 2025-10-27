@@ -1,8 +1,11 @@
-import { originalUsers, accessControlList } from "./mock-data.js";
+import { originalUsers, accessControlList, originalStudents, originalSponsors } from "./mock-data.js";
 
 export let users = '';
 export let currentUser = '';
 export let currentUserControlList = '';
+
+export let students = '';
+export let sponsors = '';
 
 export function initData() {
     //Kiểm tra xem dữ liệu trong localStorage đã có hay chưa
@@ -18,7 +21,24 @@ export function initData() {
         if (localStorage.getItem('currentUser')) {
             currentUser = JSON.parse(localStorage.getItem('currentUser'));
         }
-
+    }
+    //Students
+    if (!localStorage.getItem('students')) {
+        //sao chép toàn bộ dữ liệu từ mock-data.js vào localStorage
+        localStorage.setItem('students', JSON.stringify(originalStudents));
+    }
+    else {
+        //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
+        students = JSON.parse(localStorage.getItem('students'));
+    }
+    //Sponsors
+    if (!localStorage.getItem('sponsors')) {
+        //sao chép toàn bộ dữ liệu từ mock-data.js vào localStorage
+        localStorage.setItem('sponsors', JSON.stringify(originalSponsors));
+    }
+    else {
+        //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
+        sponsors = JSON.parse(localStorage.getItem('sponsors'));
     }
     console.log('Finish initData()');
 }

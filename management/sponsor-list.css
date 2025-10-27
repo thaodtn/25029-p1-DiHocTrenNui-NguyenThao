@@ -1,0 +1,11 @@
+#sponsorList-left-side-pannel {
+    min-height: inherit;
+}
+#open-form-add-sponsor-btn, #sponsor-search-btn {
+    position: relative;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    background-color: #1a685b;
+    color: white;
+    box-shadow: 1px 1px 3px rgba(51, 51, 51, 0.3);
+}

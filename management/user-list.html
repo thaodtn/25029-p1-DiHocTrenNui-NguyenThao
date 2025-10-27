@@ -7,20 +7,21 @@
     <script src="https://kit.fontawesome.com/d9b040b21a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
     <link rel="stylesheet" href="/static/css/common-style.css">
+    <link rel="stylesheet" href="/static/css/subpage-common-style.css">
     <link rel="stylesheet" href="/users/dashboard-style.css">
     <link rel="stylesheet" href="/management/user-list.css">
     <link rel="stylesheet" href="/static/css/footer-style.css">
 </head>
 <body>
-    <header id="user-list-page-header"></header>
+    <header id="userslist-page-header"></header>
 
-    <main id="userslist-main-section">
+    <main id="userslist-main-section" class="subpage-main-section">
         <section id="userslist-left-side-pannel"></section>
-        <section class="userslist-content-section">
-            <div class="userslist-title">
+        <section class="subpage-content-section userslist-content-section">
+            <div class="subpage-title">
                 <p>Quản lý Người dùng</p>
             </div>
-            <div class="userslist-action-container">
+            <div class="subpage-action-container">
                 <input type="text" class="input-search-text" placeholder="Tìm Họ Tên, email, số điện thoại ...">
                 <select name="search-user-role" id="search-user-role" class="input-search-filter">
                     <option value="all">Tất cả</option>
@@ -32,8 +33,8 @@
                 <button id="userslist-search-btn"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
                 <button id="open-form-add-user-btn"><i class="fa-solid fa-user-plus fa-lg"></i></button>
             </div>
-            <div class="user-list-table-container">
-                <table class="user-table">
+            <div class="subpage-table-container">
+                <table class="subpage-table">
                     <thead>
                         <tr>
                             <th>Họ Tên</th>
@@ -126,7 +127,7 @@
         import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
         import { loadDataToUserTable, loadUsersListEvent } from '/management/user-list.js';
         initData();
-        loadUserHeaderContent('/users/dashboard.html', 'user-header', 'user-list-page-header');
+        loadUserHeaderContent('/users/dashboard.html', 'user-header', 'userslist-page-header');
         loadLeftSideBarContent('userslist-left-side-pannel');
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'user-list-page-copy-right');
         loadDataToUserTable(users);

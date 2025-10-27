@@ -96,8 +96,17 @@ static
 - sponsor
 - teacher
 ### Status:
+#### Của Người dùng trong hệ thống:
 - active: account đang hoạt động, chức năng được cấp theo vai trờ.
 - inactive: account đã bị khóa, không đăng nhập được nữa, vẫn giữ lại để tra cứu lịch sử chứ không xóa.
+#### Của Học sinh:
+- Đang lấy thông tin
+- Chờ kết nối NHT
+- Đang hỗ trợ
+- Đã nghỉ học
+- Đã tốt nghiệp cấp 3
+- Rời chương trình
+- Hủy
 
 # Tasks tracking:
 ## Week 1:

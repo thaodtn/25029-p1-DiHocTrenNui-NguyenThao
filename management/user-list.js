@@ -11,7 +11,7 @@ export function loadUsersListEvent() {
     });
     document.getElementById('add-new-user-btn').addEventListener('click', getNewUser);
     //add event listener for each button in row
-    document.querySelectorAll('.edit-user-btn').forEach(element => {
+    document.querySelectorAll('.row-edit-btn').forEach(element => {
         element.addEventListener('click', editSelectedUser);
     });
     document.getElementById('save-edit-user-btn').addEventListener('click', saveEditedUser);
@@ -26,13 +26,13 @@ export function loadDataToUserTable(displayUsersList) {
         displayUsersList.forEach(element => {
             let content = `
                 <tr class="user-row">
-                    <td data-label="Họ Tên">${element.name}</td>
-                    <td data-label="Email">${element.email}</td>
-                    <td data-label="Số Điện Thoại">${element.phone}</td>
-                    <td data-label="Mã số">${element.id}</td>
-                    <td data-label="Vai trò">${element.role}</td>
-                    <td data-label="Trạng Thái" class="${element.status}"><span>${element.status}</span></td>
-                    <td><button class="edit-user-btn"><i class="fa-solid fa-pen"></i></button></td>                    
+                    <td data-label="Họ Tên" class="align-left">${element.name}</td>
+                    <td data-label="Email" class="align-left">${element.email}</td>
+                    <td data-label="Số Điện Thoại" class="align-right">${element.phone}</td>
+                    <td data-label="Mã số" class="align-center">${element.id}</td>
+                    <td data-label="Vai trò class="align-left">${element.role}</td>
+                    <td data-label="Trạng Thái" class="${element.status} align-center"><span>${element.status}</span></td>
+                    <td><button class="row-edit-btn"><i class="fa-solid fa-pen"></i></button></td>                    
                 </tr>
             `;
             let row = document.createElement('tr');

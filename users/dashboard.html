@@ -32,12 +32,12 @@
                 <button id="account-settings-btn"><img id="account-settings-avatar" class="avatar-img large-icons"
                         src="/static/image/avatar/user-1.jpg" alt=""></button>
                 <div id="account-settings-nav" class="account-settings-nav">
-                    <div id="profile-settting-btn" class="">
+                    <div id="profile-settting-btn" onclick="window.location.href ='/users/settings.html'">
                         <img src="/static/image/icons/user.png" alt="">
-                        <a href="/users/settings.html">Profile</a>
+                        <span>Profile</span>
                     </div>
                     <div id="logout-btn"><img src="/static/image/icons/logout.png" alt="">
-                        <span href="#">Logout</span></div>
+                        <span>Logout</span></div>
                 </div>
             </div>
         </div>
@@ -48,35 +48,28 @@
     <main id="user-dashboard-main-section">
         <section id="left-side-panel" class="left-side-panel">
             <button id="close-left-side-panel-btn" class="close-left-side-panel-btn">x</button>
-            <div id="goto-dashboard-btn">
-                <i class="fa-regular fa-house"></i>
-                <a href="/users/dashboard.html">Trang chủ</a>                
+            <div id="goto-dashboard-btn" onclick="window.location.href = '/index.html'">
+                <i class="fa-regular fa-house"></i><span>Trang chủ</span>                
             </div>
             <hr>
-            <div id="config-user-btn">
-                <img src="/static/image/icons/user-config.png" alt="">
-                <a href="/management/user-list.html">Quản lý người dùng</a>
+            <div id="config-user-btn" onclick="window.location.href = '/management/user-list.html'">
+                <img src="/static/image/icons/user-config.png" alt=""><span>Quản lý người dùng</span>
             </div>
-            <div id="view-student-btn">
-                <img src="/static/image/icons/children (2).png" alt="">
-                <a href="#">Danh sách Học Sinh</a>
+            <div id="view-student-btn" onclick="window.location.href = '/management/student-list.html'">
+                <img src="/static/image/icons/children (2).png" alt=""><span>Danh sách Học Sinh</span>
             </div>
-            <div id="view-sponsor-btn">
-                <img src="/static/image/icons/investor.png" alt="">
-                <a href="#">Danh sách Người Hỗ Trợ</a>
+            <div id="view-sponsor-btn" onclick="window.location.href = '/management/sponsor-list.html'">
+                <img src="/static/image/icons/investor.png" alt=""><span>Danh sách Người Hỗ Trợ</span>
             </div>
-            <div id="view-school-btn">
-                <img src="/static/image/icons/school.png" alt="">
-                <a href="#">Danh sách Trường Học</a>
+            <div id="view-school-btn" onclick="window.location.href = ''">
+                <img src="/static/image/icons/school.png" alt=""><span>Danh sách Trường Học</span>
             </div>
-            <div id="view-transaction-record-btn">
-                <img src="/static/image/icons/payment.png" alt="">
-                <a href="#">Danh sách Sao kê</a>
+            <div id="view-transaction-record-btn" onclick="window.location.href = ''">
+                <img src="/static/image/icons/payment.png" alt=""><span>Danh sách Sao kê</span>
             </div>
             <hr>
-            <div id="statistic-btn">
-                <i class="fa-solid fa-chart-line"></i>
-                <a href="#">Thống kê - Báo cáo</a>
+            <div id="statistic-btn" onclick="window.location.href = ''">
+                <i class="fa-solid fa-chart-line"></i><span>Thống kê - Báo cáo</span>
             </div>
         </section>
 
