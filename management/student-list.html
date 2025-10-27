@@ -75,14 +75,14 @@
     <script type="module" src="/users/dashboard-script.js"></script>
     <script type="module" src="/management/student-list.js"></script>
     <script type="module">
-        import { users, students, initData, fetchAndInjectElementById } from '/static/js/common-script.js';
+        import { users, relatedStudents, initData, fetchAndInjectElementById } from '/static/js/common-script.js';
         import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
         import { loadDataToStudentTable, loadStudentListEvent } from '/management/student-list.js';
         initData();
         loadUserHeaderContent('/users/dashboard.html', 'user-header', 'studentList-page-header');
         loadLeftSideBarContent('studentList-left-side-pannel');
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'studentList-page-copy-right');
-        loadDataToStudentTable(students);
+        loadDataToStudentTable(relatedStudents);
         loadStudentListEvent();
     </script>
     

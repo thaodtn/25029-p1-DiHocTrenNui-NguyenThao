@@ -65,15 +65,14 @@
     <script type="module" src="/users/dashboard-script.js"></script>
     <script type="module" src="/management/sponsor-list.js"></script>
     <script type="module">
-        import { users, sponsors, initData, fetchAndInjectElementById } from '/static/js/common-script.js';
+        import { users, relatedSponsors, initData, fetchAndInjectElementById } from '/static/js/common-script.js';
         import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
         import { loadDataToSponsorTable, loadSponsorListEvent } from '/management/sponsor-list.js';
         initData();
         loadUserHeaderContent('/users/dashboard.html', 'user-header', 'sponsorList-page-header');
         loadLeftSideBarContent('sponsorList-left-side-pannel');
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'sponsorList-page-copy-right');
-        console.log(sponsors);
-        loadDataToSponsorTable(sponsors);
+        loadDataToSponsorTable(relatedSponsors);
         loadSponsorListEvent();
     </script>
 </body>

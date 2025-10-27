@@ -4,8 +4,10 @@ export let users = '';
 export let currentUser = '';
 export let currentUserControlList = '';
 
-export let students = '';
-export let sponsors = '';
+export let allStudents = '';
+export let relatedStudents = '';
+// export let sponsors = '';
+export let relatedSponsors = '';
 
 export function initData() {
     //Kiểm tra xem dữ liệu trong localStorage đã có hay chưa
@@ -23,22 +25,43 @@ export function initData() {
         }
     }
     //Students
-    if (!localStorage.getItem('students')) {
-        //sao chép toàn bộ dữ liệu từ mock-data.js vào localStorage
-        localStorage.setItem('students', JSON.stringify(originalStudents));
+    // if (!localStorage.getItem('allStudents')) {
+    //     //sao chép toàn bộ dữ liệu từ mock-data.js vào localStorage
+    //     localStorage.setItem('allStudents', JSON.stringify(originalStudents));
+    // }
+    // else {
+    //     //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
+    //     allStudents = JSON.parse(localStorage.getItem('allStudents'));
+    // }
+    if (!localStorage.getItem('relatedStudents')) {
+        relatedStudents = getRelatedStudentsByCurrentUser(originalStudents);
+        if (relatedStudents) {
+            localStorage.setItem('relatedStudents', JSON.stringify(relatedStudents));
+        }
     }
     else {
         //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
-        students = JSON.parse(localStorage.getItem('students'));
+        relatedStudents = JSON.parse(localStorage.getItem('relatedStudents'));
     }
+    
     //Sponsors
-    if (!localStorage.getItem('sponsors')) {
-        //sao chép toàn bộ dữ liệu từ mock-data.js vào localStorage
-        localStorage.setItem('sponsors', JSON.stringify(originalSponsors));
+    // if (!localStorage.getItem('sponsors')) {
+    //     //sao chép toàn bộ dữ liệu từ mock-data.js vào localStorage
+    //     localStorage.setItem('sponsors', JSON.stringify(originalSponsors));
+    // }
+    // else {
+    //     //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
+    //     sponsors = JSON.parse(localStorage.getItem('sponsors'));
+    // }
+    if (!localStorage.getItem('relatedSponsors')) {
+        relatedSponsors = getRelatedSponsorsByCurrentUser(originalSponsors);
+        if (relatedSponsors) {
+            localStorage.setItem('relatedSponsors', JSON.stringify(relatedSponsors));
+        }
     }
     else {
         //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
-        sponsors = JSON.parse(localStorage.getItem('sponsors'));
+        relatedSponsors = JSON.parse(localStorage.getItem('relatedSponsors'));
     }
     console.log('Finish initData()');
 }
@@ -171,4 +194,50 @@ export function checkUserControl(userId, action) {
         if (accessControlList[userRole][action] === true) return true;
         else return false;
     } else return false;
+}
+
+function getRelatedStudentsByCurrentUser(studentArray) {
+    let studentList = '';
+    if (currentUser) {
+        const role = currentUser.role;
+        switch (role) {
+            case 'sponsor':
+                studentList = studentArray.filter(element => element.currentSponsor === currentUser.id);
+                break;
+            case 'volunteer':
+                studentList = studentArray.filter(element => element.currentVolunteer === currentUser.id);
+                break;
+            case 'teacher':
+                studentList = studentArray.filter(element => element.currentTeacher === currentUser.id);
+                break;
+            case 'admin':
+                studentList = studentArray;
+                break;
+            default: //do not show anything
+                break;
+        }
+        console.log(`danh sach hoc sinh cua ${currentUser.id}:`, studentList);
+    }
+    return studentList;
+}
+
+function getRelatedSponsorsByCurrentUser(sponsorArray) {
+    let sponsorList = '';
+    if (currentUser) {
+        const role = currentUser.role;
+        switch (role) {
+            case 'volunteer':
+                sponsorList = sponsorArray.filter(element => element.currentVolunteer === currentUser.id);
+                break;
+            case 'sponsor':
+                sponsorList = sponsorArray.filter(element => element.id === currentUser.id);
+                break;
+            case 'admin':
+                sponsorList = sponsorArray;
+                break;
+            default: //do not show anything
+                break;
+        }
+    }
+    return sponsorList;
 }

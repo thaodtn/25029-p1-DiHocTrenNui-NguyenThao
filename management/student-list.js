@@ -1,5 +1,5 @@
 import { studentStatusTranslated } from '/static/js/mock-data.js';
-import {currentUser, students } from '/static/js/common-script.js';
+import {currentUser, relatedStudents, checkUserControl } from '/static/js/common-script.js';
 
 export function loadStudentListEvent() {
     
@@ -8,6 +8,10 @@ export function loadStudentListEvent() {
 export function loadDataToStudentTable(displayStudentList) {
     if (displayStudentList) {
         const table = document.getElementById('student-table-body');
+        let rowEditBtn = '';
+        if (checkUserControl(currentUser.id, 'editStudent') === false) {
+            rowEditBtn = 'hidden-btn';
+        }
         displayStudentList.forEach(element => {
             let content = `
                 <tr class="student-row">
@@ -29,7 +33,7 @@ export function loadDataToStudentTable(displayStudentList) {
                     <td data-label="Học Bổng Lũy Kế" class="align-right">${element.funds}</td>
                     <td data-label="Số Dư" class="align-right">${element.balance}</td>
                     <td data-label="Ghi Chú" class="align-left">${element.remark}</td>
-                    <td><button class="row-edit-btn"><i class="fa-solid fa-pen"></i></button></td>                    
+                    <td><button class="row-edit-btn ${rowEditBtn}"><i class="fa-solid fa-pen"></i></button></td>                    
                 </tr>                
             `;
             let row = document.createElement('tr');

@@ -1,5 +1,5 @@
 import { sponsorStatusTranslated } from '/static/js/mock-data.js';
-import {currentUser, sponsors } from '/static/js/common-script.js';
+import {currentUser, relatedSponsors, checkUserControl } from '/static/js/common-script.js';
 
 export function loadSponsorListEvent() {
     
@@ -8,6 +8,10 @@ export function loadDataToSponsorTable(displaySponsorList) {
     console.log(displaySponsorList);
     if (displaySponsorList) {
         const table = document.getElementById('sponsor-table-body');
+        let rowEditBtn = '';
+        if (checkUserControl(currentUser.id, 'editSponsor') === false) {
+            rowEditBtn = 'hidden-btn';
+        }
         displaySponsorList.forEach(element => {
             let content = `
                 <tr class="sponsor-row">
@@ -23,7 +27,7 @@ export function loadDataToSponsorTable(displaySponsorList) {
                     <td data-label="Số tiền đã ủng hộ" class="align-right">${element.totalDeposit}</td>
                     <td data-label="Số Dư" class="align-right">${element.balance}</td>
                     <td data-label="Ghi Chú" class="align-left">${element.remark}</td>
-                    <td><button class="row-edit-btn"><i class="fa-solid fa-pen"></i></button></td>                    
+                    <td><button class="row-edit-btn ${rowEditBtn}"><i class="fa-solid fa-pen"></i></button></td>                    
                 </tr>                
             `;
             let row = document.createElement('tr');
