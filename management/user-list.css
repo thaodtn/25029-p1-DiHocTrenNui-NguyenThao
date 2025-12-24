@@ -2,7 +2,7 @@
     min-height: inherit;
 }
 
-.userslist-content-section {max-width: 1024px;}
+/* .userslist-content-section {max-width: 1024px;} */
 
 #open-form-add-user-btn, #userslist-search-btn {
     position: relative;

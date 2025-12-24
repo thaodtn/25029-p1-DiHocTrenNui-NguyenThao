@@ -113,6 +113,15 @@
 .align-right {text-align: right;}
 .align-center {text-align: center;}
 
+.inner-cell {
+    width: 100%;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
 .active span {
     color: darkgreen;
     background-color: #e6ffe6;
@@ -150,17 +159,22 @@
         text-align: right;
         position: relative;
         text-wrap: wrap;
-        padding-left: 30%;
+        padding-left: 140px;
+        padding-right: 10px;
+        height: 2rem;
     }
     .subpage-table td::before {
         content: attr(data-label);
         position: absolute;
         left: 0;
-        width: 30%;
+        width: 120px;
         text-align: left;
-        padding-left: 1rem;
+        padding-left: 10px;
     }
     .subpage-table tr:nth-child(even) {
         background: whitesmoke;
+    }
+    .inner-cell {
+        max-width: calc(100vw - 210px);
     }
 }

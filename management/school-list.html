@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường Học</title>
+    <script src="https://kit.fontawesome.com/d9b040b21a.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
+    <link rel="stylesheet" href="/static/css/common-style.css">
+    <link rel="stylesheet" href="/static/css/subpage-common-style.css">
+    <link rel="stylesheet" href="/users/dashboard-style.css">
+    <link rel="stylesheet" href="/management/school-list.css">
+    <link rel="stylesheet" href="/static/css/footer-style.css">
+</head>
+<body>
+    <header id="schoolList-page-header"></header>
+    <main id="schoolList-main-section" class="subpage-main-section">
+        <section id="schoolList-left-side-pannel"></section>
+        <section class="subpage-content-section schoolList-content-section">
+            <div class="subpage-title">
+                <p>Danh Sách Trường Học</p>
+            </div>
+            <div class="subpage-action-container">
+                <input type="text" class="input-search-text" placeholder="Tìm Mã số, Tên Trường, Địa chỉ...">
+                <select name="search-school-status" id="search-school-status" class="input-search-filter">
+                    <option value="all">Tất cả</option>
+                    <option value="inProgress">Đang hỗ trợ</option>               
+                    <option value="ended">Đã kết thúc</option>
+                </select>
+                <button id="school-search-btn"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+                <button id="open-form-add-school-btn"><i class="fa-solid fa-user-plus fa-lg"></i></button>
+            </div>
+            <div class="subpage-table-container school-table-container">
+                <table class="subpage-table">
+                    <thead>
+                        <tr>
+                            <th><div class="inner-cell">Mã Số</div></th>
+                            <th><div class="inner-cell">Tên Trường</div></th>
+                            <th><div class="inner-cell">Địa Chỉ</div></th>
+                            <th><div class="inner-cell">Số HS đang hỗ trợ</div></th>
+                            <th><div class="inner-cell">GV Phụ Trách</div></th>                            
+                            <th><div class="inner-cell">Trạng Thái</div></th>                            
+                            <th><div class="inner-cell">Ghi Chú</div></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="school-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer id="schoolList-page-copy-right"></footer>
+
+    <script type="module" src="/static/js/common-script.js"></script>
+    <script type="module" src="/static/js/mock-data.js"></script>
+    <script type="module" src="/users/dashboard-script.js"></script>
+    <script type="module" src="/management/school-list.js"></script>
+    <script type="module">
+        import { users, relatedSchool, initData, fetchAndInjectElementById } from '/static/js/common-script.js';
+        import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
+        import { loadDataToSchoolTable, loadSchoolListEvent } from '/management/school-list.js';
+        initData();
+        loadUserHeaderContent('/users/dashboard.html', 'user-header', 'schoolList-page-header');
+        loadLeftSideBarContent('schoolList-left-side-pannel');
+        fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'schoolList-page-copy-right');
+        loadDataToSchoolTable(relatedSchool);
+        loadSchoolListEvent();
+    </script>
+</body>
+</html>

@@ -26,13 +26,13 @@ export function loadDataToUserTable(displayUsersList) {
         displayUsersList.forEach(element => {
             let content = `
                 <tr class="user-row">
-                    <td data-label="Họ Tên" class="align-left">${element.name}</td>
-                    <td data-label="Email" class="align-left">${element.email}</td>
-                    <td data-label="Số Điện Thoại" class="align-right">${element.phone}</td>
-                    <td data-label="Mã số" class="align-center">${element.id}</td>
-                    <td data-label="Vai trò class="align-left">${element.role}</td>
-                    <td data-label="Trạng Thái" class="${element.status} align-center"><span>${element.status}</span></td>
-                    <td><button class="row-edit-btn"><i class="fa-solid fa-pen"></i></button></td>                    
+                    <td data-label="Họ Tên" class="align-left"><div class="inner-cell">${element.name}</div></td>
+                    <td data-label="Email" class="align-left"><div class="inner-cell">${element.email}</div></td>
+                    <td data-label="Mã số" class="align-center"><div class="inner-cell">${element.id}</div></td>
+                    <td data-label="Số Điện Thoại" class="align-right"><div class="inner-cell">${element.phone}</div></td>
+                    <td data-label="Vai trò" class="align-left"><div class="inner-cell">${element.role}</div></td>
+                    <td data-label="Trạng Thái" class="${element.status} align-center"><div class="inner-cell"><span>${element.status}</span></div></td>
+                    <td><button class="row-edit-btn"><i class="fa-solid fa-pen"></i></button></td>
                 </tr>
             `;
             let row = document.createElement('tr');
@@ -44,7 +44,7 @@ export function loadDataToUserTable(displayUsersList) {
 }
 
 function getNewUser() {
-    let newUser = currentUser;
+    let newUser = {};
     newUser.id = document.getElementById('user-id').value;
     newUser.name = document.getElementById('user-name').value;
     newUser.email = document.getElementById('user-email').value;
@@ -53,7 +53,6 @@ function getNewUser() {
     newUser.role = document.getElementById('user-role').value;
     newUser.status = document.getElementById('user-status').value;
     addNewUser(newUser);
-    //reload table
     loadDataToUserTable(users);
 }
 

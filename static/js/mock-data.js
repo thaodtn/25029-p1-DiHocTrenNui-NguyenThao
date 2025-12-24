@@ -11,7 +11,7 @@ export const originalUsers = [
     { id: 'GVN0001', name: "Ngoc Thu", email: "thu@gmail.com", password: "123456", phone: "0905458294", role: "teacher", status: 'active' },
     { id: 'GVN0002', name: "Minh Chau", email: "chau@gmail.com", password: "123456", phone: "0905572017", role: "teacher", status: 'active' },
     { id: 'GVN0003', name: "My Linh", email: "linh@gmail.com", password: "123456", phone: "0905839930", role: "teacher", status: 'active' },
-    { id: 'GVN0004', name: "Huu Hoang", email: "hoang@gmail.com", password: "123456", phone: "09054839393", role: "teacher", status: 'active' },
+    { id: 'GVN0004', name: "Huu Hoang", email: "hoang@gmail.com", password: "123456", phone: "09054839393", role: "teacher", status: 'inactive' },
 ];
 
 
@@ -81,7 +81,7 @@ export const originalStudents = [
         currentSchool: 'Tiểu Học Nùng Nàng',
         currentSponsor: 'NHT0001',
         currentVolunteer: 'TNV0001',
-        currentTeacher: 'GVN0012'
+        currentTeacher: 'GVN0001'
     },
     {
         id: 'DH92.002',
@@ -101,7 +101,7 @@ export const originalStudents = [
         currentSchool: 'THCS Trà Mai',
         currentSponsor: 'NHT0001',
         currentVolunteer: 'TNV0001',
-        currentTeacher: 'GVN0013'
+        currentTeacher: 'GVN0002'
     },
     {
         id: 'DH92.003',
@@ -118,10 +118,10 @@ export const originalStudents = [
         balance: '7000000',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu Học Ia Băng',
+        currentSchool: 'Tiểu Học Nùng Nàng',
         currentSponsor: 'NHT0002',
         currentVolunteer: 'TNV0001',
-        currentTeacher: 'GVN0014'
+        currentTeacher: 'GVN0001'
     },
     {
         id: 'DH92.004',
@@ -138,10 +138,10 @@ export const originalStudents = [
         balance: '12000000',
         remark: '',
         currentClass: '3',
-        currentSchool: 'Tiểu Học Pa Vệ Sủ',
+        currentSchool: 'Tiểu Học Nùng Nàng',
         currentSponsor: 'NHT0003',
         currentVolunteer: 'TNV0001',
-        currentTeacher: 'GVN0015'
+        currentTeacher: 'GVN0001'
     },
     {
         id: 'DH92.005',
@@ -158,10 +158,10 @@ export const originalStudents = [
         balance: '10000000',
         remark: 'Đã nhận hỗ trợ học phí và sách vở.',
         currentClass: '7',
-        currentSchool: 'THCS Cán Chu Phìn',
+        currentSchool: 'THCS Trà Mai',
         currentSponsor: 'NHT0003',
         currentVolunteer: 'TNV0001',
-        currentTeacher: 'GVN0016'
+        currentTeacher: 'GVN0002'
     },
     {
         id: 'DH92.006',
@@ -178,10 +178,10 @@ export const originalStudents = [
         balance: '6000000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu Học Bù Gia Mập',
+        currentSchool: 'Tiểu Học Nùng Nàng',
         currentSponsor: 'NHT0003',
         currentVolunteer: 'TNV0001',
-        currentTeacher: 'GVN0017'
+        currentTeacher: 'GVN0001'
     },
     {
         id: 'DH92.007',
@@ -198,10 +198,10 @@ export const originalStudents = [
         balance: '7000000',
         remark: '',
         currentClass: '6',
-        currentSchool: 'THCS Chiềng Công',
+        currentSchool: 'THCS Trà Mai',
         currentSponsor: 'NHT0004',
         currentVolunteer: 'TNV0001',
-        currentTeacher: 'GVN0018'
+        currentTeacher: 'GVN0002'
     },
     {
         id: 'DH92.008',
@@ -218,10 +218,10 @@ export const originalStudents = [
         balance: '12000000',
         remark: '',
         currentClass: '3',
-        currentSchool: 'Tiểu học Chư Răng',
+        currentSchool: 'Tiểu học Nùng Nàng',
         currentSponsor: 'NHT0005',
         currentVolunteer: 'TNV0001',
-        currentTeacher: 'GVN0019'
+        currentTeacher: 'GVN0001'
     },
     {
         id: 'DH92.009',
@@ -241,7 +241,7 @@ export const originalStudents = [
         currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0005',
         currentVolunteer: 'TNV0001',
-        currentTeacher: 'GVN0020'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.010',
@@ -258,10 +258,10 @@ export const originalStudents = [
         balance: '8000000',
         remark: '',
         currentClass: '7',
-        currentSchool: 'THCS Nùng Nàng',
+        currentSchool: 'THCS Trà Mai',
         currentSponsor: 'NHT0006',
         currentVolunteer: 'TNV0001',
-        currentTeacher: 'GVN0021'
+        currentTeacher: 'GVN0002'
     },
     {
         id: 'DH92.011',
@@ -278,10 +278,10 @@ export const originalStudents = [
         balance: '13000000',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu học Lũng Cú',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0007',
         currentVolunteer: 'TNV0002',
-        currentTeacher: 'GVN0022'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.012',
@@ -298,10 +298,10 @@ export const originalStudents = [
         balance: '8000000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu học Tà Tổng',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0007',
         currentVolunteer: 'TNV0002',
-        currentTeacher: 'GVN0023'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.013',
@@ -318,10 +318,10 @@ export const originalStudents = [
         balance: '8000000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu học Lát',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0008',
         currentVolunteer: 'TNV0002',
-        currentTeacher: 'GVN0024'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.014',
@@ -338,10 +338,10 @@ export const originalStudents = [
         balance: '11000000',
         remark: '',
         currentClass: '6',
-        currentSchool: 'THCS Tả Giàng Phình',
+        currentSchool: 'THCS Trà Mai',
         currentSponsor: 'NHT0009',
         currentVolunteer: 'TNV0002',
-        currentTeacher: 'GVN0025'
+        currentTeacher: 'GVN0002'
     },
     {
         id: 'DH92.015',
@@ -358,10 +358,10 @@ export const originalStudents = [
         balance: '7000000',
         remark: '',
         currentClass: '7',
-        currentSchool: 'THCS Cán Cấu',
+        currentSchool: 'THCS Trà Mai',
         currentSponsor: 'NHT0009',
         currentVolunteer: 'TNV0002',
-        currentTeacher: 'GVN0026'
+        currentTeacher: 'GVN0002'
     },
     {
         id: 'DH92.016',
@@ -378,10 +378,10 @@ export const originalStudents = [
         balance: '6000000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu Học Trà Leng',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0009',
         currentVolunteer: 'TNV0002',
-        currentTeacher: 'GVN0027'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.017',
@@ -398,10 +398,10 @@ export const originalStudents = [
         balance: '5000000',
         remark: '',
         currentClass: '6',
-        currentSchool: 'THCS Pờ Y',
+        currentSchool: 'THCS Trà Mai',
         currentSponsor: 'NHT0010',
         currentVolunteer: 'TNV0002',
-        currentTeacher: 'GVN0028'
+        currentTeacher: 'GVN0002'
     },
     {
         id: 'DH92.018',
@@ -418,10 +418,10 @@ export const originalStudents = [
         balance: '3000000',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu học Lùng Thàng',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0011',
         currentVolunteer: 'TNV0002',
-        currentTeacher: 'GVN0029'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.019',
@@ -438,10 +438,10 @@ export const originalStudents = [
         balance: '10000000',
         remark: '',
         currentClass: '7',
-        currentSchool: 'THCS Na Ư',
+        currentSchool: 'THCS Trà Mai',
         currentSponsor: 'NHT0011',
         currentVolunteer: 'TNV0002',
-        currentTeacher: 'GVN0030'
+        currentTeacher: 'GVN0002'
     },
     {
         id: 'DH92.020',
@@ -458,10 +458,10 @@ export const originalStudents = [
         balance: '12000000',
         remark: '',
         currentClass: '3',
-        currentSchool: 'Tiểu học Chư Răng',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0012',
         currentVolunteer: 'TNV0003',
-        currentTeacher: 'GVN0031'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.021',
@@ -478,10 +478,10 @@ export const originalStudents = [
         balance: '7000000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu học Cán Cấu',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0013',
         currentVolunteer: 'TNV0003',
-        currentTeacher: 'GVN0032'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.022',
@@ -498,10 +498,10 @@ export const originalStudents = [
         balance: '6000000',
         remark: '',
         currentClass: '6',
-        currentSchool: 'THCS Chiềng Công',
+        currentSchool: 'THCS Trà Mai',
         currentSponsor: 'NHT0013',
         currentVolunteer: 'TNV0003',
-        currentTeacher: 'GVN0033'
+        currentTeacher: 'GVN0002'
     },
     {
         id: 'DH92.023',
@@ -518,10 +518,10 @@ export const originalStudents = [
         balance: '13000000',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu học Cán Chu Phìn',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0014',
         currentVolunteer: 'TNV0003',
-        currentTeacher: 'GVN0034'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.024',
@@ -538,10 +538,10 @@ export const originalStudents = [
         balance: '8000000',
         remark: 'Hỗ trợ mua sách vở và đồ dùng học tập.',
         currentClass: '5',
-        currentSchool: 'Tiểu học Lát',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0015',
         currentVolunteer: 'TNV0003',
-        currentTeacher: 'GVN0035'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.025',
@@ -558,10 +558,10 @@ export const originalStudents = [
         balance: '14000000',
         remark: '',
         currentClass: '3',
-        currentSchool: 'Tiểu học Hướng Sơn',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0015',
         currentVolunteer: 'TNV0003',
-        currentTeacher: 'GVN0036'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.026',
@@ -578,10 +578,10 @@ export const originalStudents = [
         balance: '8000000',
         remark: '',
         currentClass: '7',
-        currentSchool: 'THCS Nùng Nàng',
+        currentSchool: 'THCS Trà Mai',
         currentSponsor: 'NHT0016',
         currentVolunteer: 'TNV0003',
-        currentTeacher: 'GVN0037'
+        currentTeacher: 'GVN0002'
     },
     {
         id: 'DH92.027',
@@ -598,10 +598,10 @@ export const originalStudents = [
         balance: '6000000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu Học Trà Dơn',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0017',
         currentVolunteer: 'TNV0003',
-        currentTeacher: 'GVN0001'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.028',
@@ -617,11 +617,11 @@ export const originalStudents = [
         funds: '21000000',
         balance: '5000000',
         remark: '',
-        currentClass: '6',
-        currentSchool: 'THCS Pờ Y',
+        currentClass: '4',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0018',
         currentVolunteer: 'TNV0003',
-        currentTeacher: 'GVN0002'
+        currentTeacher: 'GVN0003'
     },
     {
         id: 'DH92.029',
@@ -638,7 +638,7 @@ export const originalStudents = [
         balance: '3000000',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu học Lùng Thàng',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0019',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0003'
@@ -657,11 +657,11 @@ export const originalStudents = [
         funds: '30000000',
         balance: '10000000',
         remark: 'Đã nhận được xe đạp từ chương trình.',
-        currentClass: '7',
-        currentSchool: 'THCS Na Ư',
+        currentClass: '5',
+        currentSchool: 'Tiểu học Hướng Hóa',
         currentSponsor: 'NHT0020',
         currentVolunteer: 'TNV0003',
-        currentTeacher: 'GVN0004'
+        currentTeacher: 'GVN0003'
     }
 ];
 
@@ -966,3 +966,33 @@ export const sponsorStatusTranslated = {
     'Đã kết thúc': 'ended',    
     'Hủy': 'canceled'
 }
+
+export const originalSchools = [
+    {
+        id: 'TR001',
+        name: 'Tiểu Học Nùng Nàng',
+        address: 'Xã Nùng Nàng - Huyện Tam Đường - Lai Châu',
+        totalStudents: '5',
+        currentTeacher: 'GVN0001',
+        status: 'Đang hỗ trợ',
+        remark: ''
+    },
+    {
+        id: 'TR002',
+        name: 'THCS Trà Mai',
+        address: 'Xã Trà Mai - Huyện Nam Trà My - Quảng Nam',
+        totalStudents: '10',
+        currentTeacher: 'GVN0002',
+        status: 'Đang hỗ trợ',
+        remark: ''
+    },
+    {
+        id: 'TR003',
+        name: 'Tiểu Học Hướng Hóa',
+        address: 'Xã A Túc - Huyện Hướng Hóa - Quảng Trị',
+        totalStudents: '15',
+        currentTeacher: 'GVN0003',
+        status: 'Đang hỗ trợ',
+        remark: ''
+    }
+]

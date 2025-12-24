@@ -1,4 +1,4 @@
-import { originalUsers, accessControlList, originalStudents, originalSponsors } from "./mock-data.js";
+import { originalUsers, accessControlList, originalStudents, originalSponsors, originalSchools } from "./mock-data.js";
 
 export let users = '';
 export let currentUser = '';
@@ -8,6 +8,7 @@ export let allStudents = '';
 export let relatedStudents = '';
 // export let sponsors = '';
 export let relatedSponsors = '';
+export let relatedSchool = '';
 
 export function initData() {
     //Kiểm tra xem dữ liệu trong localStorage đã có hay chưa
@@ -63,6 +64,16 @@ export function initData() {
         //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
         relatedSponsors = JSON.parse(localStorage.getItem('relatedSponsors'));
     }
+    if (!localStorage.getItem('relatedSchool')) {
+        relatedSchool = getRelatedSchoolByCurrentUser(originalSchools);
+        if (relatedSchool) {
+            localStorage.setItem('relatedSchool', JSON.stringify(relatedSchool));
+        }
+    }
+    else {
+        //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
+        relatedSchool = JSON.parse(localStorage.getItem('relatedSchool'));
+    }
     console.log('Finish initData()');
 }
 
@@ -88,6 +99,12 @@ export function updateUserByIndex(index, newUser) {
 }
 
 export function addNewUser(newUser) {
+    //Kiểm tra email trùng lặp
+    const index = users.findIndex(user => user.email === newUser.email);
+    if (index !== -1) {
+        alert('Email trùng lặp. Vui lòng đăng kí email mới');
+        return;
+    }
     users.push(newUser);
     //sao chép toàn bộ dữ liệu mới của mảng users vào localStorage
     localStorage.setItem('users', JSON.stringify(users));
@@ -103,6 +120,13 @@ export function deactiveUser(selectedUser) {
         alert('Cập nhật thành công.');
     }
     else alert('Cập nhật thất bại. Vui lòng thử lại!');
+}
+
+export function addNewStudent(newStudent) {
+    relatedStudents.push(newStudent);
+    //sao chép toàn bộ dữ liệu mới của mảng relatedStudents vào localStorage
+    localStorage.setItem('relatedStudents', JSON.stringify(relatedStudents));
+    alert('Cập nhật thành công.');
 }
 
 export async function loadMainHeaderContent(sourcePageURL, sourceElementId, destinationElementId) {
@@ -211,7 +235,7 @@ function getRelatedStudentsByCurrentUser(studentArray) {
                 studentList = studentArray.filter(element => element.currentTeacher === currentUser.id);
                 break;
             case 'admin':
-                studentList = studentArray;
+                studentList = studentArray; //show all
                 break;
             default: //do not show anything
                 break;
@@ -233,11 +257,30 @@ function getRelatedSponsorsByCurrentUser(sponsorArray) {
                 sponsorList = sponsorArray.filter(element => element.id === currentUser.id);
                 break;
             case 'admin':
-                sponsorList = sponsorArray;
+                sponsorList = sponsorArray; //show all
                 break;
             default: //do not show anything
                 break;
         }
     }
     return sponsorList;
+}
+
+function getRelatedSchoolByCurrentUser(schoolArray) {
+    let schoolList = '';
+    if (currentUser) {
+        const role = currentUser.role;
+        switch (role) {
+            case 'teacher':
+                schoolList = schoolArray.filter(element => element.currentTeacher === currentUser.id);
+                break;
+            case 'volunteer':
+            case 'admin':
+                schoolList = schoolArray; //show all
+                break;
+            default: //do not show anything
+                break;
+        }
+    }
+    return schoolList;
 }
