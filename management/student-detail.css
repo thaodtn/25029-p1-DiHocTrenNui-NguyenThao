@@ -1,0 +1,19 @@
+.student-detail-form-container {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    color: inherit;
+    gap: 0.5rem;
+}
+.student-detail-form-container label {
+    margin: 0 5vw;
+    padding-top: 1rem;
+}
+.student-detail-form-container select {
+    margin: 0 5vw;
+}
+.student-detail-form-container input {
+    margin: 0 5vw;
+    color: inherit;
+    
+}

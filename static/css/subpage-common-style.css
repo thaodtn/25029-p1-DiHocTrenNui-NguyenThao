@@ -89,7 +89,7 @@
     text-overflow: ellipsis;
 }
 
-.row-edit-btn {
+.row-edit-btn, .row-detail-btn {
     position: relative;
     display: inline-block;
     margin: 0 auto;

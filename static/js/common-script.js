@@ -129,6 +129,16 @@ export function addNewStudent(newStudent) {
     alert('Cập nhật thành công.');
 }
 
+export function updateStudentByIndex(index, newStudent) {
+    if (index < relatedStudents.length) {
+        relatedStudents[index] = newStudent;
+        //sao chép toàn bộ dữ liệu mới của mảng users vào localStorage
+        localStorage.setItem('relatedStudents', JSON.stringify(relatedStudents));
+        alert('Cập nhật thành công.');
+    }
+    else alert('Cập nhật thất bại. Vui lòng thử lại!');
+}
+
 export async function loadMainHeaderContent(sourcePageURL, sourceElementId, destinationElementId) {
     await fetchAndInjectElementById(sourcePageURL, sourceElementId, destinationElementId);
     document.getElementById('nav-dropdown-btn').addEventListener('click', openMenuDropdown);

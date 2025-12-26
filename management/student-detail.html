@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Học sinh</title>
+    <script src="https://kit.fontawesome.com/d9b040b21a.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
+    <link rel="stylesheet" href="/static/css/common-style.css">
+    <link rel="stylesheet" href="/static/css/subpage-common-style.css">
+    <link rel="stylesheet" href="/users/dashboard-style.css">
+    <link rel="stylesheet" href="/management/student-detail.css">
+    <link rel="stylesheet" href="/static/css/footer-style.css">
+</head>
+
+<body>
+    <header id="studentDetail-page-header"></header>
+    <main id="studentDetail-main-section" class="subpage-main-section">
+        <section id="studentDetail-left-side-pannel"></section>
+
+        <section class="subpage-content-section studentDetail-content-section">
+            <div class="subpage-title">
+                <p>Thông tin chi tiết của Học Sinh</p>
+            </div>
+
+            <form id="student-detail-form-container" class="student-detail-form-container" action="">
+                <label for="student-name">Họ Tên:</label>
+                <input type="text" name="student-name" id="student-name" disabled>
+
+                <label for="student-id">Mã số:</label>
+                <input type="text" name="student-id" id="student-id">
+
+                <label for="student-birthday">Ngày sinh:</label>
+                <input type="date" name="student-birthday" id="student-birthday">
+
+                <label for="student-address">Địa chỉ:</label>
+                <input type="text" name="student-address" id="student-address">
+
+                <label for="student-sponsor">Người hỗ trợ:</label>
+                <input type="text" name="student-sponsor" id="student-sponsor">
+
+                <label for="student-status">Trạng Thái</label>
+                <select name="student-status" id="student-status" required>
+                    <option value="gettingConnection">Chờ kết nối NHT</option>
+                    <option value="gettingInfor">Đang lấy thông tin</option>
+                    <option value="inProgress">Đang hỗ trợ</option>
+                    <option value="droppedOut">Đã nghỉ học</option>
+                    <option value="graduated">Đã tốt nghiệp cấp 3</option>
+                    <option value="left">Rời chương trình</option>
+                    <option value="canceled">Hủy</option>
+                </select>
+                <label for="student-people">Dân tộc:</label>
+                <input type="text" name="student-people" id="student-people">
+                <label for="student-situation">Hoàn cảnh:</label>
+                <input type="text" name="student-situation" id="student-situation">
+                <label for="student-recommender">Người giới thiệu:</label>
+                <input type="text" name="student-recommender" id="student-recommender">
+                <label for="student-startDate">Ngày bắt đầu:</label>
+                <input type="date" name="student-startDate" id="student-startDate">
+                <label for="student-endDate">Ngày kết thúc:</label>
+                <input type="date" name="student-endDate" id="student-endDate">
+                <label for="student-funds">Học Bổng Lũy Kế:</label>
+                <input type="text" name="student-funds" id="student-funds">
+                <label for="student-balance">Số Dư:</label>
+                <input type="text" name="student-balance" id="student-balance">
+                <label for="student-currentClass">Lớp:</label>
+                <input type="text" name="student-currentClass" id="student-currentClass">
+                <label for="student-currentSchool">Trường:</label>
+                <input type="text" name="student-currentSchool" id="student-currentSchool">
+                <label for="student-currentTeacher">Giáo Viên Phụ Trách:</label>
+                <input type="text" name="student-currentTeacher" id="student-currentTeacher">
+                <label for="student-currentVolunteer">TNV Phụ Trách:</label>
+                <input type="text" name="student-currentVolunteer" id="student-currentVolunteer">
+                <label for="student-remark">Ghi chú:</label>
+                <input type="text" name="student-remark" id="student-remark">
+                <div class="button-group">
+                    <button id="save-edit-student-btn" class="submit-btn" type="submit"><i
+                            class="fa-regular fa-floppy-disk fa-lg"></i>Lưu</button>
+                    <button id="close-edit-student-form-btn" type="button"><i
+                            class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                </div>
+            </form>
+        </section>
+
+
+    </main>
+    <footer id="studentDetail-page-copy-right"></footer>
+
+    <script type="module" src="/static/js/common-script.js"></script>
+    <script type="module" src="/static/js/mock-data.js"></script>
+    <script type="module" src="/users/dashboard-script.js"></script>
+    <script type="module" src="/management/student-detail.js"></script>
+    <script type="module">
+        import { initData, fetchAndInjectElementById } from '/static/js/common-script.js';
+        import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
+        import { loadStudentDetail } from '/management/student-detail.js';
+        initData();
+        loadUserHeaderContent('/users/dashboard.html', 'user-header', 'studentDetail-page-header');
+        loadLeftSideBarContent('studentDetail-left-side-pannel');
+        fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'studentDetail-page-copy-right');
+        loadStudentDetail();
+    </script>
+
+</body>
+
+</html>

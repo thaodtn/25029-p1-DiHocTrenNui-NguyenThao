@@ -22,13 +22,13 @@
     gap: 1.5rem;
     background-color: white;
     width: max-content;
-    /* height: max-content; */
+    height: 80vh;
     min-width: 310px;
     margin: 5rem auto;
     padding: 2rem;
     border-radius: 8px;
     color: #333;
-    overflow: auto;
+    overflow-y: auto;
 
 }
 
