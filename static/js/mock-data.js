@@ -1003,3 +1003,18 @@ export const originalSchools = [
         remark: ''
     }
 ]
+
+export const originalImages = [
+    {
+        id: "DH92.001-2025.01",
+        studentId: "DH92.001",
+        createdDate: "2025-01-15",
+        path: "/static/image/ho-tro/gifts.jpg"
+    },
+    {
+        id: "DH92.001-2025.02",
+        studentId: "DH92.001",
+        createdDate: "2025-02-15",
+        path: "/static/image/ho-tro/gifts.jpg"
+    },
+]

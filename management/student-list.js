@@ -1,5 +1,5 @@
 import { studentStatusTranslated } from '/static/js/mock-data.js';
-import {currentUser, addNewStudent, updateStudentByIndex, relatedStudents, checkUserControl } from '/static/js/common-script.js';
+import { currentUser, addNewStudent, updateStudentByIndex, relatedStudents, checkUserControl } from '/static/js/common-script.js';
 
 // let selectRowIndex = 0;
 let selectStudentIndex = 0;
@@ -24,7 +24,7 @@ export function loadStudentListEvent() {
     });
 
     document.getElementById('student-search-btn').addEventListener('click', searchStudentByText);
-    
+
 }
 
 export function loadDataToStudentTable(displayStudentList) {
@@ -39,7 +39,6 @@ export function loadDataToStudentTable(displayStudentList) {
         displayStudentList.forEach(element => {
             let content = `
                 <tr class="student-row">
-                    <td class="align-center"><button data-student-id="${element.id}" class="row-detail-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button></td>                    
                     <td data-label="Mã Số" class="align-center"><div class="inner-cell">${element.id}</div></td>
                     <td data-label="Họ Tên" class="align-left"><div class="inner-cell">${element.name}</div></td>                    
                     <td data-label="Trạng Thái" class="${element.status} align-center"><div class="inner-cell"><span>${studentStatusTranslated[element.status]}</span></div></td>
@@ -47,21 +46,22 @@ export function loadDataToStudentTable(displayStudentList) {
                     <td data-label="Địa Chỉ" class="align-left"><div class="inner-cell">${element.address}</div></td>
                     <td data-label="Người Hỗ Trợ" class="align-left"><div class="inner-cell">${element.currentSponsor}</div></td>
                     <td data-label="Số Dư" class="align-right"><div class="inner-cell">${element.balance}</div></td>
-                    <td><button data-student-id="${element.id}" class="row-edit-btn ${rowEditBtn}"><i class="fa-solid fa-pen"></i></button></td>
+                    <td class="align-center"><button data-student-id="${element.id}" class="row-detail-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button></td>                    
                 </tr>                
-                `;
-                    // <td data-label="Dân Tộc" class="align-left"><div class="inner-cell">${element.people}</div></td>
-                    // <td data-label="Hoàn Cảnh" class="align-left"><div class="inner-cell">${element.situation}</div></td>
-                    // <td data-label="Trường" class="align-left"><div class="inner-cell">${element.currentSchool}</div></td>
-                    // <td data-label="Lớp" class="align-center"><div class="inner-cell">${element.currentClass}</div></td>
-                    // <td data-label="Giáo Viên Phụ Trách" class="align-left"><div class="inner-cell">${element.currentTeacher}</div></td>
-                    // <td data-label="Giáo Viên Giới Thiệu" class="align-left"><div class="inner-cell">${element.recommender}</div></td>
-                    // <td data-label="Người Phụ Trách" class="align-left"><div class="inner-cell">${element.currentVolunteer}</div></td>
-                    // <td data-label="Học Bổng Lũy Kế" class="align-right"><div class="inner-cell">${element.funds}</div></td>
-                    // <td data-label="Ngày Bắt Đầu" class="align-right"><div class="inner-cell">${element.startDate}</div></td>
-                    // <td data-label="Ngày Kết Thúc" class="align-right"><div class="inner-cell">${element.endDate}</div></td>
-                    // <td data-label="Ghi Chú" class="align-left"><div class="inner-cell">${element.remark}</div></td>
-                    //<td data-label="Trạng Thái" class="${studentStatusTranslated[element.status]} align-center"><div class="inner-cell"><span>${element.status}</span></div></td>
+            `;
+            // <td data-label="Dân Tộc" class="align-left"><div class="inner-cell">${element.people}</div></td>
+            // <td data-label="Hoàn Cảnh" class="align-left"><div class="inner-cell">${element.situation}</div></td>
+            // <td data-label="Trường" class="align-left"><div class="inner-cell">${element.currentSchool}</div></td>
+            // <td data-label="Lớp" class="align-center"><div class="inner-cell">${element.currentClass}</div></td>
+            // <td data-label="Giáo Viên Phụ Trách" class="align-left"><div class="inner-cell">${element.currentTeacher}</div></td>
+            // <td data-label="Giáo Viên Giới Thiệu" class="align-left"><div class="inner-cell">${element.recommender}</div></td>
+            // <td data-label="Người Phụ Trách" class="align-left"><div class="inner-cell">${element.currentVolunteer}</div></td>
+            // <td data-label="Học Bổng Lũy Kế" class="align-right"><div class="inner-cell">${element.funds}</div></td>
+            // <td data-label="Ngày Bắt Đầu" class="align-right"><div class="inner-cell">${element.startDate}</div></td>
+            // <td data-label="Ngày Kết Thúc" class="align-right"><div class="inner-cell">${element.endDate}</div></td>
+            // <td data-label="Ghi Chú" class="align-left"><div class="inner-cell">${element.remark}</div></td>
+            //<td data-label="Trạng Thái" class="${studentStatusTranslated[element.status]} align-center"><div class="inner-cell"><span>${element.status}</span></div></td>
+            // <td><button data-student-id="${element.id}" class="row-edit-btn ${rowEditBtn}"><i class="fa-solid fa-pen"></i></button></td>
             let row = document.createElement('tr');
             row.innerHTML = content;
             row.classList.add('student-row');
@@ -80,7 +80,7 @@ export function loadDataToStudentTable(displayStudentList) {
     }
 }
 
-        
+
 
 function getNewStudent() {
     let newStudent = {};
@@ -90,7 +90,7 @@ function getNewStudent() {
     newStudent.address = document.getElementById('student-address').value;
     newStudent.currentSponsor = document.getElementById('student-sponsor').value;
     newStudent.status = document.getElementById('student-status').value;
-    
+
     newStudent.people = '';
     newStudent.situation = '';
     newStudent.recommender = '';
@@ -122,7 +122,7 @@ function editSelectedStudent(event) {
         return; //do nothing
     }
 
-    console.log("selectStudentIndex:",selectStudentIndex);
+    console.log("selectStudentIndex:", selectStudentIndex);
 
     //display Form
     document.getElementById('edit-student-modal-container').classList.toggle('show');
@@ -132,7 +132,7 @@ function editSelectedStudent(event) {
     document.getElementById('edit-student-birthday').value = relatedStudents[selectStudentIndex].birthday;
     document.getElementById('edit-student-address').value = relatedStudents[selectStudentIndex].address;
     document.getElementById('edit-student-sponsor').value = relatedStudents[selectStudentIndex].currentSponsor;
-    document.getElementById('edit-student-status').value = relatedStudents[selectStudentIndex].status;        
+    document.getElementById('edit-student-status').value = relatedStudents[selectStudentIndex].status;
     document.getElementById('edit-student-people').value = relatedStudents[selectStudentIndex].people;
     document.getElementById('edit-student-situation').value = relatedStudents[selectStudentIndex].situation;
     document.getElementById('edit-student-recommender').value = relatedStudents[selectStudentIndex].recommender;
@@ -156,7 +156,7 @@ function saveEditedStudent() {
     editStudent.address = document.getElementById('edit-student-address').value;
     editStudent.currentSponsor = document.getElementById('edit-student-sponsor').value;
     editStudent.status = document.getElementById('edit-student-status').value;
-    
+
     editStudent.people = document.getElementById('edit-student-people').value;
     editStudent.situation = document.getElementById('edit-student-situation').value;
     editStudent.recommender = document.getElementById('edit-student-recommender').value;
@@ -173,14 +173,14 @@ function saveEditedStudent() {
     updateStudentByIndex(selectStudentIndex, editStudent);
     //reload table
     loadDataToStudentTable(relatedStudents);
-    
+
 }
 
 
 function searchStudentByText() {
     const searchText = document.getElementById('student-input-search-text').value;
     const selectedStatus = document.getElementById('search-student-status').value;
-    const filteredStudents = relatedStudents.filter(({id, name, address, currentSponsor, status}) => {
+    const filteredStudents = relatedStudents.filter(({ id, name, address, currentSponsor, status }) => {
         if (id.includes(searchText) || name.includes(searchText) || address.includes(searchText) || currentSponsor.includes(searchText)) {
             if (selectedStatus !== 'all') {
                 return (status === selectedStatus);

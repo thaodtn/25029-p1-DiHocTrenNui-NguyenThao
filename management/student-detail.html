@@ -24,63 +24,131 @@
                 <p>Thông tin chi tiết của Học Sinh</p>
             </div>
 
-            <form id="student-detail-form-container" class="student-detail-form-container" action="">
-                <label for="student-name">Họ Tên:</label>
-                <input type="text" name="student-name" id="student-name" disabled>
+            <form id="student-detail-form-container" class="student-detail-form-container" action="">                
+                <div id="student-detail-display-content">
+                    <label for="student-id">Mã số:</label>
+                    <input type="text" name="student-id" id="student-id" disabled>
+                    <label for="student-name">Họ Tên:</label>
+                    <input type="text" name="student-name" id="student-name" disabled>
+                    <label for="student-sponsor">Người hỗ trợ:</label>
+                    <input type="text" name="student-sponsor" id="student-sponsor" disabled>
+                    <label for="student-status">Trạng Thái</label>
+                    <select name="student-status" id="student-status" disabled>
+                        <option value="gettingConnection">Chờ kết nối NHT</option>
+                        <option value="gettingInfor">Đang lấy thông tin</option>
+                        <option value="inProgress">Đang hỗ trợ</option>
+                        <option value="droppedOut">Đã nghỉ học</option>
+                        <option value="graduated">Đã tốt nghiệp cấp 3</option>
+                        <option value="left">Rời chương trình</option>
+                        <option value="canceled">Hủy</option>
+                    </select>
+                </div>                
+                <div id="student-detail-hidden-content">
+                    <label for="student-birthday">Ngày sinh:</label>
+                    <input type="date" name="student-birthday" id="student-birthday" disabled>    
+                    <label for="student-address">Địa chỉ:</label>
+                    <input type="text" name="student-address" id="student-address" disabled>
+                    <label for="student-people">Dân tộc:</label>
+                    <input type="text" name="student-people" id="student-people" disabled>
+                    <label for="student-situation">Hoàn cảnh:</label>
+                    <textarea name="student-situation" id="student-situation" disabled></textarea>
+                    <label for="student-recommender">Người giới thiệu:</label>
+                    <input type="text" name="student-recommender" id="student-recommender" disabled>
+                    <label for="student-startDate">Ngày bắt đầu:</label>
+                    <input type="date" name="student-startDate" id="student-startDate" disabled>
+                    <label for="student-endDate">Ngày kết thúc:</label>
+                    <input type="date" name="student-endDate" id="student-endDate" disabled>
+                    <label for="student-funds">Học Bổng Lũy Kế:</label>
+                    <input type="text" name="student-funds" id="student-funds" disabled>
+                    <label for="student-balance">Số Dư:</label>
+                    <input type="text" name="student-balance" id="student-balance" disabled>
+                    <label for="student-currentClass">Lớp:</label>
+                    <input type="text" name="student-currentClass" id="student-currentClass" disabled>
+                    <label for="student-currentSchool">Trường:</label>
+                    <input type="text" name="student-currentSchool" id="student-currentSchool" disabled>
+                    <label for="student-currentTeacher">Giáo Viên Phụ Trách:</label>
+                    <input type="text" name="student-currentTeacher" id="student-currentTeacher" disabled>
+                    <label for="student-currentVolunteer">TNV Phụ Trách:</label>
+                    <input type="text" name="student-currentVolunteer" id="student-currentVolunteer" disabled>
+                    <label for="student-remark">Ghi chú:</label>
+                    <input type="text" name="student-remark" id="student-remark" disabled>
+                </div>
 
-                <label for="student-id">Mã số:</label>
-                <input type="text" name="student-id" id="student-id">
-
-                <label for="student-birthday">Ngày sinh:</label>
-                <input type="date" name="student-birthday" id="student-birthday">
-
-                <label for="student-address">Địa chỉ:</label>
-                <input type="text" name="student-address" id="student-address">
-
-                <label for="student-sponsor">Người hỗ trợ:</label>
-                <input type="text" name="student-sponsor" id="student-sponsor">
-
-                <label for="student-status">Trạng Thái</label>
-                <select name="student-status" id="student-status" required>
-                    <option value="gettingConnection">Chờ kết nối NHT</option>
-                    <option value="gettingInfor">Đang lấy thông tin</option>
-                    <option value="inProgress">Đang hỗ trợ</option>
-                    <option value="droppedOut">Đã nghỉ học</option>
-                    <option value="graduated">Đã tốt nghiệp cấp 3</option>
-                    <option value="left">Rời chương trình</option>
-                    <option value="canceled">Hủy</option>
-                </select>
-                <label for="student-people">Dân tộc:</label>
-                <input type="text" name="student-people" id="student-people">
-                <label for="student-situation">Hoàn cảnh:</label>
-                <input type="text" name="student-situation" id="student-situation">
-                <label for="student-recommender">Người giới thiệu:</label>
-                <input type="text" name="student-recommender" id="student-recommender">
-                <label for="student-startDate">Ngày bắt đầu:</label>
-                <input type="date" name="student-startDate" id="student-startDate">
-                <label for="student-endDate">Ngày kết thúc:</label>
-                <input type="date" name="student-endDate" id="student-endDate">
-                <label for="student-funds">Học Bổng Lũy Kế:</label>
-                <input type="text" name="student-funds" id="student-funds">
-                <label for="student-balance">Số Dư:</label>
-                <input type="text" name="student-balance" id="student-balance">
-                <label for="student-currentClass">Lớp:</label>
-                <input type="text" name="student-currentClass" id="student-currentClass">
-                <label for="student-currentSchool">Trường:</label>
-                <input type="text" name="student-currentSchool" id="student-currentSchool">
-                <label for="student-currentTeacher">Giáo Viên Phụ Trách:</label>
-                <input type="text" name="student-currentTeacher" id="student-currentTeacher">
-                <label for="student-currentVolunteer">TNV Phụ Trách:</label>
-                <input type="text" name="student-currentVolunteer" id="student-currentVolunteer">
-                <label for="student-remark">Ghi chú:</label>
-                <input type="text" name="student-remark" id="student-remark">
                 <div class="button-group">
-                    <button id="save-edit-student-btn" class="submit-btn" type="submit"><i
-                            class="fa-regular fa-floppy-disk fa-lg"></i>Lưu</button>
-                    <button id="close-edit-student-form-btn" type="button"><i
-                            class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                    <button id="edit-student-detail-btn" type="button"><i class="fa-solid fa-pen fa-lg"></i> Sửa</button>
+                    <button id="save-student-detail-btn" type="button"><i class="fa-regular fa-floppy-disk fa-lg"></i> Lưu</button>
+                    <button id="cancel-edit-student-detail-btn" type="button"><i class="fa-solid fa-square-xmark fa-lg"></i>  Hủy</button>
+                    <button id="display-hidden-student-detail-btn" type="button"><i class="fa fa-caret-square-o-down fa-lg"></i> Xem thêm</button>
                 </div>
             </form>
+
+        </section>
+        <section class="subpage-content-section studentImages-section">
+            <div class="subpage-title">
+                <p>Hình ảnh trao quà</p>
+            </div>
+            <div class="images-container">
+                <div class="image-card">
+                    <h4>Tháng 01/2025</h4>
+                    <img src="/static/image/ho-tro/gifts.jpg" alt="Tháng 01/2025" class="image-inner-card">
+                    <button class="edit-image-btn" type="button"><i class="fa-solid fa-pen fa-lg"></i> Sửa</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 02/2025</h4>
+                    <img src="/static/image/ho-tro/gifts.jpg" alt="Tháng 02/2025" class="image-inner-card">
+                    <button class="edit-image-btn" type="button"><i class="fa-solid fa-pen fa-lg"></i> Sửa</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 03/2025</h4>
+                    <img src="/static/image/ho-tro/gifts.jpg" alt="Tháng 03/2025" class="image-inner-card">
+                    <button class="edit-image-btn" type="button"><i class="fa-solid fa-pen fa-lg"></i> Sửa</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 04/2025</h4>
+                    <img src="/static/image/ho-tro/gifts.jpg" alt="Tháng 04/2025" class="image-inner-card">
+                    <button class="edit-image-btn" type="button"><i class="fa-solid fa-pen fa-lg"></i> Sửa</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 05/2025</h4>
+                    <img src="" alt="Chưa có hình trao quà" class="image-inner-card">
+                    <button class="add-image-btn" type="button"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i> Thêm</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 06/2025</h4>
+                    <img src="" alt="Chưa có hình trao quà" class="image-inner-card">
+                    <button class="add-image-btn" type="button"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i> Thêm</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 07/2025</h4>
+                    <img src="" alt="Chưa có hình trao quà" class="image-inner-card">
+                    <button class="add-image-btn" type="button"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i> Thêm</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 08/2025</h4>
+                    <img src="" alt="Chưa có hình trao quà" class="image-inner-card">
+                    <button class="add-image-btn" type="button"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i> Thêm</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 09/2025</h4>
+                    <img src="" alt="Chưa có hình trao quà" class="image-inner-card">
+                    <button class="add-image-btn" type="button"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i> Thêm</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 10/2025</h4>
+                    <img src="" alt="Chưa có hình trao quà" class="image-inner-card">
+                    <button class="add-image-btn" type="button"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i> Thêm</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 11/2025</h4>
+                    <img src="" alt="Chưa có hình trao quà" class="image-inner-card">
+                    <button class="add-image-btn" type="button"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i> Thêm</button>
+                </div>
+                <div class="image-card">
+                    <h4>Tháng 12/2025</h4>
+                    <img src="" alt="Chưa có hình trao quà" class="image-inner-card">
+                    <button class="add-image-btn" type="button"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i> Thêm</button>
+                </div>
+            </div>
         </section>
 
 
@@ -94,12 +162,13 @@
     <script type="module">
         import { initData, fetchAndInjectElementById } from '/static/js/common-script.js';
         import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
-        import { loadStudentDetail } from '/management/student-detail.js';
+        import { loadStudentDetail, loadStudentDetailEvent } from '/management/student-detail.js';
         initData();
         loadUserHeaderContent('/users/dashboard.html', 'user-header', 'studentDetail-page-header');
         loadLeftSideBarContent('studentDetail-left-side-pannel');
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'studentDetail-page-copy-right');
         loadStudentDetail();
+        loadStudentDetailEvent();
     </script>
 
 </body>

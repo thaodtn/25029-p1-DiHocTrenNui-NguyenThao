@@ -1,3 +1,15 @@
+#studentDetail-main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.studentDetail-content-section,
+.studentImages-section {
+    max-width: 1200px;
+    width: 90vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .student-detail-form-container {
     display: flex;
     flex-direction: column;
@@ -5,15 +17,72 @@
     color: inherit;
     gap: 0.5rem;
 }
+#student-detail-display-content, #student-detail-hidden-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5vw;
+}
+#student-detail-hidden-content {
+    display: none;
+}
+#save-student-detail-btn,
+#cancel-edit-student-detail-btn {
+    display: none; /* hidden by default */
+}
 .student-detail-form-container label {
-    margin: 0 5vw;
     padding-top: 1rem;
 }
-.student-detail-form-container select {
-    margin: 0 5vw;
-}
-.student-detail-form-container input {
-    margin: 0 5vw;
+
+.student-detail-form-container input,
+.student-detail-form-container select,
+.student-detail-form-container textarea {
     color: inherit;
-    
+}
+
+.button-group {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+.button-group button {
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(51, 51, 51, 0.3);
+    background-color: #1a685b;
+    color: white;
+}
+
+.images-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+.image-card h4 {
+    padding-top: 20px;
+}
+.image-inner-card {
+    width: 80%;
+    height: 70%;
+    /* padding: 5px; */
+}
+.edit-image-btn,
+.add-image-btn {
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(51, 51, 51, 0.3);
+    background-color: grey;
+    color: white;
 }
