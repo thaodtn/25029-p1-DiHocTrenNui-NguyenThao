@@ -1006,15 +1006,48 @@ export const originalSchools = [
 
 export const originalImages = [
     {
-        id: "DH92.001-2025.01",
         studentId: "DH92.001",
-        createdDate: "2025-01-15",
-        path: "/static/image/ho-tro/gifts.jpg"
+        month: "01/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
     },
     {
-        id: "DH92.001-2025.02",
         studentId: "DH92.001",
-        createdDate: "2025-02-15",
-        path: "/static/image/ho-tro/gifts.jpg"
+        month: "02/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.001",
+        month: "03/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.001",
+        month: "04/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.001",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.001",
+        month: "06/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.001",
+        month: "07/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.002",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.002",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
     },
 ]

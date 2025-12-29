@@ -1,12 +1,15 @@
 import { relatedStudents, updateStudentByIndex, checkUserControl, currentUser } from "/static/js/common-script.js";
 import { studentStatusTranslated, originalImages } from "/static/js/mock-data.js";
 let selectStudentIndex = 0;
+let selectStudent = {};
+let imageList = [];
 
 export function loadStudentDetailEvent() {
     document.getElementById('display-hidden-student-detail-btn').addEventListener('click', toggleViewAllDetails);
     document.getElementById('edit-student-detail-btn').addEventListener('click', editAllDetails);
     document.getElementById('save-student-detail-btn').addEventListener('click', saveAllDetails);
     document.getElementById('cancel-edit-student-detail-btn').addEventListener('click', restoreAllDetails);
+    
 }
 
 export function loadStudentDetail() {
@@ -14,8 +17,7 @@ export function loadStudentDetail() {
     if (selectStudentIndex >= relatedStudents.length) {
         return;
     }
-    const selectStudent = relatedStudents[selectStudentIndex];
-    console.log('selectStudent:', selectStudent);
+    selectStudent = relatedStudents[selectStudentIndex];
 
     if (checkUserControl(currentUser.id, 'editStudent') === false) {
         document.getElementById('edit-student-detail-btn').style.display = 'none';
@@ -39,6 +41,34 @@ export function loadStudentDetail() {
     document.getElementById('student-currentTeacher').value = selectStudent.currentTeacher;
     document.getElementById('student-currentVolunteer').value = selectStudent.currentVolunteer;
     document.getElementById('student-remark').value = selectStudent.remark;
+
+    // load images
+    imageList = originalImages.filter(img => img.studentId === selectStudent.id);
+    console.log(imageList);
+
+    const container = document.getElementById('images-container');
+    imageList.forEach(img => {
+        //check new image exist in local storage or not
+        let storedImage = localStorage.getItem(`image_${img.studentId}_${img.month}`);
+        if (!storedImage) {
+            storedImage = img.imageSrc;
+        }
+        //create <form> of the month
+        let newForm = document.createElement('form');
+        const formContent = `
+            <form>
+                <h4>Tháng ${img.month}</h4>
+                <input data-month="${img.month}" type="file" id=${img.month} hidden />
+                <div class="image-inner-card"><img id="file-chosen-${img.month}" src=${storedImage} alt="Chưa có hình trao quà" ></div>
+                <label for=${img.month} class="submit-button"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i>  Cập nhật</label>
+            </form>
+        `;
+        newForm.innerHTML = formContent;
+        newForm.classList.add("image-card");
+        container.appendChild(newForm);
+        document.getElementById(img.month).addEventListener('change', getImageInput);
+    })
+
 
     console.log('finish loadStudentDetail');
 
@@ -117,7 +147,6 @@ function saveAllDetails() {
 
 function restoreAllDetails() {
     //reload detail
-    const selectStudent = relatedStudents[selectStudentIndex];
     document.getElementById('student-id').value = selectStudent.id;
     document.getElementById('student-name').value = selectStudent.name;
     document.getElementById('student-birthday').value = selectStudent.birthday;
@@ -151,4 +180,22 @@ function restoreAllDetails() {
     document.getElementById('cancel-edit-student-detail-btn').style.display = 'none';
     document.getElementById('edit-student-detail-btn').style.display = 'block';
     document.getElementById('display-hidden-student-detail-btn').style.display = 'block';
+}
+
+function getImageInput(event) {
+    const file = event.target.files[0];
+    if (!file) return; //kiểm tra nếu người dùng bấm cancel
+
+    const selectedMonth = event.target.dataset.month;
+    const reader = new FileReader();
+    reader.onloadend = () => {
+        const fullBase64String = reader.result;
+        //store into Local Storage with name: studentId + month
+        localStorage.setItem(`image_${selectStudent.id}_${selectedMonth}`, fullBase64String);
+        
+        //display new image
+        document.getElementById('file-chosen-' + selectedMonth).src = fullBase64String;
+        console.log('Đã lưu và hiển thị ảnh thành công');
+    }
+    reader.readAsDataURL(file);
 }
