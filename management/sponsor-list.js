@@ -1,7 +1,16 @@
 import { sponsorStatusTranslated } from '/static/js/mock-data.js';
-import {currentUser, relatedSponsors, checkUserControl } from '/static/js/common-script.js';
+import {currentUser, relatedSponsors, checkUserControl, addNewSponsor } from '/static/js/common-script.js';
 
 export function loadSponsorListEvent() {
+    document.getElementById('open-form-add-sponsor-btn').addEventListener('click', () => {
+        console.log('open-form-add-sponsor-btn clicked');
+        document.getElementById('add-new-sponsor-modal-container').classList.toggle('show');
+    });
+    document.getElementById('close-add-sponsor-form-btn').addEventListener('click', () => {
+        document.getElementById('add-new-sponsor-modal-container').classList.toggle('show');
+    });
+    document.getElementById('add-new-sponsor-btn').addEventListener('click', getNewSponsor);
+
     document.getElementById('sponsor-search-btn').addEventListener('click', searchSponsorByText);
     
 }
@@ -24,19 +33,19 @@ export function loadDataToSponsorTable(displaySponsorList) {
                     <td data-label="Mã HS đang hỗ trợ" class="align-left"><div>${element.detailStudents}</div></td>
                     <td data-label="Đã ủng hộ" class="align-right"><div class="inner-cell">${element.totalDeposit}</div></td>
                     <td data-label="Số Dư" class="align-right"><div class="inner-cell">${element.balance}</div></td>
-                    <td><button class="row-edit-btn ${rowEditBtn}"><i class="fa-solid fa-pen"></i></button></td>                    
+                    <td class="align-center"><button data-sponsor-id="${element.id}" class="row-detail-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button></td>                
                     </tr>                
                     `;
-                    // <td data-label="Liên hệ" class="align-left"><div class="inner-cell">${element.contact}</div></td>
-                    // <td data-label="Số HS đang hỗ trợ" class="align-center"><div class="inner-cell">${element.totalStudents}</div></td>
-                    // <td data-label="Bắt Đầu" class="align-right"><div class="inner-cell">${element.startDate}</div></td>
-                    // <td data-label="Kết Thúc" class="align-right"><div class="inner-cell">${element.endDate}</div></td>                    
-                    // <td data-label="TNV Phụ Trách" class="align-left"><div class="inner-cell">${element.currentVolunteer}</div></td>
-                    // <td data-label="Ghi Chú" class="align-left"><div class="inner-cell">${element.remark}</div></td>
+                    
             let row = document.createElement('tr');
             row.innerHTML = content;
             row.classList.add('sponsor-row');
             table.appendChild(row);
+        });
+
+        //add event listener for each Detail button in row
+        document.querySelectorAll('.row-detail-btn').forEach(element => {
+            element.addEventListener('click', openSponsorDetail);
         });
     }
     else {
@@ -59,5 +68,38 @@ function searchSponsorByText() {
 
     if (filteredSponsors) {
         loadDataToSponsorTable(filteredSponsors);
+    }
+}
+
+function getNewSponsor() {
+    let newSponsor = {};
+        newSponsor.id = document.getElementById('sponsor-id').value;
+        newSponsor.name = document.getElementById('sponsor-name').value;
+        newSponsor.status = document.getElementById('sponsor-status').value;
+        newSponsor.startDate = document.getElementById('sponsor-startDate').value;
+        newSponsor.contact = document.getElementById('sponsor-contact').value;
+    
+        newSponsor.totalStudents = 0;
+        newSponsor.detailStudents = '';
+        newSponsor.endDate = '';
+        newSponsor.currentVolunteer = '';
+        newSponsor.totalDeposit = '0';
+        newSponsor.balance = '0';
+        newSponsor.remark = '';
+
+    
+        addNewSponsor(newSponsor);
+        //reload table
+        loadDataToSponsorTable(relatedSponsors);
+        
+}
+
+function openSponsorDetail(event) {
+    const sponsorId = event.target.closest('.row-detail-btn').dataset.sponsorId;
+    const selectSponsorIndex = relatedSponsors.findIndex(sponsor => sponsor.id === sponsorId);
+    if (selectSponsorIndex !== -1) {
+        //save selectSponsorIndex to Local storage
+        localStorage.setItem('selectSponsorIndex', JSON.stringify(selectSponsorIndex));
+        window.location.href = '/management/sponsor-detail.html';
     }
 }

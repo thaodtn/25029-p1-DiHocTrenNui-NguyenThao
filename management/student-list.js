@@ -49,28 +49,11 @@ export function loadDataToStudentTable(displayStudentList) {
                     <td class="align-center"><button data-student-id="${element.id}" class="row-detail-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button></td>                    
                 </tr>                
             `;
-            // <td data-label="Dân Tộc" class="align-left"><div class="inner-cell">${element.people}</div></td>
-            // <td data-label="Hoàn Cảnh" class="align-left"><div class="inner-cell">${element.situation}</div></td>
-            // <td data-label="Trường" class="align-left"><div class="inner-cell">${element.currentSchool}</div></td>
-            // <td data-label="Lớp" class="align-center"><div class="inner-cell">${element.currentClass}</div></td>
-            // <td data-label="Giáo Viên Phụ Trách" class="align-left"><div class="inner-cell">${element.currentTeacher}</div></td>
-            // <td data-label="Giáo Viên Giới Thiệu" class="align-left"><div class="inner-cell">${element.recommender}</div></td>
-            // <td data-label="Người Phụ Trách" class="align-left"><div class="inner-cell">${element.currentVolunteer}</div></td>
-            // <td data-label="Học Bổng Lũy Kế" class="align-right"><div class="inner-cell">${element.funds}</div></td>
-            // <td data-label="Ngày Bắt Đầu" class="align-right"><div class="inner-cell">${element.startDate}</div></td>
-            // <td data-label="Ngày Kết Thúc" class="align-right"><div class="inner-cell">${element.endDate}</div></td>
-            // <td data-label="Ghi Chú" class="align-left"><div class="inner-cell">${element.remark}</div></td>
-            //<td data-label="Trạng Thái" class="${studentStatusTranslated[element.status]} align-center"><div class="inner-cell"><span>${element.status}</span></div></td>
-            // <td><button data-student-id="${element.id}" class="row-edit-btn ${rowEditBtn}"><i class="fa-solid fa-pen"></i></button></td>
+            
             let row = document.createElement('tr');
             row.innerHTML = content;
             row.classList.add('student-row');
             table.appendChild(row);
-        });
-
-        //add event listener for each Edit button in row
-        document.querySelectorAll('.row-edit-btn').forEach(element => {
-            element.addEventListener('click', editSelectedStudent);
         });
 
         //add event listener for each Detail button in row

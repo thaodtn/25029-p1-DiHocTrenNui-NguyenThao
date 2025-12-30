@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Người Hỗ Trợ</title>
+    <script src="https://kit.fontawesome.com/d9b040b21a.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
+    <link rel="stylesheet" href="/static/css/common-style.css">
+    <link rel="stylesheet" href="/static/css/subpage-common-style.css">
+    <link rel="stylesheet" href="/users/dashboard-style.css">
+    <link rel="stylesheet" href="/management/sponsor-detail.css">
+    <link rel="stylesheet" href="/static/css/footer-style.css">
+</head>
+
+<body>
+    <header id="sponsorDetail-page-header"></header>
+    <main id="sponsorDetail-main-section" class="subpage-main-section">
+        <section id="sponsorDetail-left-side-pannel"></section>
+
+        <section class="subpage-content-section sponsorDetail-content-section">
+            <div class="subpage-title">
+                <p>Thông tin chi tiết của Người Hỗ Trợ</p>
+            </div>
+
+            <form id="sponsor-detail-form-container" class="sponsor-detail-form-container" action="">                
+                <div id="sponsor-detail-display-content">
+                    <label for="sponsor-id">Mã số:</label>
+                    <input type="text" name="sponsor-id" id="sponsor-id" disabled>
+                    <label for="sponsor-name">Họ Tên:</label>
+                    <input type="text" name="sponsor-name" id="sponsor-name" disabled>
+                    <label for="sponsor-contact">Thông tin liên hệ:</label>
+                    <input type="text" name="sponsor-contact" id="sponsor-contact" disabled>
+                    <label for="sponsor-status">Trạng Thái</label>
+                    <select name="sponsor-status" id="sponsor-status" disabled>
+                        <option value="gettingInfor">Đang xác minh</option>
+                        <option value="gettingConnection">Chờ kết nối HS</option>
+                        <option value="inProgress">Đang hỗ trợ</option>
+                        <option value="ended">Đã kết thúc</option>
+                        <option value="canceled">Hủy</option>
+                    </select>
+                    <label for="sponsor-totalStudents">Số học sinh đăng ký nhận hỗ trợ:</label>
+                    <input type="text" name="sponsor-totalStudents" id="sponsor-totalStudents" disabled>
+                    <label for="sponsor-detailStudents">Mã số học sinh đang hỗ trợ:</label>
+                    <input type="text" name="sponsor-detailStudents" id="sponsor-detailStudents" disabled>
+                    <label for="sponsor-startDate">Ngày bắt đầu:</label>
+                    <input type="date" name="sponsor-startDate" id="sponsor-startDate" disabled>
+                    <label for="sponsor-endDate">Ngày kết thúc:</label>
+                    <input type="date" name="sponsor-endDate" id="sponsor-endDate" disabled>
+                    <label for="sponsor-currentVolunteer">TNV Phụ Trách:</label>
+                    <input type="text" name="sponsor-currentVolunteer" id="sponsor-currentVolunteer" disabled>
+                    <label for="sponsor-totalDeposit">Số tiền đã ủng hộ:</label>
+                    <input type="text" name="sponsor-totalDeposit" id="sponsor-totalDeposit" disabled>
+                    <label for="sponsor-balance">Số dư:</label>
+                    <input type="text" name="sponsor-balance" id="sponsor-balance" disabled>
+                    <label for="sponsor-remark">Ghi chú:</label>
+                    <input type="text" name="sponsor-remark" id="sponsor-remark" disabled>
+                </div>  
+
+                <div class="button-group">
+                    <button id="edit-sponsor-detail-btn" type="button"><i class="fa-solid fa-pen fa-lg"></i> Sửa</button>
+                    <button id="save-sponsor-detail-btn" type="button"><i class="fa-regular fa-floppy-disk fa-lg"></i> Lưu</button>
+                    <button id="cancel-edit-sponsor-detail-btn" type="button"><i class="fa-solid fa-square-xmark fa-lg"></i>  Hủy</button>
+                </div>
+            </form>
+
+        </section>
+
+
+    </main>
+    <footer id="sponsorDetail-page-copy-right"></footer>
+
+    <script type="module" src="/static/js/common-script.js"></script>
+    <script type="module" src="/static/js/mock-data.js"></script>
+    <script type="module" src="/users/dashboard-script.js"></script>
+    <script type="module" src="/management/sponsor-detail.js"></script>
+    <script type="module">
+        import { initData, fetchAndInjectElementById } from '/static/js/common-script.js';
+        import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
+        import { loadSponsorDetail, loadSponsorDetailEvent } from '/management/sponsor-detail.js';
+        initData();
+        loadUserHeaderContent('/users/dashboard.html', 'user-header', 'sponsorDetail-page-header');
+        loadLeftSideBarContent('sponsorDetail-left-side-pannel');
+        fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'sponsorDetail-page-copy-right');
+        loadSponsorDetail();
+        loadSponsorDetailEvent();
+    </script>
+
+</body>
+
+</html>

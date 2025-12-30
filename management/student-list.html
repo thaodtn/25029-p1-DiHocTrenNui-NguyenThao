@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="/management/student-list.css">
     <link rel="stylesheet" href="/static/css/footer-style.css">
 </head>
+
 <body>
     <header id="studentList-page-header"></header>
 
@@ -22,7 +24,8 @@
                 <p>Danh Sách Học Sinh</p>
             </div>
             <div class="subpage-action-container">
-                <input type="text" class="input-search-text" id="student-input-search-text" placeholder="Tìm Mã số, Họ Tên, Địa Chỉ...">
+                <input type="text" class="input-search-text" id="student-input-search-text"
+                    placeholder="Tìm Mã số, Họ Tên, Địa Chỉ...">
                 <select name="search-student-status" id="search-student-status" class="input-search-filter">
                     <option value="all">Tất cả</option>
                     <option value="inProgress">Đang hỗ trợ</option>
@@ -40,14 +43,30 @@
                 <table class="subpage-table">
                     <thead>
                         <tr>
-                            <th><div class="inner-cell">Mã Số</div></th>
-                            <th><div class="inner-cell">Họ Tên</div></th>
-                            <th><div class="inner-cell">Trạng Thái</div></th>
-                            <th><div class="inner-cell">Ngày Sinh</div></th>
-                            <th><div class="inner-cell">Địa Chỉ</div></th>
-                            <th><div class="inner-cell">Người Hỗ Trợ</div></th>
-                            <th><div class="inner-cell">Số Dư</div></th>
-                            <th><div class="inner-cell">Chi tiết</div></th>
+                            <th>
+                                <div class="inner-cell">Mã Số</div>
+                            </th>
+                            <th>
+                                <div class="inner-cell">Họ Tên</div>
+                            </th>
+                            <th>
+                                <div class="inner-cell">Trạng Thái</div>
+                            </th>
+                            <th>
+                                <div class="inner-cell">Ngày Sinh</div>
+                            </th>
+                            <th>
+                                <div class="inner-cell">Địa Chỉ</div>
+                            </th>
+                            <th>
+                                <div class="inner-cell">Người Hỗ Trợ</div>
+                            </th>
+                            <th>
+                                <div class="inner-cell">Số Dư</div>
+                            </th>
+                            <th>
+                                <div class="inner-cell">Chi tiết</div>
+                            </th>
                             <!-- <th><div class="inner-cell">Dân Tộc</div></th>
                             <th><div class="inner-cell">Hoàn cảnh</div></th>
                             <th><div class="inner-cell">Trường</div></th>
@@ -61,96 +80,40 @@
                             <!-- <th><div class="inner-cell">Ghi Chú</div></th> -->
                         </tr>
                     </thead>
-                    <tbody id="student-table-body">    
+                    <tbody id="student-table-body">
                     </tbody>
                 </table>
             </div>
 
             <section id="add-new-student-modal-container" class="modal-container">
-            <form class="add-new-student-form-container" action="">
-                <p class="form-title">Thông tin của Học Sinh mới</p>
-                <label for="student-id">Mã Số</label>
-                <input type="text" name="student-id" id="student-id" required>
-                <label for="student-name">Họ Tên</label>
-                <input type="text" name="student-name" id="student-name" required>
-                <label for="student-status">Trạng Thái</label>
-                <select name="student-status" id="student-status" required>
-                    <option value="gettingConnection">Chờ kết nối NHT</option>
-                    <option value="gettingInfor">Đang lấy thông tin</option>
-                    <option value="inProgress">Đang hỗ trợ</option>
-                </select>
-                <label for="student-birthday">Ngày Sinh</label>
-                <input type="date" name="student-birthday" id="student-birthday" required>
-                <label for="student-address">Địa Chỉ</label>
-                <input type="text" name="student-address" id="student-address" required>
-                <label for="student-sponsor">Người Hỗ Trợ</label>
-                <input type="text" name="student-sponsor" id="student-sponsor">
-                
-                <div class="button-group">
-                    <button id="add-new-student-btn" class="submit-btn" type="submit"><i class="fa-solid fa-user-plus fa-lg"></i>Thêm</button>
-                    <button id="close-add-student-form-btn" type="button"><i class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
-                </div>
-            </form>
-        </section>
-
-            <div id="edit-student-modal-container" class="modal-container">
-                <form id="edit-student-form-container" class="edit-student-form-container" action="">
-                    <p class="form-title">Thông tin học sinh</p>
-                    <label for="edit-student-name">Họ Tên:</label>
-                    <input type="text" name="edit-student-name" id="edit-student-name">
-
-                    <label for="edit-student-id">Mã số:</label>
-                    <input type="text" name="edit-student-id" id="edit-student-id">
-
-                    <label for="edit-student-birthday">Ngày sinh:</label>
-                    <input type="date" name="edit-student-birthday" id="edit-student-birthday">
-
-                    <label for="edit-student-address">Địa chỉ:</label>
-                    <input type="text" name="edit-student-address" id="edit-student-address">
-
-                    <label for="edit-student-sponsor">Người hỗ trợ:</label>
-                    <input type="text" name="edit-student-sponsor" id="edit-student-sponsor">
-
-                    <label for="edit-student-status">Trạng Thái</label>
-                    <select name="edit-student-status" id="edit-student-status" required>
+                <form class="add-new-student-form-container" action="">
+                    <p class="form-title">Thông tin của Học Sinh mới</p>
+                    <label for="student-id">Mã Số</label>
+                    <input type="text" name="student-id" id="student-id" required>
+                    <label for="student-name">Họ Tên</label>
+                    <input type="text" name="student-name" id="student-name" required>
+                    <label for="student-status">Trạng Thái</label>
+                    <select name="student-status" id="student-status" required>
                         <option value="gettingConnection">Chờ kết nối NHT</option>
                         <option value="gettingInfor">Đang lấy thông tin</option>
                         <option value="inProgress">Đang hỗ trợ</option>
-                        <option value="droppedOut">Đã nghỉ học</option>
-                        <option value="graduated">Đã tốt nghiệp cấp 3</option>
-                        <option value="left">Rời chương trình</option>
-                        <option value="canceled">Hủy</option>
                     </select>
-                    <label for="edit-student-people">Dân tộc:</label>
-                    <input type="text" name="edit-student-people" id="edit-student-people">
-                    <label for="edit-student-situation">Hoàn cảnh:</label>
-                    <input type="text" name="edit-student-situation" id="edit-student-situation">
-                    <label for="edit-student-recommender">Người giới thiệu:</label>
-                    <input type="text" name="edit-student-recommender" id="edit-student-recommender">
-                    <label for="edit-student-startDate">Ngày bắt đầu:</label>
-                    <input type="date" name="edit-student-startDate" id="edit-student-startDate">
-                    <label for="edit-student-endDate">Ngày kết thúc:</label>
-                    <input type="date" name="edit-student-endDate" id="edit-student-endDate">
-                    <label for="edit-student-funds">Học Bổng Lũy Kế:</label>
-                    <input type="text" name="edit-student-funds" id="edit-student-funds">
-                    <label for="edit-student-balance">Số Dư:</label>
-                    <input type="text" name="edit-student-balance" id="edit-student-balance">
-                    <label for="edit-student-currentClass">Lớp:</label>
-                    <input type="text" name="edit-student-currentClass" id="edit-student-currentClass">
-                    <label for="edit-student-currentSchool">Trường:</label>
-                    <input type="text" name="edit-student-currentSchool" id="edit-student-currentSchool">
-                    <label for="edit-student-currentTeacher">Giáo Viên Phụ Trách:</label>
-                    <input type="text" name="edit-student-currentTeacher" id="edit-student-currentTeacher">
-                    <label for="edit-student-currentVolunteer">TNV Phụ Trách:</label>
-                    <input type="text" name="edit-student-currentVolunteer" id="edit-student-currentVolunteer">
-                    <label for="edit-student-remark">Ghi chú:</label>
-                    <input type="text" name="edit-student-remark" id="edit-student-remark">
+                    <label for="student-birthday">Ngày Sinh</label>
+                    <input type="date" name="student-birthday" id="student-birthday" required>
+                    <label for="student-address">Địa Chỉ</label>
+                    <input type="text" name="student-address" id="student-address" required>
+                    <label for="student-sponsor">Người Hỗ Trợ</label>
+                    <input type="text" name="student-sponsor" id="student-sponsor">
+
                     <div class="button-group">
-                        <button id="save-edit-student-btn" class="submit-btn" type="submit"><i class="fa-regular fa-floppy-disk fa-lg"></i>Lưu</button>
-                        <button id="close-edit-student-form-btn" type="button"><i class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                        <button id="add-new-student-btn" class="submit-btn" type="submit"><i
+                                class="fa-solid fa-user-plus fa-lg"></i>Thêm</button>
+                        <button id="close-add-student-form-btn" type="button"><i
+                                class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
                     </div>
                 </form>
-            </div>
+            </section>
+
         </section>
     </main>
 
@@ -171,6 +134,7 @@
         loadDataToStudentTable(relatedStudents);
         loadStudentListEvent();
     </script>
-    
+
 </body>
+
 </html>

@@ -684,7 +684,7 @@ export const originalSponsors = [
         status: 'inProgress',
         totalStudents: '2',
         detailStudents: 'DH92.001,DH92.002',
-        startDate: '1/9/2022',
+        startDate: '2025-09-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
         totalDeposit: '20000000',
@@ -698,7 +698,7 @@ export const originalSponsors = [
         status: 'inProgress', // Đang hỗ trợ vì endDate trống
         totalStudents: '1',
         detailStudents: 'DH92.003',
-        startDate: '15/8/2023',
+        startDate: '2025-11-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
         totalDeposit: '10000000',
@@ -709,11 +709,11 @@ export const originalSponsors = [
         id: 'NHT0003',
         name: 'Lê Thị Thu Hoài',
         contact: 'SĐT: 0987654321, Email: hoai.lt@gmail.com',
-        status: 'Đã kết thúc', // Đã kết thúc vì endDate có giá trị
+        status: 'ended', // Đã kết thúc vì endDate có giá trị
         totalStudents: '3',
         detailStudents: 'DH92.004,DH92.005,DH92.006',
-        startDate: '10/10/2022',
-        endDate: '1/3/2024',
+        startDate: '2025-01-01',
+        endDate: '2025-12-31',
         currentVolunteer: 'TNV0001',
         totalDeposit: '35000000',
         balance: '2500000',
@@ -726,7 +726,7 @@ export const originalSponsors = [
         status: 'inProgress', // Đang hỗ trợ vì endDate trống
         totalStudents: '1',
         detailStudents: 'DH92.007',
-        startDate: '5/4/2023',
+        startDate: '2025-11-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
         totalDeposit: '8000000',
@@ -740,7 +740,7 @@ export const originalSponsors = [
         status: 'inProgress', // Đang hỗ trợ vì endDate trống
         totalStudents: '2',
         detailStudents: 'DH92.008,DH92.009',
-        startDate: '20/11/2022',
+        startDate: '2025-03-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
         totalDeposit: '25000000',
@@ -754,7 +754,7 @@ export const originalSponsors = [
         status: 'gettingConnection', // Gán ngẫu nhiên
         totalStudents: '1',
         detailStudents: 'DH92.010',
-        startDate: '1/9/2023',
+        startDate: '2025-08-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
         totalDeposit: '5000000',
@@ -765,11 +765,11 @@ export const originalSponsors = [
         id: 'NHT0007',
         name: 'Đặng Thị Mai',
         contact: 'SĐT: 0903123789',
-        status: 'Đã kết thúc', // Đã kết thúc vì endDate có giá trị
+        status: 'ended', // Đã kết thúc vì endDate có giá trị
         totalStudents: '2',
         detailStudents: 'DH92.011,DH92.012',
-        startDate: '12/12/2022',
-        endDate: '12/12/2023',
+        startDate: '2025-04-01',
+        endDate: '2025-12-31',
         currentVolunteer: 'TNV0001',
         totalDeposit: '15000000',
         balance: '0',
@@ -782,7 +782,7 @@ export const originalSponsors = [
         status: 'inProgress', // Đang hỗ trợ vì endDate trống
         totalStudents: '1',
         detailStudents: 'DH92.013',
-        startDate: '1/3/2023',
+        startDate: '2025-07-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
         totalDeposit: '12000000',
@@ -796,7 +796,7 @@ export const originalSponsors = [
         status: 'inProgress', // Đang hỗ trợ vì endDate trống
         totalStudents: '3',
         detailStudents: 'DH92.014,DH92.015,DH92.016',
-        startDate: '18/10/2022',
+        startDate: '2025-02-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
         totalDeposit: '40000000',
@@ -810,7 +810,7 @@ export const originalSponsors = [
         status: 'gettingConnection', // Gán ngẫu nhiên
         totalStudents: '1',
         detailStudents: 'DH92.017',
-        startDate: '1/10/2023',
+        startDate: '2025-10-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
         totalDeposit: '6000000',
@@ -821,11 +821,11 @@ export const originalSponsors = [
         id: 'NHT0011',
         name: 'Phan Kim Ngân',
         contact: 'SĐT: 0935556677',
-        status: 'Đã kết thúc', // Đã kết thúc vì endDate có giá trị
+        status: 'ended', // Đã kết thúc vì endDate có giá trị
         totalStudents: '2',
         detailStudents: 'DH92.018,DH92.019',
-        startDate: '7/7/2023',
-        endDate: '7/1/2024',
+        startDate: '2025-01-01',
+        endDate: '2025-12-31',
         currentVolunteer: 'TNV0002',
         totalDeposit: '18000000',
         balance: '3000000',
@@ -838,7 +838,7 @@ export const originalSponsors = [
         status: 'inProgress', // Đang hỗ trợ vì endDate trống
         totalStudents: '1',
         detailStudents: 'DH92.020',
-        startDate: '25/11/2022',
+        startDate: '2025-06-01',
         endDate: '',
         currentVolunteer: 'TNV0002',
         totalDeposit: '15000000',
@@ -852,7 +852,7 @@ export const originalSponsors = [
         status: 'inProgress', // Đang hỗ trợ vì endDate trống
         totalStudents: '2',
         detailStudents: 'DH92.021,DH92.022',
-        startDate: '15/9/2023',
+        startDate: '2025-09-01',
         endDate: '',
         currentVolunteer: 'TNV0002',
         totalDeposit: '10000000',
@@ -866,7 +866,7 @@ export const originalSponsors = [
         status: 'inProgress', // Đang hỗ trợ vì endDate trống
         totalStudents: '1',
         detailStudents: 'DH92.023',
-        startDate: '1/4/2023',
+        startDate: '2025-04-01',
         endDate: '',
         currentVolunteer: 'TNV0002',
         totalDeposit: '9000000',
@@ -877,10 +877,10 @@ export const originalSponsors = [
         id: 'NHT0015',
         name: 'Hồ Thị Thanh',
         contact: 'SĐT: 0978111222',
-        status: 'Đã kết thúc', // Đã kết thúc vì endDate có giá trị
+        status: 'ended', // Đã kết thúc vì endDate có giá trị
         totalStudents: '2',
         detailStudents: 'DH92.024,DH92.025',
-        startDate: '10/1/2023',
+        startDate: '2025-03-01',
         endDate: '10/7/2023',
         currentVolunteer: 'TNV0002',
         totalDeposit: '22000000',
@@ -894,7 +894,7 @@ export const originalSponsors = [
         status: 'gettingConnection', // Gán ngẫu nhiên
         totalStudents: '1',
         detailStudents: 'DH92.026',
-        startDate: '5/8/2023',
+        startDate: '2025-08-01',
         endDate: '',
         currentVolunteer: 'TNV0003',
         totalDeposit: '7000000',
@@ -908,7 +908,7 @@ export const originalSponsors = [
         status: 'inProgress', // Đang hỗ trợ vì endDate trống
         totalStudents: '1',
         detailStudents: 'DH92.027',
-        startDate: '20/12/2022',
+        startDate: '2025-09-01',
         endDate: '',
         currentVolunteer: 'TNV0003',
         totalDeposit: '30000000',
@@ -922,7 +922,7 @@ export const originalSponsors = [
         status: 'inProgress', // Đang hỗ trợ vì endDate trống
         totalStudents: '1',
         detailStudents: 'DH92.028',
-        startDate: '1/6/2023',
+        startDate: '2025-10-01',
         endDate: '',
         currentVolunteer: 'TNV0003',
         totalDeposit: '11000000',
@@ -933,10 +933,10 @@ export const originalSponsors = [
         id: 'NHT0019',
         name: 'Đinh Công Tài',
         contact: 'SĐT: 0936111000',
-        status: 'Đã kết thúc', // Đã kết thúc vì endDate có giá trị
+        status: 'ended', // Đã kết thúc vì endDate có giá trị
         totalStudents: '1',
         detailStudents: 'DH92.029',
-        startDate: '14/3/2023',
+        startDate: '2025-05-01',
         endDate: '14/9/2023',
         currentVolunteer: 'TNV0003',
         totalDeposit: '16000000',
@@ -950,7 +950,7 @@ export const originalSponsors = [
         status: 'gettingConnection', // Gán ngẫu nhiên
         totalStudents: '1',
         detailStudents: 'DH92.030',
-        startDate: '1/9/2023',
+        startDate: '2025-01-01',
         endDate: '',
         currentVolunteer: 'TNV0003',
         totalDeposit: '5000000',

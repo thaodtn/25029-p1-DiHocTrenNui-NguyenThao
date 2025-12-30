@@ -129,11 +129,28 @@ export function addNewStudent(newStudent) {
     alert('Cập nhật thành công.');
 }
 
+export function addNewSponsor(newSponsor) {
+    relatedSponsors.push(newSponsor);
+    //sao chép toàn bộ dữ liệu mới của mảng relatedSponsors vào localStorage
+    localStorage.setItem('relatedSponsors', JSON.stringify(relatedSponsors));
+    alert('Cập nhật thành công.');
+}
+
 export function updateStudentByIndex(index, newStudent) {
     if (index < relatedStudents.length) {
         relatedStudents[index] = newStudent;
         //sao chép toàn bộ dữ liệu mới của mảng users vào localStorage
         localStorage.setItem('relatedStudents', JSON.stringify(relatedStudents));
+        alert('Cập nhật thành công.');
+    }
+    else alert('Cập nhật thất bại. Vui lòng thử lại!');
+}
+
+export function updateSponsorByIndex(index, newSponsor) {
+    if (index < relatedSponsors.length) {
+        relatedSponsors[index] = newSponsor;
+        //sao chép toàn bộ dữ liệu mới của mảng users vào localStorage
+        localStorage.setItem('relatedSponsors', JSON.stringify(relatedSponsors));
         alert('Cập nhật thành công.');
     }
     else alert('Cập nhật thất bại. Vui lòng thử lại!');

@@ -16,7 +16,7 @@
     <header id="sponsorList-page-header"></header>
     <main id="sponsorList-main-section" class="subpage-main-section">
         <section id="sponsorList-left-side-pannel"></section>
-        <section class="subpage-content-section studentList-content-section">
+        <section class="subpage-content-section sponsorList-content-section">
             <div class="subpage-title">
                 <p>Danh Sách Người Hỗ Trợ</p>
             </div>
@@ -40,22 +40,43 @@
                             <th><div class="inner-cell">Mã Số</div></th>
                             <th><div class="inner-cell">Họ Tên</div></th>
                             <th><div class="inner-cell">Trạng Thái</div></th>
-                            <!-- <th><div class="inner-cell">Thông tin liên hệ</div></th> -->
-                            <!-- <th><div class="inner-cell">Số HS đang hỗ trợ</div></th> -->
                             <th><div class="inner-cell">Mã HS đang hỗ trợ</div></th>                            
-                            <!-- <th><div class="inner-cell">Ngày Bắt Đầu</div></th> -->
-                            <!-- <th><div class="inner-cell">Ngày Kết Thúc</div></th> -->
-                            <!-- <th><div class="inner-cell">Người Phụ Trách</div></th> -->
                             <th><div class="inner-cell">Số tiền đã ủng hộ</div></th>
                             <th><div class="inner-cell">Số dư</div></th>
-                            <!-- <th><div class="inner-cell">Ghi Chú</div></th> -->
-                            <th></th>
+                            <th><div class="inner-cell">Chi tiết</div></th>
                         </tr>
                     </thead>
                     <tbody id="sponsor-table-body">
                     </tbody>
                 </table>
             </div>
+            
+            <section id="add-new-sponsor-modal-container" class="modal-container">
+                <form class="add-new-sponsor-form-container" action="">
+                    <p class="form-title">Thông tin của Người Hỗ Trợ mới</p>
+                    <label for="sponsor-id">Mã Số:</label>
+                    <input type="text" name="sponsor-id" id="sponsor-id" required>
+                    <label for="sponsor-name">Họ Tên:</label>
+                    <input type="text" name="sponsor-name" id="sponsor-name" required>
+                    <label for="sponsor-status">Trạng Thái:</label>
+                    <select name="sponsor-status" id="sponsor-status" required>
+                        <option value="gettingInfor">Đang xác minh</option>
+                        <option value="gettingConnection">Chờ kết nối HS</option>
+                        <option value="inProgress">Đang hỗ trợ</option>
+                    </select>
+                    <label for="sponsor-startDate">Ngày Bắt Đầu:</label>
+                    <input type="date" name="sponsor-startDate" id="sponsor-startDate" required>
+                    <label for="sponsor-contact">Thông tin liên hệ:</label>
+                    <input type="text" name="sponsor-contact" id="sponsor-contact" required>
+
+                    <div class="button-group">
+                        <button id="add-new-sponsor-btn" class="submit-btn" type="submit"><i
+                                class="fa-solid fa-user-plus fa-lg"></i>Thêm</button>
+                        <button id="close-add-sponsor-form-btn" type="button"><i
+                                class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                    </div>
+                </form>
+            </section>
         </section>
     </main>
     <footer id="sponsorList-page-copy-right"></footer>
