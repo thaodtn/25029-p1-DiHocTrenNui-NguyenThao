@@ -72,7 +72,7 @@ export const originalStudents = [
         situation: 'Gia đình đông con, bố mẹ làm nương rẫy, kinh tế rất khó khăn. Mẹ bị bệnh tim bẩm sinh.',
         recommender: 'Thầy Nguyễn Hữu Hoàng',
         status: 'inProgress',
-        startDate: '2023-10-15',
+        startDate: '2025-10-01',
         endDate: '',
         funds: '18000000',
         balance: '9000000',
@@ -92,7 +92,7 @@ export const originalStudents = [
         situation: 'Mồ côi cha, mẹ đi làm thuê nhưng bị tai nạn lao động, mất khả năng lao động. Sống cùng bà ngoại già yếu.',
         recommender: 'Cô Trần Thị Thu Hà',
         status: 'inProgress',
-        startDate: '2022-09-01',
+        startDate: '2025-09-01',
         endDate: '',
         funds: '24000000',
         balance: '6000000',
@@ -112,7 +112,7 @@ export const originalStudents = [
         situation: 'Bố mất sớm do tai nạn giao thông, mẹ đi làm xa, Hùng ở với gia đình bác ruột có 4 người con.',
         recommender: 'Ông A Sinh',
         status: 'inProgress',
-        startDate: '2023-11-20',
+        startDate: '2025-11-01',
         endDate: '',
         funds: '15000000',
         balance: '7000000',
@@ -132,7 +132,7 @@ export const originalStudents = [
         situation: 'Bố mẹ nghiện rượu, không có khả năng nuôi con. Thu sống với ông bà ngoại trong căn nhà tranh tre.',
         recommender: 'Cô Nguyễn Thị Lý',
         status: 'inProgress',
-        startDate: '2024-04-08',
+        startDate: '2025-04-01',
         endDate: '',
         funds: '12000000',
         balance: '12000000',
@@ -152,7 +152,7 @@ export const originalStudents = [
         situation: 'Gia đình quá nghèo, nhà có 5 anh chị em. Sính phải nghỉ học để giúp bố mẹ làm nương rẫy.',
         recommender: 'Anh Đinh Văn Trưởng',
         status: 'inProgress',
-        startDate: '2022-01-01',
+        startDate: '2025-01-01',
         endDate: '',
         funds: '30000000',
         balance: '10000000',
@@ -172,7 +172,7 @@ export const originalStudents = [
         situation: 'Bố bị tai biến, mẹ phải chăm sóc bố, không có khả năng làm việc nặng. K Rô sống với gia đình cô ruột.',
         recommender: 'Cô Ngô Thị Hải',
         status: 'inProgress',
-        startDate: '2022-09-10',
+        startDate: '2025-09-01',
         endDate: '',
         funds: '24000000',
         balance: '6000000',
@@ -192,7 +192,7 @@ export const originalStudents = [
         situation: 'Bố đi làm thuê bị tai nạn mất, mẹ bỏ đi từ lâu. Minh sống cùng bà ngoại già yếu, không ai chăm sóc.',
         recommender: 'Thầy Trịnh Công Đức',
         status: 'inProgress',
-        startDate: '2023-11-05',
+        startDate: '2025-11-01',
         endDate: '',
         funds: '15000000',
         balance: '7000000',
@@ -212,7 +212,7 @@ export const originalStudents = [
         situation: 'Mồ côi bố, mẹ bệnh nặng. H\'Nông sống cùng em trai, được người thân giúp đỡ ít nhiều.',
         recommender: 'Chị Nguyễn Thị Phương',
         status: 'inProgress',
-        startDate: '2024-06-18',
+        startDate: '2025-06-01',
         endDate: '',
         funds: '12000000',
         balance: '12000000',
@@ -232,7 +232,7 @@ export const originalStudents = [
         situation: 'Bố mẹ ly hôn, Hải sống với bố nghiện rượu. Cuộc sống của Hải thiếu thốn tình cảm và vật chất.',
         recommender: 'Thầy Nguyễn Đức Tài',
         status: 'inProgress',
-        startDate: '2024-03-11',
+        startDate: '2025-03-01',
         endDate: '',
         funds: '14000000',
         balance: '14000000',
@@ -252,7 +252,7 @@ export const originalStudents = [
         situation: 'Bố bị bệnh tâm thần, mẹ bị mù. Thủy là trụ cột chính trong gia đình, phải chăm sóc bố mẹ và em trai.',
         recommender: 'Thầy Phạm Văn Ánh',
         status: 'inProgress',
-        startDate: '2023-08-02',
+        startDate: '2025-08-01',
         endDate: '',
         funds: '16000000',
         balance: '8000000',
@@ -272,7 +272,7 @@ export const originalStudents = [
         situation: 'Mồ côi cả cha lẫn mẹ, sống với bà nội già yếu. Lợi rất ngoan ngoãn và chăm học.',
         recommender: 'Chị Đỗ Thị Lan',
         status: 'inProgress',
-        startDate: '2024-04-08',
+        startDate: '2025-04-01',
         endDate: '',
         funds: '13000000',
         balance: '13000000',
@@ -292,7 +292,7 @@ export const originalStudents = [
         situation: 'Bố mẹ đi làm thuê ở miền xuôi, gửi con cho ông bà. Cuộc sống thiếu thốn tình cảm của cha mẹ.',
         recommender: 'Thầy Lê Văn Hùng',
         status: 'inProgress',
-        startDate: '2022-07-22',
+        startDate: '2025-07-01',
         endDate: '',
         funds: '20000000',
         balance: '8000000',
@@ -312,7 +312,7 @@ export const originalStudents = [
         situation: 'Gia đình đông con, bố mẹ làm rẫy, thu nhập thấp. Hương phải chăm sóc các em nhỏ.',
         recommender: 'Chị Trần Thị Huyền',
         status: 'inProgress',
-        startDate: '2022-07-22',
+        startDate: '2025-07-01',
         endDate: '',
         funds: '20000000',
         balance: '8000000',
@@ -332,7 +332,7 @@ export const originalStudents = [
         situation: 'Mồ côi cả cha lẫn mẹ, sống với chú thím, có 3 người con nhỏ. Cuộc sống rất khó khăn.',
         recommender: 'Cô Nguyễn Thị Hoa',
         status: 'inProgress',
-        startDate: '2023-02-01',
+        startDate: '2025-02-01',
         endDate: '',
         funds: '22000000',
         balance: '11000000',
@@ -352,7 +352,7 @@ export const originalStudents = [
         situation: 'Bố bị bệnh nặng, mẹ làm nương rẫy, không đủ tiền thuốc thang. Phúc phải nghỉ học phụ giúp gia đình.',
         recommender: 'Ông Bùi Văn Hải',
         status: 'inProgress',
-        startDate: '2023-11-05',
+        startDate: '2025-11-01',
         endDate: '',
         funds: '15000000',
         balance: '7000000',
@@ -372,7 +372,7 @@ export const originalStudents = [
         situation: 'Mồ côi cả cha lẫn mẹ, sống with bà ngoại già yếu. Gia đình rất nghèo khó.',
         recommender: 'Thầy Nguyễn Văn Minh',
         status: 'inProgress',
-        startDate: '2022-09-01',
+        startDate: '2025-09-01',
         endDate: '',
         funds: '24000000',
         balance: '6000000',
@@ -392,7 +392,7 @@ export const originalStudents = [
         situation: 'Bố mất do tai nạn, mẹ bị bệnh hiểm nghèo. A Diệu sống với gia đình chú ruột có 5 người con.',
         recommender: 'Cô Trần Thị Thu',
         status: 'inProgress',
-        startDate: '2022-10-15',
+        startDate: '2025-10-01',
         endDate: '',
         funds: '21000000',
         balance: '5000000',
@@ -412,7 +412,7 @@ export const originalStudents = [
         situation: 'Mẹ bỏ đi, bố đi làm ăn xa. A Phủ sống với bà nội già yếu và em gái.',
         recommender: 'Thầy Lương Văn Quyết',
         status: 'inProgress',
-        startDate: '2023-05-20',
+        startDate: '2025-05-01',
         endDate: '',
         funds: '18000000',
         balance: '3000000',
@@ -432,7 +432,7 @@ export const originalStudents = [
         situation: 'Bố mẹ làm thuê không đủ chi tiêu, Kiên phải phụ giúp gia đình từ nhỏ.',
         recommender: 'Cô Ngô Thị Lý',
         status: 'inProgress',
-        startDate: '2022-01-01',
+        startDate: '2025-01-01',
         endDate: '',
         funds: '30000000',
         balance: '10000000',
@@ -452,7 +452,7 @@ export const originalStudents = [
         situation: 'Mồ côi cả cha lẫn mẹ, sống với bà nội già yếu, không có ai chăm sóc.',
         recommender: 'Chị Nguyễn Thị Phương',
         status: 'inProgress',
-        startDate: '2024-06-18',
+        startDate: '2025-06-01',
         endDate: '',
         funds: '12000000',
         balance: '12000000',
@@ -472,7 +472,7 @@ export const originalStudents = [
         situation: 'Bố mất sớm do tai nạn, mẹ bị bệnh hiểm nghèo. Ngân sống với bà ngoại già yếu.',
         recommender: 'Ông Bùi Văn Hải',
         status: 'inProgress',
-        startDate: '2023-11-05',
+        startDate: '2025-11-01',
         endDate: '',
         funds: '15000000',
         balance: '7000000',
@@ -492,7 +492,7 @@ export const originalStudents = [
         situation: 'Bố mẹ đi làm ăn xa, gửi con lại cho người thân. Thắng sống với gia đình chú ruột đông con.',
         recommender: 'Thầy giáo Trịnh Công Đức',
         status: 'inProgress',
-        startDate: '2022-09-10',
+        startDate: '2025-09-01',
         endDate: '',
         funds: '24000000',
         balance: '6000000',
@@ -512,7 +512,7 @@ export const originalStudents = [
         situation: 'Mồ côi cả cha lẫn mẹ, sống với bà nội già yếu. Gia đình thuộc diện hộ nghèo đặc biệt khó khăn.',
         recommender: 'Bà Đỗ Thị Lan',
         status: 'inProgress',
-        startDate: '2024-04-08',
+        startDate: '2025-04-01',
         endDate: '',
         funds: '13000000',
         balance: '13000000',
@@ -532,7 +532,7 @@ export const originalStudents = [
         situation: 'Gia đình đông con, bố mẹ làm rẫy thu nhập thấp. Ka Diêu phải phụ giúp việc nhà và chăm sóc các em.',
         recommender: 'Chị Trần Thị Huyền',
         status: 'inProgress',
-        startDate: '2022-07-22',
+        startDate: '2025-07-01',
         endDate: '',
         funds: '20000000',
         balance: '8000000',
@@ -552,7 +552,7 @@ export const originalStudents = [
         situation: 'Bố mất do bệnh tật, mẹ đi làm thuê nhưng thu nhập không đủ trang trải. Dũng sống cùng mẹ trong căn nhà dột nát.',
         recommender: 'Thầy Nguyễn Đức Tài',
         status: 'inProgress',
-        startDate: '2024-03-11',
+        startDate: '2025-03-01',
         endDate: '',
         funds: '14000000',
         balance: '14000000',
@@ -572,7 +572,7 @@ export const originalStudents = [
         situation: 'Gia đình ly tán, Liên sống với bà ngoại già yếu và thường xuyên đau ốm.',
         recommender: 'Cô Phạm Thị Ánh',
         status: 'inProgress',
-        startDate: '2023-08-02',
+        startDate: '2025-08-01',
         endDate: '',
         funds: '16000000',
         balance: '8000000',
@@ -592,7 +592,7 @@ export const originalStudents = [
         situation: 'Mồ côi cả cha lẫn mẹ, ở với gia đình chị có 2 con nhỏ cùng 6 a chị e khác, rất khó khăn.',
         recommender: 'Thầy Nguyễn Văn Minh',
         status: 'inProgress',
-        startDate: '2022-09-01',
+        startDate: '2025-09-01',
         endDate: '',
         funds: '24000000',
         balance: '6000000',
@@ -612,7 +612,7 @@ export const originalStudents = [
         situation: 'Bố mất do tai nạn, mẹ bị bệnh hiểm nghèo, không có khả năng lao động. Nam sống cùng ông bà đã già yếu.',
         recommender: 'Cô Trần Thị Thu',
         status: 'inProgress',
-        startDate: '2022-10-15',
+        startDate: '2025-10-01',
         endDate: '',
         funds: '21000000',
         balance: '5000000',
@@ -632,7 +632,7 @@ export const originalStudents = [
         situation: 'Mẹ bỏ đi từ nhỏ, bố thường xuyên đi làm ăn xa. Mai sống với gia đình cô ruột và các anh chị em họ.',
         recommender: 'Thầy Lương Văn Quyết',
         status: 'inProgress',
-        startDate: '2023-05-20',
+        startDate: '2025-05-01',
         endDate: '',
         funds: '18000000',
         balance: '3000000',
@@ -652,7 +652,7 @@ export const originalStudents = [
         situation: 'Bố mẹ đều làm nông, thu nhập bấp bênh, gia đình có 5 anh chị em nên rất khó khăn.',
         recommender: 'Cô Ngô Thị Lý',
         status: 'inProgress',
-        startDate: '2022-01-01',
+        startDate: '2025-01-01',
         endDate: '',
         funds: '30000000',
         balance: '10000000',
@@ -1007,47 +1007,977 @@ export const originalSchools = [
 export const originalImages = [
     {
         studentId: "DH92.001",
-        month: "01/2025",
+        month: "10/2025",
         imageSrc: "/static/image/ho-tro/gifts-1.jpg"
     },
     {
         studentId: "DH92.001",
-        month: "02/2025",
+        month: "11/2025",
         imageSrc: "/static/image/ho-tro/gifts-2.jpg"
     },
     {
         studentId: "DH92.001",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.002",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.002",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.002",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.002",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.003",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.003",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.004",
+        month: "04/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.004",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.004",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.004",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.004",
+        month: "08/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.004",
+        month: "09/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.004",
+        month: "10/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.004",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.004",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.005",
+        month: "01/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.005",
+        month: "02/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.005",
+        month: "03/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.005",
+        month: "04/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.005",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.005",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.005",
+        month: "07/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.005",
+        month: "08/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.005",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.005",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.005",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.005",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.006",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.006",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.006",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.006",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.007",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.007",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.008",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.008",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.008",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.008",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.008",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.008",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.008",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.009",
         month: "03/2025",
         imageSrc: "/static/image/ho-tro/gifts-3.jpg"
     },
     {
-        studentId: "DH92.001",
+        studentId: "DH92.009",
         month: "04/2025",
-        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
     },
     {
-        studentId: "DH92.001",
+        studentId: "DH92.009",
         month: "05/2025",
         imageSrc: "/static/image/ho-tro/gifts-5.jpg"
     },
     {
-        studentId: "DH92.001",
+        studentId: "DH92.009",
         month: "06/2025",
-        imageSrc: ""
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
     },
     {
-        studentId: "DH92.001",
+        studentId: "DH92.009",
         month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.009",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.009",
+        month: "09/2025",
         imageSrc: ""
     },
     {
-        studentId: "DH92.002",
-        month: "06/2025",
+        studentId: "DH92.009",
+        month: "10/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.009",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.009",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.010",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.010",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.010",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.010",
+        month: "11/2025",
         imageSrc: "/static/image/ho-tro/gifts-5.jpg"
     },
     {
-        studentId: "DH92.002",
+        studentId: "DH92.010",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.011",
+        month: "04/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.011",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.011",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.011",
         month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.011",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.011",
+        month: "09/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.011",
+        month: "10/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.011",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.011",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.012",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.012",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.012",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.012",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.012",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.012",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.013",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.013",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.013",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.013",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.013",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.013",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "02/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "03/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "04/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.015",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.015",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.014",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.015",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.015",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.016",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.016",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.016",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.016",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.0.17",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.0.17",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.0.17",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.018",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.018",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.018",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.018",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.018",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.018",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.018",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.018",
+        month: "12/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "01/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "02/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "03/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "04/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.019",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.019",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.020",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.020",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.020",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.020",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.020",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.020",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.020",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.021",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.021",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.022",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.022",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.022",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.022",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH9223",
+        month: "04/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.023",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.023",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.023",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.023",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.023",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.023",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.023",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.023",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.024",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.024",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.024",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.4",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.024",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.024",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.025",
+        month: "03/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.025",
+        month: "04/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.025",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.025",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.025",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.025",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.025",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.025",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.025",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.025",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.026",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.026",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.026",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.026",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.026",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.027",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.027",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.027",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.027",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.028",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.028",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.028",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.029",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.029",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.029",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.029",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.029",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.029",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.029",
+        month: "11/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.029",
+        month: "12/2025",
+        imageSrc: ""
+    },
+    {
+        studentId: "DH92.030",
+        month: "01/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "02/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "03/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "04/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "05/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "06/2025",
+        imageSrc: "/static/image/ho-tro/gifts-1.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "07/2025",
+        imageSrc: "/static/image/ho-tro/gifts-2.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "08/2025",
+        imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "09/2025",
+        imageSrc: "/static/image/ho-tro/gifts-3.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "10/2025",
+        imageSrc: "/static/image/ho-tro/gifts-4.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "11/2025",
+        imageSrc: "/static/image/ho-tro/gifts-5.jpg"
+    },
+    {
+        studentId: "DH92.030",
+        month: "12/2025",
         imageSrc: "/static/image/ho-tro/gifts-6.jpg"
     },
 ]

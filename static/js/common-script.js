@@ -143,6 +143,14 @@ export async function loadMainHeaderContent(sourcePageURL, sourceElementId, dest
     await fetchAndInjectElementById(sourcePageURL, sourceElementId, destinationElementId);
     document.getElementById('nav-dropdown-btn').addEventListener('click', openMenuDropdown);
     document.getElementById('register-dropdown-btn').addEventListener('click', openRegisterDropdown);
+    //check login status
+    if (currentUser) {
+        document.getElementById('login-button').innerHTML = 'Tài khoản của tôi';
+        document.getElementById('login-nav-dropdown').innerHTML = 'Tài khoản của tôi';
+    } else {
+        document.getElementById('login-button').innerText = 'Đăng nhập';
+        document.getElementById('login-nav-dropdown').innerText = 'Đăng nhập';
+    }
 }
 
 // Use async/await for cleaner asynchronous code.
