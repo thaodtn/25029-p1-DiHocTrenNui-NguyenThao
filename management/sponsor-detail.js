@@ -1,4 +1,4 @@
-import { relatedSponsors, checkUserControl, currentUser, updateSponsorByIndex } from "/static/js/common-script.js";
+import { relatedSponsors, checkUserControl, currentUser, updateSponsorByIndex, formatNumber } from "/static/js/common-script.js";
 import { } from "/static/js/mock-data.js";
 let selectSponsorIndex = 0;
 let selectSponsor = {};
@@ -31,8 +31,8 @@ export function loadSponsorDetail() {
     document.getElementById('sponsor-startDate').value = selectSponsor.startDate;
     document.getElementById('sponsor-endDate').value = selectSponsor.endDate;
     document.getElementById('sponsor-currentVolunteer').value = selectSponsor.currentVolunteer;
-    document.getElementById('sponsor-totalDeposit').value = selectSponsor.totalDeposit;
-    document.getElementById('sponsor-balance').value = selectSponsor.balance;
+    document.getElementById('sponsor-totalDeposit').value = formatNumber(selectSponsor.totalDeposit);
+    document.getElementById('sponsor-balance').value = formatNumber(selectSponsor.balance);
     document.getElementById('sponsor-remark').value = selectSponsor.remark;
 
     console.log('finish loadSponsorDetail');
@@ -64,8 +64,8 @@ function saveAllDetails() {
     editSponsor.startDate = document.getElementById('sponsor-startDate').value;
     editSponsor.endDate = document.getElementById('sponsor-endDate').value;
     editSponsor.currentVolunteer = document.getElementById('sponsor-currentVolunteer').value;
-    editSponsor.totalDeposit = document.getElementById('sponsor-totalDeposit').value;
-    editSponsor.balance = document.getElementById('sponsor-balance').value;
+    editSponsor.totalDeposit = document.getElementById('sponsor-totalDeposit').value.replaceAll('.','');
+    editSponsor.balance = document.getElementById('sponsor-balance').value.replaceAll('.','');
     editSponsor.remark = document.getElementById('sponsor-remark').value;
 
     updateSponsorByIndex(selectSponsorIndex, editSponsor);
@@ -93,8 +93,8 @@ function restoreAllDetails() {
     document.getElementById('sponsor-startDate').value = selectSponsor.startDate;
     document.getElementById('sponsor-endDate').value = selectSponsor.endDate;
     document.getElementById('sponsor-currentVolunteer').value = selectSponsor.currentVolunteer;
-    document.getElementById('sponsor-totalDeposit').value = selectSponsor.totalDeposit;
-    document.getElementById('sponsor-balance').value = selectSponsor.balance;
+    document.getElementById('sponsor-totalDeposit').value = formatNumber(selectSponsor.totalDeposit);
+    document.getElementById('sponsor-balance').value = formatNumber(selectSponsor.balance);
     document.getElementById('sponsor-remark').value = selectSponsor.remark;
 
     const inputs = document.getElementById('sponsor-detail-form-container').querySelectorAll('input');

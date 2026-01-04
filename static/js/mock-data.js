@@ -25,7 +25,8 @@ export const accessControlList = {
         viewSchool: true,
         editSchool: true,
         viewTransactionRecord: true,
-        editTransactionRecord: true
+        editTransactionRecord: true,
+        viewReport: true
     },
     'volunteer': {
         configUser: false,
@@ -36,7 +37,8 @@ export const accessControlList = {
         viewSchool: true,
         editSchool: true,
         viewTransactionRecord: true,
-        editTransactionRecord: true
+        editTransactionRecord: true,
+        viewReport: true
     },
     'sponsor': {
         configUser: false,
@@ -47,7 +49,8 @@ export const accessControlList = {
         viewSchool: false,
         editSchool: false,
         viewTransactionRecord: true,
-        editTransactionRecord: false
+        editTransactionRecord: false,
+        viewReport: true
     },
     'teacher': {
         configUser: false,
@@ -58,7 +61,8 @@ export const accessControlList = {
         viewSchool: true,
         editSchool: true,
         viewTransactionRecord: false,
-        editTransactionRecord: false
+        editTransactionRecord: false,
+        viewReport: true
     },
 }
 
@@ -74,11 +78,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-10-01',
         endDate: '',
-        funds: '18000000',
-        balance: '9000000',
+        funds: '3000000',
+        balance: '1500000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu Học Nùng Nàng',
+        currentSchool: 'TR001',
         currentSponsor: 'NHT0001',
         currentVolunteer: 'TNV0001',
         currentTeacher: 'GVN0001'
@@ -94,11 +98,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-09-01',
         endDate: '',
-        funds: '24000000',
-        balance: '6000000',
+        funds: '4000000',
+        balance: '2000000',
         remark: 'Hỗ trợ thêm chi phí khám bệnh cho mẹ.',
         currentClass: '6',
-        currentSchool: 'THCS Trà Mai',
+        currentSchool: 'TR002',
         currentSponsor: 'NHT0001',
         currentVolunteer: 'TNV0001',
         currentTeacher: 'GVN0002'
@@ -114,11 +118,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-11-01',
         endDate: '',
-        funds: '15000000',
-        balance: '7000000',
+        funds: '1000000',
+        balance: '0',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu Học Nùng Nàng',
+        currentSchool: 'TR001',
         currentSponsor: 'NHT0002',
         currentVolunteer: 'TNV0001',
         currentTeacher: 'GVN0001'
@@ -134,11 +138,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-04-01',
         endDate: '',
-        funds: '12000000',
-        balance: '12000000',
+        funds: '5000000',
+        balance: '500000',
         remark: '',
         currentClass: '3',
-        currentSchool: 'Tiểu Học Nùng Nàng',
+        currentSchool: 'TR001',
         currentSponsor: 'NHT0003',
         currentVolunteer: 'TNV0001',
         currentTeacher: 'GVN0001'
@@ -154,11 +158,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-01-01',
         endDate: '',
-        funds: '30000000',
-        balance: '10000000',
+        funds: '6000000',
+        balance: '0',
         remark: 'Đã nhận hỗ trợ học phí và sách vở.',
         currentClass: '7',
-        currentSchool: 'THCS Trà Mai',
+        currentSchool: 'TR002',
         currentSponsor: 'NHT0003',
         currentVolunteer: 'TNV0001',
         currentTeacher: 'GVN0002'
@@ -174,11 +178,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-09-01',
         endDate: '',
-        funds: '24000000',
-        balance: '6000000',
+        funds: '6000000',
+        balance: '4000000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu Học Nùng Nàng',
+        currentSchool: 'TR001',
         currentSponsor: 'NHT0003',
         currentVolunteer: 'TNV0001',
         currentTeacher: 'GVN0001'
@@ -194,11 +198,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-11-01',
         endDate: '',
-        funds: '15000000',
-        balance: '7000000',
+        funds: '3000000',
+        balance: '2000000',
         remark: '',
         currentClass: '6',
-        currentSchool: 'THCS Trà Mai',
+        currentSchool: 'TR002',
         currentSponsor: 'NHT0004',
         currentVolunteer: 'TNV0001',
         currentTeacher: 'GVN0002'
@@ -214,11 +218,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-06-01',
         endDate: '',
-        funds: '12000000',
-        balance: '12000000',
+        funds: '3000000',
+        balance: '-500000',
         remark: '',
         currentClass: '3',
-        currentSchool: 'Tiểu học Nùng Nàng',
+        currentSchool: 'TR001',
         currentSponsor: 'NHT0005',
         currentVolunteer: 'TNV0001',
         currentTeacher: 'GVN0001'
@@ -234,11 +238,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-03-01',
         endDate: '',
-        funds: '14000000',
-        balance: '14000000',
+        funds: '6000000',
+        balance: '2500000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0005',
         currentVolunteer: 'TNV0001',
         currentTeacher: 'GVN0003'
@@ -254,11 +258,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-08-01',
         endDate: '',
-        funds: '16000000',
-        balance: '8000000',
+        funds: '3000000',
+        balance: '500000',
         remark: '',
         currentClass: '7',
-        currentSchool: 'THCS Trà Mai',
+        currentSchool: 'TR002',
         currentSponsor: 'NHT0006',
         currentVolunteer: 'TNV0001',
         currentTeacher: 'GVN0002'
@@ -274,11 +278,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-04-01',
         endDate: '',
-        funds: '13000000',
-        balance: '13000000',
+        funds: '4500000',
+        balance: '0',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0007',
         currentVolunteer: 'TNV0002',
         currentTeacher: 'GVN0003'
@@ -294,11 +298,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-07-01',
         endDate: '',
-        funds: '20000000',
-        balance: '8000000',
+        funds: '2000000',
+        balance: '-1000000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0007',
         currentVolunteer: 'TNV0002',
         currentTeacher: 'GVN0003'
@@ -314,11 +318,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-07-01',
         endDate: '',
-        funds: '20000000',
-        balance: '8000000',
+        funds: '3000000',
+        balance: '0',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0008',
         currentVolunteer: 'TNV0002',
         currentTeacher: 'GVN0003'
@@ -334,11 +338,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-02-01',
         endDate: '',
-        funds: '22000000',
-        balance: '11000000',
+        funds: '5500000',
+        balance: '0',
         remark: '',
         currentClass: '6',
-        currentSchool: 'THCS Trà Mai',
+        currentSchool: 'TR002',
         currentSponsor: 'NHT0009',
         currentVolunteer: 'TNV0002',
         currentTeacher: 'GVN0002'
@@ -354,11 +358,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-11-01',
         endDate: '',
-        funds: '15000000',
-        balance: '7000000',
+        funds: '2000000',
+        balance: '1000000',
         remark: '',
         currentClass: '7',
-        currentSchool: 'THCS Trà Mai',
+        currentSchool: 'TR002',
         currentSponsor: 'NHT0009',
         currentVolunteer: 'TNV0002',
         currentTeacher: 'GVN0002'
@@ -374,11 +378,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-09-01',
         endDate: '',
-        funds: '24000000',
-        balance: '6000000',
+        funds: '3000000',
+        balance: '1000000',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0009',
         currentVolunteer: 'TNV0002',
         currentTeacher: 'GVN0003'
@@ -394,11 +398,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-10-01',
         endDate: '',
-        funds: '21000000',
-        balance: '5000000',
+        funds: '1500000',
+        balance: '0',
         remark: '',
         currentClass: '6',
-        currentSchool: 'THCS Trà Mai',
+        currentSchool: 'TR002',
         currentSponsor: 'NHT0010',
         currentVolunteer: 'TNV0002',
         currentTeacher: 'GVN0002'
@@ -414,11 +418,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-05-01',
         endDate: '',
-        funds: '18000000',
-        balance: '3000000',
+        funds: '5000000',
+        balance: '1000000',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0011',
         currentVolunteer: 'TNV0002',
         currentTeacher: 'GVN0003'
@@ -434,11 +438,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-01-01',
         endDate: '',
-        funds: '30000000',
-        balance: '10000000',
+        funds: '6000000',
+        balance: '0',
         remark: '',
         currentClass: '7',
-        currentSchool: 'THCS Trà Mai',
+        currentSchool: 'TR002',
         currentSponsor: 'NHT0011',
         currentVolunteer: 'TNV0002',
         currentTeacher: 'GVN0002'
@@ -454,11 +458,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-06-01',
         endDate: '',
-        funds: '12000000',
-        balance: '12000000',
+        funds: '3500000',
+        balance: '0',
         remark: '',
         currentClass: '3',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0012',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0003'
@@ -474,11 +478,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-11-01',
         endDate: '',
-        funds: '15000000',
-        balance: '7000000',
+        funds: '1000000',
+        balance: '0',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0013',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0003'
@@ -494,11 +498,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-09-01',
         endDate: '',
-        funds: '24000000',
-        balance: '6000000',
+        funds: '2000000',
+        balance: '0',
         remark: '',
         currentClass: '6',
-        currentSchool: 'THCS Trà Mai',
+        currentSchool: 'TR002',
         currentSponsor: 'NHT0013',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0002'
@@ -514,11 +518,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-04-01',
         endDate: '',
-        funds: '13000000',
-        balance: '13000000',
+        funds: '4500000',
+        balance: '0',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0014',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0003'
@@ -534,11 +538,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-07-01',
         endDate: '',
-        funds: '20000000',
-        balance: '8000000',
+        funds: '3000000',
+        balance: '0',
         remark: 'Hỗ trợ mua sách vở và đồ dùng học tập.',
         currentClass: '5',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0015',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0003'
@@ -554,11 +558,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-03-01',
         endDate: '',
-        funds: '14000000',
-        balance: '14000000',
+        funds: '6000000',
+        balance: '1000000',
         remark: '',
         currentClass: '3',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0015',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0003'
@@ -574,11 +578,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-08-01',
         endDate: '',
-        funds: '16000000',
-        balance: '8000000',
+        funds: '3000000',
+        balance: '500000',
         remark: '',
         currentClass: '7',
-        currentSchool: 'THCS Trà Mai',
+        currentSchool: 'TR002',
         currentSponsor: 'NHT0016',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0002'
@@ -594,11 +598,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-09-01',
         endDate: '',
-        funds: '24000000',
-        balance: '6000000',
+        funds: '2000000',
+        balance: '0',
         remark: '',
         currentClass: '5',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0017',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0003'
@@ -614,11 +618,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-10-01',
         endDate: '',
-        funds: '21000000',
-        balance: '5000000',
+        funds: '1500000',
+        balance: '0',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0018',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0003'
@@ -634,11 +638,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-05-01',
         endDate: '',
-        funds: '18000000',
-        balance: '3000000',
+        funds: '5000000',
+        balance: '1000000',
         remark: '',
         currentClass: '4',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0019',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0003'
@@ -654,11 +658,11 @@ export const originalStudents = [
         status: 'inProgress',
         startDate: '2025-01-01',
         endDate: '',
-        funds: '30000000',
-        balance: '10000000',
+        funds: '6000000',
+        balance: '0',
         remark: 'Đã nhận được xe đạp từ chương trình.',
         currentClass: '5',
-        currentSchool: 'Tiểu học Hướng Hóa',
+        currentSchool: 'TR003',
         currentSponsor: 'NHT0020',
         currentVolunteer: 'TNV0003',
         currentTeacher: 'GVN0003'
@@ -687,8 +691,8 @@ export const originalSponsors = [
         startDate: '2025-09-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
-        totalDeposit: '20000000',
-        balance: '5000000',
+        totalDeposit: '7000000',
+        balance: '3500000',
         remark: 'Đã hoàn thành đợt hỗ trợ 1'
     },
     {
@@ -701,8 +705,8 @@ export const originalSponsors = [
         startDate: '2025-11-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
-        totalDeposit: '10000000',
-        balance: '7500000',
+        totalDeposit: '1000000',
+        balance: '0',
         remark: 'Hỗ trợ dài hạn cho sinh viên y khoa'
     },
     {
@@ -715,8 +719,8 @@ export const originalSponsors = [
         startDate: '2025-01-01',
         endDate: '2025-12-31',
         currentVolunteer: 'TNV0001',
-        totalDeposit: '35000000',
-        balance: '2500000',
+        totalDeposit: '17000000',
+        balance: '4500000',
         remark: 'Hỗ trợ chương trình "Ươm mầm tài năng"'
     },
     {
@@ -729,8 +733,8 @@ export const originalSponsors = [
         startDate: '2025-11-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
-        totalDeposit: '8000000',
-        balance: '6500000',
+        totalDeposit: '3000000',
+        balance: '2000000',
         remark: 'Ưu tiên hỗ trợ chi phí học tập'
     },
     {
@@ -743,8 +747,8 @@ export const originalSponsors = [
         startDate: '2025-03-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
-        totalDeposit: '25000000',
-        balance: '15000000',
+        totalDeposit: '9000000',
+        balance: '2000000',
         remark: 'Cam kết hỗ trợ thêm vào cuối năm'
     },
     {
@@ -757,8 +761,8 @@ export const originalSponsors = [
         startDate: '2025-08-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
-        totalDeposit: '5000000',
-        balance: '3000000',
+        totalDeposit: '3000000',
+        balance: '500000',
         remark: 'Mới tham gia hỗ trợ'
     },
     {
@@ -771,8 +775,8 @@ export const originalSponsors = [
         startDate: '2025-04-01',
         endDate: '2025-12-31',
         currentVolunteer: 'TNV0001',
-        totalDeposit: '15000000',
-        balance: '0',
+        totalDeposit: '6500000',
+        balance: '-1000000',
         remark: 'Đã rút hết số dư hỗ trợ'
     },
     {
@@ -785,8 +789,8 @@ export const originalSponsors = [
         startDate: '2025-07-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
-        totalDeposit: '12000000',
-        balance: '9000000',
+        totalDeposit: '3000000',
+        balance: '0',
         remark: 'Tăng mức hỗ trợ từ tháng 5/2023'
     },
     {
@@ -799,8 +803,8 @@ export const originalSponsors = [
         startDate: '2025-02-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
-        totalDeposit: '40000000',
-        balance: '25000000',
+        totalDeposit: '10500000',
+        balance: '2000000',
         remark: 'Đơn vị hỗ trợ doanh nghiệp'
     },
     {
@@ -813,8 +817,8 @@ export const originalSponsors = [
         startDate: '2025-10-01',
         endDate: '',
         currentVolunteer: 'TNV0001',
-        totalDeposit: '6000000',
-        balance: '5500000',
+        totalDeposit: '1500000',
+        balance: '0',
         remark: ''
     },
     {
@@ -827,8 +831,8 @@ export const originalSponsors = [
         startDate: '2025-01-01',
         endDate: '2025-12-31',
         currentVolunteer: 'TNV0002',
-        totalDeposit: '18000000',
-        balance: '3000000',
+        totalDeposit: '11000000',
+        balance: '1000000',
         remark: 'Tạm ngừng hỗ trợ sau 6 tháng'
     },
     {
@@ -841,8 +845,8 @@ export const originalSponsors = [
         startDate: '2025-06-01',
         endDate: '',
         currentVolunteer: 'TNV0002',
-        totalDeposit: '15000000',
-        balance: '12000000',
+        totalDeposit: '3500000',
+        balance: '0',
         remark: 'Hỗ trợ chi phí sinh hoạt'
     },
     {
@@ -855,8 +859,8 @@ export const originalSponsors = [
         startDate: '2025-09-01',
         endDate: '',
         currentVolunteer: 'TNV0002',
-        totalDeposit: '10000000',
-        balance: '8500000',
+        totalDeposit: '3000000',
+        balance: '0',
         remark: ''
     },
     {
@@ -869,8 +873,8 @@ export const originalSponsors = [
         startDate: '2025-04-01',
         endDate: '',
         currentVolunteer: 'TNV0002',
-        totalDeposit: '9000000',
-        balance: '4000000',
+        totalDeposit: '4500000',
+        balance: '0',
         remark: 'Đã sử dụng 5 triệu cho học phí'
     },
     {
@@ -883,8 +887,8 @@ export const originalSponsors = [
         startDate: '2025-03-01',
         endDate: '10/7/2023',
         currentVolunteer: 'TNV0002',
-        totalDeposit: '22000000',
-        balance: '0',
+        totalDeposit: '9000000',
+        balance: '1000000',
         remark: 'Kết thúc đợt hỗ trợ 2'
     },
     {
@@ -897,8 +901,8 @@ export const originalSponsors = [
         startDate: '2025-08-01',
         endDate: '',
         currentVolunteer: 'TNV0003',
-        totalDeposit: '7000000',
-        balance: '6500000',
+        totalDeposit: '3000000',
+        balance: '500000',
         remark: 'Mức hỗ trợ 500k/tháng'
     },
     {
@@ -911,8 +915,8 @@ export const originalSponsors = [
         startDate: '2025-09-01',
         endDate: '',
         currentVolunteer: 'TNV0003',
-        totalDeposit: '30000000',
-        balance: '20000000',
+        totalDeposit: '2000000',
+        balance: '0',
         remark: 'Hỗ trợ học bổng toàn phần'
     },
     {
@@ -925,8 +929,8 @@ export const originalSponsors = [
         startDate: '2025-10-01',
         endDate: '',
         currentVolunteer: 'TNV0003',
-        totalDeposit: '11000000',
-        balance: '5000000',
+        totalDeposit: '1500000',
+        balance: '0',
         remark: 'Đang theo dõi tiến trình học tập'
     },
     {
@@ -939,8 +943,8 @@ export const originalSponsors = [
         startDate: '2025-05-01',
         endDate: '14/9/2023',
         currentVolunteer: 'TNV0003',
-        totalDeposit: '16000000',
-        balance: '0',
+        totalDeposit: '5000000',
+        balance: '1000000',
         remark: 'Học sinh đã hoàn thành chương trình'
     },
     {
@@ -953,8 +957,8 @@ export const originalSponsors = [
         startDate: '2025-01-01',
         endDate: '',
         currentVolunteer: 'TNV0003',
-        totalDeposit: '5000000',
-        balance: '4500000',
+        totalDeposit: '6000000',
+        balance: '0',
         remark: 'Đợt hỗ trợ nhỏ hàng tháng'
     }
 ];
@@ -981,8 +985,7 @@ export const originalSchools = [
         address: 'Xã Nùng Nàng - Huyện Tam Đường - Lai Châu',
         totalStudents: '5',
         currentTeacher: 'GVN0001',
-        status: 'Đang hỗ trợ',
-        remark: ''
+        // status: 'Đang hỗ trợ'
     },
     {
         id: 'TR002',
@@ -990,17 +993,15 @@ export const originalSchools = [
         address: 'Xã Trà Mai - Huyện Nam Trà My - Quảng Nam',
         totalStudents: '10',
         currentTeacher: 'GVN0002',
-        status: 'Đang hỗ trợ',
-        remark: ''
+        // status: 'Đang hỗ trợ'
     },
     {
         id: 'TR003',
-        name: 'Tiểu Học Hướng Hóa',
+        name: 'Tiểu Học Hướng Hóa',
         address: 'Xã A Túc - Huyện Hướng Hóa - Quảng Trị',
         totalStudents: '15',
         currentTeacher: 'GVN0003',
-        status: 'Đang hỗ trợ',
-        remark: ''
+        // status: 'Đang hỗ trợ'
     }
 ]
 
@@ -1979,5 +1980,282 @@ export const originalImages = [
         studentId: "DH92.030",
         month: "12/2025",
         imageSrc: "/static/image/ho-tro/gifts-6.jpg"
+    },
+]
+
+//status: opened / approved / cancel
+export const originalTransactionList = [
+    {
+        code: "00000001",
+        date: "2025-10-01",
+        amount: "18000000",
+        content: "Chuyen tien cho DH92.001",
+        status: "approved",
+        sponsorId: "NHT0001",
+        studentId: "DH92.001"
+    },
+    {
+        code: "00000002",
+        date: "2025-09-01",
+        amount: "4000000",
+        content: "Chuyen tien cho DH92.002",
+        // status: "approved",
+        // sponsorId: "NHT0001",
+        // studentId: "DH92.002"
+        status: "opened",
+        sponsorId: "",
+        studentId: ""
+    },
+    {
+        code: "00000003",
+        date: "2025-11-01",
+        amount: "1000000",
+        content: "Chuyen tien cho DH92.003",
+        status: "approved",
+        sponsorId: "NHT0002",
+        studentId: "DH92.003"
+    },
+    {
+        code: "00000004",
+        date: "2025-04-01",
+        amount: "5000000",
+        content: "Chuyen tien cho DH92.004",
+        status: "approved",
+        sponsorId: "NHT0003",
+        studentId: "DH92.004"
+    },
+    {
+        code: "00000005",
+        date: "2025-01-01",
+        amount: "6000000",
+        content: "Chuyen tien cho DH92.005",
+        status: "approved",
+        sponsorId: "NHT0003",
+        studentId: "DH92.005"
+    },
+    {
+        code: "00000006",
+        date: "2025-09-01",
+        amount: "6000000",
+        content: "Chuyen tien cho DH92.006",
+        status: "approved",
+        sponsorId: "NHT0003",
+        studentId: "DH92.006"
+    },
+    {
+        code: "00000007",
+        date: "2025-11-01",
+        amount: "3000000",
+        content: "Chuyen tien cho DH92.007",
+        status: "approved",
+        sponsorId: "NHT0004",
+        studentId: "DH92.007"
+    },
+    {
+        code: "00000008",
+        date: "2025-06-01",
+        amount: "3000000",
+        content: "Chuyen tien cho DH92.008",
+        status: "approved",
+        sponsorId: "NHT0005",
+        studentId: "DH92.008"
+    },
+    {
+        code: "00000009",
+        date: "2025-06-01",
+        amount: "6000000",
+        content: "Chuyen tien cho DH92.009",
+        status: "approved",
+        sponsorId: "NHT0005",
+        studentId: "DH92.009"
+    },
+    {
+        code: "00000010",
+        date: "2025-08-01",
+        amount: "3000000",
+        content: "Chuyen tien cho DH92.010",
+        status: "approved",
+        sponsorId: "NHT0006",
+        studentId: "DH92.010"
+    },
+    {
+        code: "00000011",
+        date: "2025-04-01",
+        amount: "4500000",
+        content: "Chuyen tien cho DH92.011",
+        status: "approved",
+        sponsorId: "NHT0007",
+        studentId: "DH92.011"
+    },
+    {
+        code: "00000012",
+        date: "2025-07-01",
+        amount: "2000000",
+        content: "Chuyen tien cho DH92.012",
+        status: "approved",
+        sponsorId: "NHT0007",
+        studentId: "DH92.012"
+    },
+    {
+        code: "00000013",
+        date: "2025-07-01",
+        amount: "3000000",
+        content: "Chuyen tien cho DH92.013",
+        status: "approved",
+        sponsorId: "NHT0008",
+        studentId: "DH92.013"
+    },
+    {
+        code: "00000014",
+        date: "2025-02-01",
+        amount: "5500000",
+        content: "Chuyen tien cho DH92.014",
+        status: "approved",
+        sponsorId: "NHT0009",
+        studentId: "DH92.014"
+    },
+    {
+        code: "00000015",
+        date: "2025-11-01",
+        amount: "2000000",
+        content: "Chuyen tien cho DH92.015",
+        status: "approved",
+        sponsorId: "NHT0009",
+        studentId: "DH92.015"
+    },
+    {
+        code: "00000016",
+        date: "2025-09-01",
+        amount: "3000000",
+        content: "Chuyen tien cho DH92.016",
+        status: "approved",
+        sponsorId: "NHT0009",
+        studentId: "DH92.016"
+    },
+    {
+        code: "00000017",
+        date: "2025-10-01",
+        amount: "1500000",
+        content: "Chuyen tien cho DH92.017",
+        status: "approved",
+        sponsorId: "NHT0010",
+        studentId: "DH92.017"
+    },
+    {
+        code: "00000018",
+        date: "2025-05-01",
+        amount: "5000000",
+        content: "Chuyen tien cho DH92.018",
+        status: "approved",
+        sponsorId: "NHT0011",
+        studentId: "DH92.018"
+    },
+    {
+        code: "00000019",
+        date: "2025-01-01",
+        amount: "6000000",
+        content: "Chuyen tien cho DH92.019",
+        status: "approved",
+        sponsorId: "NHT0011",
+        studentId: "DH92.019"
+    },
+    {
+        code: "00000020",
+        date: "2025-06-01",
+        amount: "3500000",
+        content: "Chuyen tien cho DH92.020",
+        status: "approved",
+        sponsorId: "NHT0012",
+        studentId: "DH92.020"
+    },
+    {
+        code: "00000021",
+        date: "2025-11-01",
+        amount: "1000000",
+        content: "Chuyen tien cho DH92.021",
+        status: "approved",
+        sponsorId: "NHT0013",
+        studentId: "DH92.021"
+    },
+    {
+        code: "00000022",
+        date: "2025-09-01",
+        amount: "2000000",
+        content: "Chuyen tien cho DH92.022",
+        status: "approved",
+        sponsorId: "NHT0013",
+        studentId: "DH92.022"
+    },
+    {
+        code: "00000023",
+        date: "2025-04-01",
+        amount: "4500000",
+        content: "Chuyen tien cho DH92.023",
+        status: "approved",
+        sponsorId: "NHT0014",
+        studentId: "DH92.023"
+    },
+    {
+        code: "00000024",
+        date: "2025-07-01",
+        amount: "3000000",
+        content: "Chuyen tien cho DH92.024",
+        status: "approved",
+        sponsorId: "NHT0015",
+        studentId: "DH92.024"
+    },
+    {
+        code: "00000025",
+        date: "2025-03-01",
+        amount: "6000000",
+        content: "Chuyen tien cho DH92.025",
+        status: "approved",
+        sponsorId: "NHT0015",
+        studentId: "DH92.025"
+    },
+    {
+        code: "00000026",
+        date: "2025-08-01",
+        amount: "3000000",
+        content: "Chuyen tien cho DH92.026",
+        status: "approved",
+        sponsorId: "NHT0016",
+        studentId: "DH92.026"
+    },
+    {
+        code: "00000027",
+        date: "2025-09-01",
+        amount: "2000000",
+        content: "Chuyen tien cho DH92.027",
+        status: "approved",
+        sponsorId: "NHT0017",
+        studentId: "DH92.027"
+    },
+    {
+        code: "00000028",
+        date: "2025-10-01",
+        amount: "1500000",
+        content: "Chuyen tien cho DH92.028",
+        status: "approved",
+        sponsorId: "NHT0018",
+        studentId: "DH92.028"
+    },
+    {
+        code: "00000029",
+        date: "2025-05-01",
+        amount: "5000000",
+        content: "Chuyen tien cho DH92.029",
+        status: "approved",
+        sponsorId: "NHT0019",
+        studentId: "DH92.029"
+    },
+    {
+        code: "00000030",
+        date: "2025-01-01",
+        amount: "6000000",
+        content: "Chuyen tien cho DH92.030",
+        status: "approved",
+        sponsorId: "NHT0020",
+        studentId: "DH92.030"
     },
 ]

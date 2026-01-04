@@ -1,4 +1,4 @@
-import { relatedStudents, updateStudentByIndex, checkUserControl, currentUser } from "/static/js/common-script.js";
+import { users, relatedStudents, relatedSchool, updateStudentByIndex, checkUserControl, currentUser, formatNumber } from "/static/js/common-script.js";
 import { studentStatusTranslated, originalImages } from "/static/js/mock-data.js";
 let selectStudentIndex = 0;
 let selectStudent = {};
@@ -35,11 +35,13 @@ export function loadStudentDetail() {
     document.getElementById('student-recommender').value = selectStudent.recommender;
     document.getElementById('student-startDate').value = selectStudent.startDate;
     document.getElementById('student-endDate').value = selectStudent.endDate;
-    document.getElementById('student-balance').value = selectStudent.balance;
+    document.getElementById('student-funds').value = formatNumber(selectStudent.funds);
+    document.getElementById('student-balance').value = formatNumber(selectStudent.balance);
     document.getElementById('student-currentClass').value = selectStudent.currentClass;
-    document.getElementById('student-currentSchool').value = selectStudent.currentSchool;
-    document.getElementById('student-currentTeacher').value = selectStudent.currentTeacher;
-    document.getElementById('student-currentVolunteer').value = selectStudent.currentVolunteer;
+    // document.getElementById('student-currentSchool').value = selectStudent.currentSchool;
+    document.getElementById('student-currentSchool').value = relatedSchool.find(school => school.id === selectStudent.currentSchool).name;
+    document.getElementById('student-currentTeacher').value = users.find(user => user.id === selectStudent.currentTeacher).name;
+    document.getElementById('student-currentVolunteer').value = users.find(user => user.id === selectStudent.currentVolunteer).name;
     document.getElementById('student-remark').value = selectStudent.remark;
 
     // load images
@@ -59,14 +61,18 @@ export function loadStudentDetail() {
             <form>
                 <h4>Tháng ${img.month}</h4>
                 <input data-month="${img.month}" type="file" id=${img.month} hidden />
-                <div class="image-inner-card"><img id="file-chosen-${img.month}" src=${storedImage} alt="Chưa có hình trao quà" ></div>
-                <label for=${img.month} class="submit-button"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i>  Cập nhật</label>
+                <div class="image-inner-card"><img id="file-chosen-${img.month}" src="${storedImage}" alt='Chưa có hình trao quà' ></div>
+                <label for=${img.month} class="submit-button" id="label-${img.month}"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i>  Cập nhật</label>
             </form>
         `;
         newForm.innerHTML = formContent;
         newForm.classList.add("image-card");
         container.appendChild(newForm);
+        if (checkUserControl(currentUser.id, 'editStudent') === false) {
+            document.getElementById("label-" + img.month).style.display = 'none';
+        }
         document.getElementById(img.month).addEventListener('change', getImageInput);
+        
     })
 
 
@@ -92,9 +98,13 @@ function editAllDetails() {
     const selects = document.getElementById('student-detail-form-container').querySelectorAll('select');
     const textareas = document.getElementById('student-detail-form-container').querySelectorAll('textarea');
 
-    inputs.forEach(input => (input.disabled = false));
-    selects.forEach(select => (select.disabled = false));
-    textareas.forEach(text => (text.disabled = false));
+    if (currentUser.role === 'teacher') {
+        document.getElementById('student-currentClass').disabled = false;
+    } else {
+        inputs.forEach(input => (input.disabled = false));
+        selects.forEach(select => (select.disabled = false));
+        textareas.forEach(text => (text.disabled = false));
+    }    
 
     document.getElementById('save-student-detail-btn').style.display = 'block';
     document.getElementById('cancel-edit-student-detail-btn').style.display = 'block';
@@ -118,8 +128,8 @@ function saveAllDetails() {
     editStudent.recommender = document.getElementById('student-recommender').value;
     editStudent.startDate = document.getElementById('student-startDate').value;
     editStudent.endDate = document.getElementById('student-endDate').value;
-    editStudent.funds = document.getElementById('student-funds').value;
-    editStudent.balance = document.getElementById('student-balance').value;
+    editStudent.funds = document.getElementById('student-funds').value.replaceAll('.','');
+    editStudent.balance = document.getElementById('student-balance').value.replaceAll('.','');
     editStudent.remark = document.getElementById('student-remark').value;
     editStudent.currentClass = document.getElementById('student-currentClass').value;
     editStudent.currentSchool = document.getElementById('student-currentSchool').value;
@@ -158,7 +168,8 @@ function restoreAllDetails() {
     document.getElementById('student-recommender').value = selectStudent.recommender;
     document.getElementById('student-startDate').value = selectStudent.startDate;
     document.getElementById('student-endDate').value = selectStudent.endDate;
-    document.getElementById('student-balance').value = selectStudent.balance;
+    document.getElementById('student-funds').value = formatNumber(selectStudent.funds);
+    document.getElementById('student-balance').value = formatNumber(selectStudent.balance);
     document.getElementById('student-currentClass').value = selectStudent.currentClass;
     document.getElementById('student-currentSchool').value = selectStudent.currentSchool;
     document.getElementById('student-currentTeacher').value = selectStudent.currentTeacher;

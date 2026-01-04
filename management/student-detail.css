@@ -83,6 +83,7 @@
     /* Ngăn chặn việc tràn khung */
     max-width: 90%; 
     max-height: 250px;
+    min-height: 250px;
     flex-grow: 1;
 }
 .image-inner-card img {

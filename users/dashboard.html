@@ -27,7 +27,7 @@
                 <button class="user-search-btn"><img class="small-icons" src="/static/image/icons/search.png"
                         alt=""></button>
             </div>
-            <div class="img-box notif-btn"><img class="small-icons" src="/static/image/icons/bell.png" alt=""></div>
+            <!-- <div class="img-box notif-btn"><img class="small-icons" src="/static/image/icons/bell.png" alt=""></div> -->
             <!-- <div class="img-box"><img class="avatar-img large-icons" src="/static/image/avatar/user-1.jpg" alt=""></div> -->
             <div id="account-settings-container">
                 <button id="account-settings-btn"><img id="account-settings-avatar" class="avatar-img large-icons"
@@ -49,10 +49,13 @@
     <main id="user-dashboard-main-section">
         <section id="left-side-panel" class="left-side-panel">
             <button id="close-left-side-panel-btn" class="close-left-side-panel-btn">x</button>
-            <div id="goto-dashboard-btn" onclick="window.location.href = '/index.html'">
+            <div onclick="window.location.href = '/index.html'">
                 <i class="fa-regular fa-house"></i><span>Trang chủ</span>                
             </div>
             <hr>
+            <div onclick="window.location.href = '/users/dashboard.html'">
+                <img src="/static/image/icons/dashboard.png" alt=""><span>Dash Board</span>
+            </div>
             <div id="config-user-btn" onclick="window.location.href = '/management/user-list.html'">
                 <img src="/static/image/icons/user-config.png" alt=""><span>Quản lý người dùng</span>
             </div>
@@ -65,12 +68,30 @@
             <div id="view-school-btn" onclick="window.location.href = '/management/school-list.html'">
                 <img src="/static/image/icons/school.png" alt=""><span>Danh sách Trường Học</span>
             </div>
-            <div id="view-transaction-record-btn" onclick="window.location.href = ''">
+            <div id="view-transaction-record-btn" onclick="window.location.href = '/management/transaction.html'">
                 <img src="/static/image/icons/payment.png" alt=""><span>Danh sách Sao kê</span>
             </div>
             <hr>
-            <div id="statistic-btn" onclick="window.location.href = ''">
+            <div id="view-report-btn" onclick="window.location.href = '/management/report.html'">
                 <i class="fa-solid fa-chart-line"></i><span>Thống kê - Báo cáo</span>
+            </div>
+        </section>
+
+        <section class="features-container">
+            <div class="feature-card" id="students-card">
+                <h3>Học sinh</h3>
+                <h2 id="my-students"></h2>
+                <a href="/management/student-list.html">Xem chi tiết</a>
+            </div>
+            <div class="feature-card" id="sponsors-card">
+                <h3>Người hỗ trợ</h3>
+                <h2 id="my-sponsors"></h2>
+                <a href="/management/sponsor-list.html">Xem chi tiết</a>
+            </div>
+            <div class="feature-card" id="schools-card">
+                <h3>Trường học</h3>
+                <h2 id="my-schools"></h2>
+                <a href="/management/school-list.html">Xem chi tiết</a>
             </div>
         </section>
 
@@ -81,11 +102,12 @@
     <script type="module" src="./dashboard-script.js"></script>
     <script type="module">
         import { initData, fetchAndInjectElementById } from '/static/js/common-script.js';
-        import { loadUserHeaderEvents, loadLeftSideBarEvents } from '/users/dashboard-script.js';
+        import { loadUserHeaderEvents, loadLeftSideBarEvents, loadDatatoDashBoardCard } from '/users/dashboard-script.js';
         initData();
         loadUserHeaderEvents();
         loadLeftSideBarEvents();
         fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'dashboard-page-copy-right');
+        loadDatatoDashBoardCard();
     </script>
 </body>
 

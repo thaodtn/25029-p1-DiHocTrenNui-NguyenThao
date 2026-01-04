@@ -1,4 +1,4 @@
-import { originalUsers, accessControlList, originalStudents, originalSponsors, originalSchools } from "./mock-data.js";
+import { originalUsers, accessControlList, originalStudents, originalSponsors, originalSchools, originalTransactionList } from "./mock-data.js";
 
 export let users = '';
 export let currentUser = '';
@@ -9,6 +9,12 @@ export let relatedStudents = '';
 // export let sponsors = '';
 export let relatedSponsors = '';
 export let relatedSchool = '';
+export let relatedTransactions = '';
+
+export function formatNumber(numberString) {
+  const number = Number(numberString);
+  return number.toLocaleString('it-IT'); 
+}
 
 export function initData() {
     //Kiểm tra xem dữ liệu trong localStorage đã có hay chưa
@@ -26,14 +32,6 @@ export function initData() {
         }
     }
     //Students
-    // if (!localStorage.getItem('allStudents')) {
-    //     //sao chép toàn bộ dữ liệu từ mock-data.js vào localStorage
-    //     localStorage.setItem('allStudents', JSON.stringify(originalStudents));
-    // }
-    // else {
-    //     //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
-    //     allStudents = JSON.parse(localStorage.getItem('allStudents'));
-    // }
     if (!localStorage.getItem('relatedStudents')) {
         relatedStudents = getRelatedStudentsByCurrentUser(originalStudents);
         if (relatedStudents) {
@@ -46,14 +44,6 @@ export function initData() {
     }
     
     //Sponsors
-    // if (!localStorage.getItem('sponsors')) {
-    //     //sao chép toàn bộ dữ liệu từ mock-data.js vào localStorage
-    //     localStorage.setItem('sponsors', JSON.stringify(originalSponsors));
-    // }
-    // else {
-    //     //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
-    //     sponsors = JSON.parse(localStorage.getItem('sponsors'));
-    // }
     if (!localStorage.getItem('relatedSponsors')) {
         relatedSponsors = getRelatedSponsorsByCurrentUser(originalSponsors);
         if (relatedSponsors) {
@@ -64,6 +54,8 @@ export function initData() {
         //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
         relatedSponsors = JSON.parse(localStorage.getItem('relatedSponsors'));
     }
+
+    //School
     if (!localStorage.getItem('relatedSchool')) {
         relatedSchool = getRelatedSchoolByCurrentUser(originalSchools);
         if (relatedSchool) {
@@ -73,6 +65,18 @@ export function initData() {
     else {
         //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
         relatedSchool = JSON.parse(localStorage.getItem('relatedSchool'));
+    }
+
+    //Transactions
+    if (!localStorage.getItem('relatedTransactions')) {
+        relatedTransactions = getRelatedTransactionByCurrentUser(originalTransactionList);
+        if (relatedTransactions) {
+            localStorage.setItem('relatedTransactions', JSON.stringify(relatedTransactions));
+        }
+    }
+    else {
+        //Bỏ qua bước sao chép và sử dụng luôn dữ liệu hiện tại trong localStorage
+        relatedTransactions = JSON.parse(localStorage.getItem('relatedTransactions'));
     }
     console.log('Finish initData()');
 }
@@ -136,6 +140,20 @@ export function addNewSponsor(newSponsor) {
     alert('Cập nhật thành công.');
 }
 
+export function addNewSchool(newSchool) {
+    relatedSchool.push(newSchool);
+    //sao chép toàn bộ dữ liệu mới của mảng relatedSchool vào localStorage
+    localStorage.setItem('relatedSchool', JSON.stringify(relatedSchool));
+    alert('Cập nhật thành công.');
+}
+
+export function addNewTransaction(newTransaction) {
+    relatedTransactions.push(newTransaction);
+    //sao chép toàn bộ dữ liệu mới của mảng relatedTransactions vào localStorage
+    localStorage.setItem('relatedTransactions', JSON.stringify(relatedTransactions));
+    // alert('Cập nhật thành công.');
+}
+
 export function updateStudentByIndex(index, newStudent) {
     if (index < relatedStudents.length) {
         relatedStudents[index] = newStudent;
@@ -154,6 +172,87 @@ export function updateSponsorByIndex(index, newSponsor) {
         alert('Cập nhật thành công.');
     }
     else alert('Cập nhật thất bại. Vui lòng thử lại!');
+}
+
+export function updateTransactionByIndex(index, newTransaction) {
+    if (index < relatedTransactions.length) {
+        relatedTransactions[index] = newTransaction;
+        //sao chép toàn bộ dữ liệu mới của mảng users vào localStorage
+        localStorage.setItem('relatedTransactions', JSON.stringify(relatedTransactions));
+        alert('Cập nhật thành công.');
+    }
+    else alert('Cập nhật thất bại. Vui lòng thử lại!');
+}
+
+export function updateSchoolByIndex(index, newSchool) {
+    if (index < relatedSchool.length) {
+        relatedSchool[index] = newSchool;
+        //sao chép toàn bộ dữ liệu mới của mảng users vào localStorage
+        localStorage.setItem('relatedSchool', JSON.stringify(relatedSchool));
+        alert('Cập nhật thành công.');
+    }
+    else alert('Cập nhật thất bại. Vui lòng thử lại!');
+}
+
+export function updateNewAmountForStudents(amount, newStudentId, oldStudentId) {
+    let updateFlag = false;
+    //nếu studentId là rỗng thì bỏ qua
+    if (newStudentId) {
+        let selectedNewStudentIndex = relatedStudents.findIndex(student => student.id === newStudentId);
+        if (selectedNewStudentIndex === -1) {
+            alert(`Mã học sinh ${newStudentId} không tồn tại. Vui lòng chọn lại`);
+            return;
+        }
+        //cập nhật tiền tích lũy cho học sinh mới
+        console.log('cập nhật tiền tích lũy cho học sinh mới...');
+        relatedStudents[selectedNewStudentIndex].funds = (parseInt(relatedStudents[selectedNewStudentIndex].funds) + parseInt(amount)).toString();
+        updateFlag = true;
+    }
+    if (oldStudentId) {
+        let selectedOldStudentIndex = relatedStudents.findIndex(student => student.id === oldStudentId);
+        if (selectedOldStudentIndex === -1) {
+            alert(`Mã học sinh ${oldStudentId} không tồn tại. Vui lòng chọn lại`);
+            return;
+        }
+        //trừ tiền tích lũy của học sinh cũ
+        relatedStudents[selectedOldStudentIndex].funds = (parseInt(relatedStudents[selectedOldStudentIndex].funds) - parseInt(amount)).toString();
+        updateFlag = true;
+    }
+    //nếu có update dữ liệu thì lưu vào local storage
+    if (updateFlag) {
+        //sao chép toàn bộ dữ liệu mới của mảng relatedStudents vào localStorage
+        localStorage.setItem('relatedStudents', JSON.stringify(relatedStudents));
+    }    
+}
+
+export function updateNewAmountForSponsors(amount, newSponsorId, oldSponsorId) {
+    let updateFlag = false;
+    //nếu sponsorId là rỗng thì bỏ qua
+    if (newSponsorId) {
+        let selectedNewSponsorIndex = relatedSponsors.findIndex(sponsor => sponsor.id === newSponsorId);
+        if (selectedNewSponsorIndex === -1) {
+            alert(`Mã người hỗ trợ ${newSponsorId} không tồn tại. Vui lòng chọn lại`);
+            return;
+        }
+        //cập nhật tiền tích lũy cho người hỗ trợ mới
+        relatedSponsors[selectedNewSponsorIndex].totalDeposit = (parseInt(relatedSponsors[selectedNewSponsorIndex].totalDeposit) + parseInt(amount)).toString();
+        updateFlag = true;
+    }
+    if (oldSponsorId) {
+        let selectedOldSponsorIndex = relatedSponsors.findIndex(sponsor => sponsor.id === oldSponsorId);
+        if (selectedOldSponsorIndex === -1) {
+            alert(`Mã người hỗ trợ ${oldSponsorId} không tồn tại. Vui lòng chọn lại`);
+            return;
+        }
+        //trừ tiền tích lũy của người hỗ trợ cũ
+        relatedSponsors[selectedOldSponsorIndex].totalDeposit = (parseInt(relatedSponsors[selectedOldSponsorIndex].totalDeposit) - parseInt(amount)).toString();
+        updateFlag = true;
+    }
+    //nếu có update dữ liệu thì lưu vào local storage
+    if (updateFlag) {
+        //sao chép toàn bộ dữ liệu mới của mảng relatedSponsors vào localStorage
+        localStorage.setItem('relatedSponsors', JSON.stringify(relatedSponsors));
+    }
 }
 
 export async function loadMainHeaderContent(sourcePageURL, sourceElementId, destinationElementId) {
@@ -318,4 +417,30 @@ function getRelatedSchoolByCurrentUser(schoolArray) {
         }
     }
     return schoolList;
+}
+
+function getRelatedTransactionByCurrentUser(transactionArray) {
+    let transactionList = '';
+    if (currentUser) {
+        const role = currentUser.role;
+        switch (role) {
+            case 'sponsor':
+                transactionList = transactionArray.filter(element => element.sponsorId === currentUser.id);
+                break;
+            case 'volunteer':
+                //TNV xem được các giao dịch chưa xử lý hoặc giao dịch của NHT và HS đang phụ trách
+                transactionList = transactionArray.filter(element => {
+                    if (element.status === 'opened') return true;
+                    if ((relatedStudents.findIndex(student => student.id === element.studentId) !== -1) && (relatedSponsors.findIndex(sponsor => sponsor.id === element.sponsorId) !== -1)) return true;
+                    return false;
+                })
+                break;
+            case 'admin':
+                transactionList = transactionArray; //show all
+                break;
+            default:
+                break; //do not show anything
+        }
+    }
+    return transactionList;
 }

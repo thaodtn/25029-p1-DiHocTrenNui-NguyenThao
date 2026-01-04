@@ -1,5 +1,5 @@
 import { studentStatusTranslated } from '/static/js/mock-data.js';
-import { currentUser, addNewStudent, updateStudentByIndex, relatedStudents, checkUserControl } from '/static/js/common-script.js';
+import { currentUser, addNewStudent, updateStudentByIndex, relatedStudents, checkUserControl, formatNumber } from '/static/js/common-script.js';
 
 // let selectRowIndex = 0;
 let selectStudentIndex = 0;
@@ -12,16 +12,6 @@ export function loadStudentListEvent() {
         document.getElementById('add-new-student-modal-container').classList.toggle('show');
     });
     document.getElementById('add-new-student-btn').addEventListener('click', getNewStudent);
-
-    //add event listener for each button in row
-    // document.querySelectorAll('.row-edit-btn').forEach(element => {
-    //     element.addEventListener('click', editSelectedStudent);
-    // });
-
-    document.getElementById('save-edit-student-btn').addEventListener('click', saveEditedStudent);
-    document.getElementById('close-edit-student-form-btn').addEventListener('click', () => {
-        document.getElementById('edit-student-modal-container').classList.toggle('show');
-    });
 
     document.getElementById('student-search-btn').addEventListener('click', searchStudentByText);
 
@@ -45,7 +35,7 @@ export function loadDataToStudentTable(displayStudentList) {
                     <td data-label="Ngày Sinh" class="align-right"><div class="inner-cell">${element.birthday}</div></td>
                     <td data-label="Địa Chỉ" class="align-left"><div class="inner-cell">${element.address}</div></td>
                     <td data-label="Người Hỗ Trợ" class="align-left"><div class="inner-cell">${element.currentSponsor}</div></td>
-                    <td data-label="Số Dư" class="align-right"><div class="inner-cell">${element.balance}</div></td>
+                    <td data-label="Số Dư" class="align-right"><div class="inner-cell">${formatNumber(element.balance)}</div></td>
                     <td class="align-center"><button data-student-id="${element.id}" class="row-detail-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button></td>                    
                 </tr>                
             `;
@@ -90,73 +80,6 @@ function getNewStudent() {
     addNewStudent(newStudent);
     //reload table
     loadDataToStudentTable(relatedStudents);
-}
-
-function editSelectedStudent(event) {
-    // Find the closest parent <tr> element and get the index
-    // selectRowIndex = event.target.closest('tr').rowIndex;
-    console.log(event.target.closest('.row-edit-btn'));
-    console.log("event.target.dataset.studentId:", event.target.closest('.row-edit-btn').dataset.studentId);
-
-    const studentId = event.target.closest('.row-edit-btn').dataset.studentId;
-    selectStudentIndex = relatedStudents.findIndex(student => student.id === studentId);
-
-    if (selectStudentIndex === -1) {
-        return; //do nothing
-    }
-
-    console.log("selectStudentIndex:", selectStudentIndex);
-
-    //display Form
-    document.getElementById('edit-student-modal-container').classList.toggle('show');
-    //load current data into form
-    document.getElementById('edit-student-id').value = relatedStudents[selectStudentIndex].id;
-    document.getElementById('edit-student-name').value = relatedStudents[selectStudentIndex].name;
-    document.getElementById('edit-student-birthday').value = relatedStudents[selectStudentIndex].birthday;
-    document.getElementById('edit-student-address').value = relatedStudents[selectStudentIndex].address;
-    document.getElementById('edit-student-sponsor').value = relatedStudents[selectStudentIndex].currentSponsor;
-    document.getElementById('edit-student-status').value = relatedStudents[selectStudentIndex].status;
-    document.getElementById('edit-student-people').value = relatedStudents[selectStudentIndex].people;
-    document.getElementById('edit-student-situation').value = relatedStudents[selectStudentIndex].situation;
-    document.getElementById('edit-student-recommender').value = relatedStudents[selectStudentIndex].recommender;
-    document.getElementById('edit-student-startDate').value = relatedStudents[selectStudentIndex].startDate;
-    document.getElementById('edit-student-endDate').value = relatedStudents[selectStudentIndex].endDate;
-    document.getElementById('edit-student-balance').value = relatedStudents[selectStudentIndex].balance;
-    document.getElementById('edit-student-currentClass').value = relatedStudents[selectStudentIndex].currentClass;
-    document.getElementById('edit-student-currentSchool').value = relatedStudents[selectStudentIndex].currentSchool;
-    document.getElementById('edit-student-currentTeacher').value = relatedStudents[selectStudentIndex].currentTeacher;
-    document.getElementById('edit-student-currentVolunteer').value = relatedStudents[selectStudentIndex].currentVolunteer;
-    document.getElementById('edit-student-remark').value = relatedStudents[selectStudentIndex].remark;
-
-}
-
-function saveEditedStudent() {
-    let editStudent = relatedStudents[selectStudentIndex];
-
-    editStudent.id = document.getElementById('edit-student-id').value;
-    editStudent.name = document.getElementById('edit-student-name').value;
-    editStudent.birthday = document.getElementById('edit-student-birthday').value;
-    editStudent.address = document.getElementById('edit-student-address').value;
-    editStudent.currentSponsor = document.getElementById('edit-student-sponsor').value;
-    editStudent.status = document.getElementById('edit-student-status').value;
-
-    editStudent.people = document.getElementById('edit-student-people').value;
-    editStudent.situation = document.getElementById('edit-student-situation').value;
-    editStudent.recommender = document.getElementById('edit-student-recommender').value;
-    editStudent.startDate = document.getElementById('edit-student-startDate').value;
-    editStudent.endDate = document.getElementById('edit-student-endDate').value;
-    editStudent.funds = document.getElementById('edit-student-funds').value;
-    editStudent.balance = document.getElementById('edit-student-balance').value;
-    editStudent.remark = document.getElementById('edit-student-remark').value;
-    editStudent.currentClass = document.getElementById('edit-student-currentClass').value;
-    editStudent.currentSchool = document.getElementById('edit-student-currentSchool').value;
-    editStudent.currentVolunteer = document.getElementById('edit-student-currentVolunteer').value;
-    editStudent.currentTeacher = document.getElementById('edit-student-currentTeacher').value;
-
-    updateStudentByIndex(selectStudentIndex, editStudent);
-    //reload table
-    loadDataToStudentTable(relatedStudents);
-
 }
 
 

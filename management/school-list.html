@@ -21,12 +21,12 @@
                 <p>Danh Sách Trường Học</p>
             </div>
             <div class="subpage-action-container">
-                <input type="text" class="input-search-text" placeholder="Tìm Mã số, Tên Trường, Địa chỉ...">
-                <select name="search-school-status" id="search-school-status" class="input-search-filter">
+                <input type="text" class="input-search-text" id="school-input-search-text" placeholder="Tìm Mã số, Tên Trường, Địa chỉ...">
+                <!-- <select name="search-school-status" id="search-school-status" class="input-search-filter">
                     <option value="all">Tất cả</option>
                     <option value="inProgress">Đang hỗ trợ</option>               
                     <option value="ended">Đã kết thúc</option>
-                </select>
+                </select> -->
                 <button id="school-search-btn"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
                 <button id="open-form-add-school-btn"><i class="fa-solid fa-user-plus fa-lg"></i></button>
             </div>
@@ -37,17 +37,56 @@
                             <th><div class="inner-cell">Mã Số</div></th>
                             <th><div class="inner-cell">Tên Trường</div></th>
                             <th><div class="inner-cell">Địa Chỉ</div></th>
-                            <th><div class="inner-cell">Số HS đang hỗ trợ</div></th>
+                            <th><div class="inner-cell">Số HS</div></th>
                             <th><div class="inner-cell">GV Phụ Trách</div></th>                            
-                            <th><div class="inner-cell">Trạng Thái</div></th>                            
-                            <th><div class="inner-cell">Ghi Chú</div></th>
-                            <th></th>
+                            <th><div class="inner-cell">Sửa</div></th>
+                            <!-- <th><div class="inner-cell">Hình ảnh</div></th> -->
                         </tr>
                     </thead>
                     <tbody id="school-table-body">
                     </tbody>
                 </table>
             </div>
+
+            <section id="add-new-school-modal-container" class="modal-container">
+                <form class="add-new-school-form-container" action="">
+                    <p class="form-title">Thông tin của Trường mới</p>
+                    <label for="school-id">Mã Số:</label>
+                    <input type="text" name="school-id" id="school-id" required>
+                    <label for="school-name">Tên Trường:</label>
+                    <input type="text" name="school-name" id="school-name" required>
+                    <label for="school-address">Địa chỉ Trường:</label>
+                    <input type="text" name="school-address" id="school-address" required>
+                    <label for="school-currentTeacher">GV phụ trách:</label>
+                    <input type="text" name="school-currentTeacher" id="school-currentTeacher" required>
+
+                    <div class="button-group">
+                        <button id="add-new-school-btn" class="submit-btn" type="submit"><i
+                                class="fa-solid fa-user-plus fa-lg"></i>Thêm</button>
+                        <button id="close-add-school-form-btn" type="button"><i
+                                class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="edit-school-modal-container" class="modal-container">
+                <form class="edit-school-form-container" action="">
+                    <p class="form-title">Cập nhật lại thông tin của Trường</p>
+                    <label for="edit-school-id">Mã Số:</label>
+                    <input type="text" name="edit-school-id" id="edit-school-id" disabled>
+                    <label for="edit-school-name">Tên Trường:</label>
+                    <input type="text" name="edit-school-name" id="edit-school-name">
+                    <label for="edit-school-address">Địa chỉ Trường:</label>
+                    <input type="text" name="edit-school-address" id="edit-school-address">
+                    <label for="edit-school-currentTeacher">GV phụ trách:</label>
+                    <input type="text" name="edit-school-currentTeacher" id="edit-school-currentTeacher">
+
+                    <div class="button-group">
+                        <button id="save-edit-school-btn" class="submit-btn" type="submit"><i class="fa-solid fa-floppy-disk fa-lg"></i>Lưu</button>
+                        <button id="close-edit-school-form-btn" type="button"><i class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                    </div>
+                </form>
+            </section>
         </section>
     </main>
     <footer id="schoolList-page-copy-right"></footer>

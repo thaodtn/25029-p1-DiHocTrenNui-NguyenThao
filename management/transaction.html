@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d9b040b21a.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
+    <link rel="stylesheet" href="/static/css/common-style.css">
+    <link rel="stylesheet" href="/static/css/subpage-common-style.css">
+    <link rel="stylesheet" href="/users/dashboard-style.css">
+    <link rel="stylesheet" href="/management/transaction.css">
+    <link rel="stylesheet" href="/static/css/footer-style.css">
+</head>
+
+<body>
+    <header id="transaction-page-header"></header>
+    <main id="transaction-main-section" class="subpage-main-section">
+        <section id="transaction-left-side-pannel"></section>
+        <section class="subpage-content-section studentList-content-section">
+            <div class="subpage-title">
+                <p>Danh Sách Giao Dịch</p>
+            </div>
+            <div class="subpage-action-container">
+                <input type="text" class="input-search-text" id="transaction-input-search-text"
+                    placeholder="Tìm Thời gian, Mã giao dịch, Người gửi, Mã Học sinh, Nội dung...">
+                <select name="search-transaction-status" id="search-transaction-status" class="input-search-filter">
+                    <option value="all">Tất cả</option>
+                    <option value="opened">Chưa xử lý</option>
+                    <option value="approved">Đã nhập</option>
+                    <option value="cancel">Hủy</option>
+                </select>
+                <button id="transaction-search-btn"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+                <button id="open-form-add-transaction-record-btn"><i class="fa-solid fa-plus"></i></button>
+                <!-- <button id="open-form-add-transaction-file-btn"><i class="fa-solid fa-plus"></i><i class="fa-regular fa-file-lines"></i></button> -->
+                <div class="upload-section">
+                    <label>Chọn file CSV: </label>
+                    <input type="file" id="csvFileInput" accept=".csv" title="dùng file mẫu tại: /static/csv/transaction_import.csv"/>
+                </div>
+            </div>
+
+            <div class="subpage-table-container transaction-table-container">
+                <table class="subpage-table">
+                    <thead>
+                        <tr>
+                            <th><div class="inner-cell">Thời gian</div></th>
+                            <th><div class="inner-cell">Mã giao dịch</div></th>
+                            <th><div class="inner-cell">Số tiền</div></th>
+                            <th><div class="inner-cell">Nội dung</div></th>
+                            <th><div class="inner-cell">Người gửi</div></th>
+                            <th><div class="inner-cell">Học sinh nhận</div></th>
+                            <th><div class="inner-cell">Trạng thái</div></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="transaction-table-body">
+                    </tbody>
+                </table>
+            </div>
+
+            <section id="add-new-transaction-modal-container" class="modal-container">
+                <form class="add-new-transaction-form-container" action="">
+                    <p class="form-title">Thông tin của giao dịch mới</p>
+                    <label for="transaction-date">Thời gian:</label>
+                    <input type="date" name="transaction-date" id="transaction-date" required>
+                    <label for="transaction-code">Mã Giao dịch:</label>
+                    <input type="text" name="transaction-code" id="transaction-code" required>
+                    <label for="transaction-amount">Số tiền:</label>
+                    <input type="text" name="transaction-amount" id="transaction-amount" required>
+                    <label for="transaction-content">Nội dung:</label>
+                    <input type="text" name="transaction-content" id="transaction-content" required>
+
+                    <div class="button-group">
+                        <button id="add-new-transaction-btn" class="submit-btn" type="submit"><i
+                                class="fa-solid fa-user-plus fa-lg"></i>Thêm</button>
+                        <button id="close-add-transaction-form-btn" type="button"><i
+                                class="fa-solid fa-square-xmark fa-lg"></i>Đóng</button>
+                    </div>
+                </form>
+            </section>
+
+        </section>
+
+
+    </main>
+    <footer id="transaction-page-copy-right"></footer>
+
+    <script type="module" src="/static/js/common-script.js"></script>
+    <script type="module" src="/static/js/mock-data.js"></script>
+    <script type="module" src="/users/dashboard-script.js"></script>
+    <script type="module" src="/management/transaction.js"></script>
+    <script type="module">
+        import { users, relatedTransactions, initData, fetchAndInjectElementById } from '/static/js/common-script.js';
+        import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
+        import { loadDataToTransactionTable, loadTransactionListEvent } from '/management/transaction.js';
+        initData();
+        loadUserHeaderContent('/users/dashboard.html', 'user-header', 'transaction-page-header');
+        loadLeftSideBarContent('transaction-left-side-pannel');
+        fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'transaction-page-copy-right');
+        loadDataToTransactionTable(relatedTransactions);
+        loadTransactionListEvent();
+    </script>
+
+</body>
+
+</html>

@@ -1,7 +1,9 @@
-#schoolList-left-side-pannel {
+#transaction-left-side-pannel {
     min-height: inherit;
 }
-#open-form-add-school-btn, #school-search-btn {
+#open-form-add-transaction-record-btn,
+#open-form-add-transaction-file-btn,
+#transaction-search-btn {
     position: relative;
     padding: 0.8rem 1rem;
     border-radius: 5px;
@@ -9,16 +11,13 @@
     color: white;
     box-shadow: 1px 1px 3px rgba(51, 51, 51, 0.3);
 }
-.inner-cell {
-    max-width: 380px;
-}
 
-.schoolList-content-section {
+.transaction-content-section {
     margin: 0;
     border-radius: 0;
 }
 
-.add-new-school-form-container, .edit-school-form-container {
+.add-new-transaction-form-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 1.5rem;
@@ -57,4 +56,9 @@
 .button-group button i {
     border-radius: 0.5rem;
     margin-right: 0.5rem;
+}
+
+.transaction-row input:disabled, 
+.transaction-row select:disabled {
+    color: black;
 }

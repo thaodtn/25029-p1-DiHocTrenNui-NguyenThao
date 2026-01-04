@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê - Báo cáo</title>
+    <script src="https://kit.fontawesome.com/d9b040b21a.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="/static/image/icons/logo.jpg">
+    <link rel="stylesheet" href="/static/css/common-style.css">
+    <link rel="stylesheet" href="/static/css/subpage-common-style.css">
+    <link rel="stylesheet" href="/users/dashboard-style.css">
+    <link rel="stylesheet" href="/management/report.css">
+    <link rel="stylesheet" href="/static/css/footer-style.css">
+</head>
+<body>
+    <header id="report-page-header"></header>
+    <main id="report-main-section" class="subpage-main-section">
+        <section id="report-left-side-pannel"></section>
+        <section class="subpage-content-section report-content-section">
+            <div class="subpage-title">
+                <p>Thống kê - Báo cáo</p>
+            </div>
+            <div class="report-container" id="report-container">
+                <div class="report-table-container subpage-table-container" id="total-deposit-table">
+                    <p class="table-title">Tổng thu</p>
+                    <table class="report-table subpage-table">
+                        <thead>
+                            <tr>
+                                <th>Người hỗ trợ</th>
+                                <th>Tổng số tiền đã gửi</th>
+                                <th>Tổng số tiền còn lại</th>
+                            </tr>
+                        </thead>
+                        <tbody id="total-deposit-body">
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="report-table-container subpage-table-container">
+                    <p class="table-title">Tổng chi</p>
+                    <table class="report-table subpage-table">
+                        <thead>
+                            <tr>
+                                <th>Học sinh</th>
+                                <th>Tổng số tiền đã nhận</th>
+                                <th>Tổng số tiền còn lại</th>
+                            </tr>
+                        </thead>
+                        <tbody id="total-funds-body">
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="report-table-container subpage-table-container" id="student-image-table">
+                    <p class="table-title">Hình ảnh trao quà</p>
+                    <table class="report-table subpage-table">
+                        <thead>
+                            <tr>
+                                <th>Học sinh</th>
+                                <th>Tháng</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-image-table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="report-page-copy-right"></footer>
+    <script type="module" src="/static/js/common-script.js"></script>
+    <script type="module" src="/static/js/mock-data.js"></script>
+    <script type="module" src="/users/dashboard-script.js"></script>
+    <script type="module" src="/management/report.js"></script>
+    <script type="module">
+        import { users, initData, fetchAndInjectElementById } from '/static/js/common-script.js';
+        import { loadUserHeaderContent, loadLeftSideBarContent } from '/users/dashboard-script.js';
+        import { loadDataToReportTable } from '/management/report.js';
+        initData();
+        loadUserHeaderContent('/users/dashboard.html', 'user-header', 'report-page-header');
+        loadLeftSideBarContent('report-left-side-pannel');
+        fetchAndInjectElementById('/static/html/footer.html', 'copy-right', 'report-page-copy-right');
+        loadDataToReportTable();
+    </script>
+</body>
+</html>

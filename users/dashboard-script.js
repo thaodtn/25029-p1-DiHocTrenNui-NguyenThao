@@ -1,5 +1,6 @@
 import { accessControlList } from '/static/js/mock-data.js';
 import { users, currentUser, fetchAndInjectElementById, checkUserControl } from '/static/js/common-script.js';
+import { relatedStudents, relatedSponsors, relatedSchool } from '/static/js/common-script.js';
 
 const UserFunctionalitiesDisplay = [
     'Quản lý người dùng',
@@ -43,6 +44,8 @@ function openLeftSidePanel() {
     if (!currentUserControlList.viewSchool) document.getElementById('view-school-btn').style.display = 'none';
     //Xem danh sách sao kê
     if (!currentUserControlList.viewTransactionRecord) document.getElementById('view-transaction-record-btn').style.display = 'none';
+    //Xem thống kê báo cáo
+    if (!currentUserControlList.viewReport) document.getElementById('view-report-btn').style.display = 'none';
     //display Side Panel
     document.getElementById('left-side-panel').classList.toggle("show");
 }
@@ -69,4 +72,26 @@ window.onclick = function (event) {
             }
         }
     }
+}
+
+export function loadDatatoDashBoardCard() {
+    const totalStudents = relatedStudents.length;
+    const totalSponsors = relatedSponsors.length;
+    const totalSchools = relatedSchool.length;
+
+    switch (currentUser.role) {
+        case 'teacher':
+            document.getElementById('sponsors-card').style.display = 'none';
+            break;
+        case 'sponsor':
+            document.getElementById('schools-card').style.display = 'none';
+            break;
+        default:
+            break; //show all
+    }
+    
+    //hiển thị lên dash board
+    document.getElementById('my-students').innerText = totalStudents;
+    document.getElementById('my-sponsors').innerText = totalSponsors;
+    document.getElementById('my-schools').innerText = totalSchools;
 }

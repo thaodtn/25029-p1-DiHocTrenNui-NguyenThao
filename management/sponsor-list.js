@@ -1,5 +1,5 @@
 import { sponsorStatusTranslated } from '/static/js/mock-data.js';
-import {currentUser, relatedSponsors, checkUserControl, addNewSponsor } from '/static/js/common-script.js';
+import {currentUser, relatedSponsors, checkUserControl, addNewSponsor, formatNumber } from '/static/js/common-script.js';
 
 export function loadSponsorListEvent() {
     document.getElementById('open-form-add-sponsor-btn').addEventListener('click', () => {
@@ -31,8 +31,8 @@ export function loadDataToSponsorTable(displaySponsorList) {
                     <td data-label="Họ Tên" class="align-left"><div class="inner-cell">${element.name}</div></td>
                     <td data-label="Trạng Thái" class="${element.status} align-center"><div class="inner-cell"><span>${sponsorStatusTranslated[element.status]}</span></div></td>
                     <td data-label="Mã HS đang hỗ trợ" class="align-left"><div>${element.detailStudents}</div></td>
-                    <td data-label="Đã ủng hộ" class="align-right"><div class="inner-cell">${element.totalDeposit}</div></td>
-                    <td data-label="Số Dư" class="align-right"><div class="inner-cell">${element.balance}</div></td>
+                    <td data-label="Đã ủng hộ" class="align-right"><div class="inner-cell">${formatNumber(element.totalDeposit)}</div></td>
+                    <td data-label="Số Dư" class="align-right"><div class="inner-cell">${formatNumber(element.balance)}</div></td>
                     <td class="align-center"><button data-sponsor-id="${element.id}" class="row-detail-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button></td>                
                     </tr>                
                     `;
